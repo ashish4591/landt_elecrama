@@ -1,0 +1,159 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.parent {
+  position: relative;
+  left: 0;
+  padding:0;
+}
+.center{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+	
+}
+
+</style>
+<script>
+
+
+function main(id)
+{
+	switch(id)
+	{
+		case 1:
+		document.getElementById('plugin').innerHTML="";
+		document.getElementById('drawout').innerHTML="";
+		document.getElementById('salientFeature2').innerHTML="";
+		document.getElementById('product_img_bkp').style.display="none";
+		document.getElementById('drawout_bkp').style.display="none";
+		document.getElementById('salientFeature_popup2').style.display="none";
+		var menu = document.getElementById('SalientFeature');
+		
+		var SalientFeature = document.createElement('img');
+		
+		//SalientFeature.setAttribute('id', 'SalientFeature');
+		SalientFeature.setAttribute('src', 'Assets/data/Withdrawable_Offerings/SalientFeature_Y.png');
+		SalientFeature.setAttribute('class', 'right_menu_img');
+		menu.appendChild(SalientFeature);
+		var popup = document.getElementById('salientFeature_popup');
+		popup.style.display='block';
+
+
+		break;
+
+		case 2:
+
+		document.getElementById('SalientFeature').innerHTML="";
+		document.getElementById('drawout').innerHTML="";
+		document.getElementById('salientFeature2').innerHTML="";
+		document.getElementById('salientFeature_popup').style.display="none";
+		document.getElementById('salientFeature_popup2').style.display="none";
+		document.getElementById('drawout_bkp').style.display="none";
+		var menu = document.getElementById('plugin');
+		var SalientFeature = document.createElement('img');
+		SalientFeature.setAttribute('src', 'Assets/data/Withdrawable_Offerings/PlugIn_Y.png');
+		SalientFeature.setAttribute('class', 'right_menu_img');
+		menu.appendChild(SalientFeature);
+		var bkp = document.getElementById('product_img_bkp');
+		bkp.style.display='block';
+
+		break;
+
+		case 3:
+
+		document.getElementById('salientFeature2').innerHTML="";
+		document.getElementById('SalientFeature').innerHTML="";
+		document.getElementById('plugin').innerHTML="";
+		var menu = document.getElementById('drawout');
+		var SalientFeature = document.createElement('img');
+		//SalientFeature.setAttribute('id', 'SalientFeature');
+		SalientFeature.setAttribute('src', 'Assets/data/Withdrawable_Offerings/Drawout_Y.png');
+		SalientFeature.setAttribute('class', 'right_menu_img');
+		menu.appendChild(SalientFeature);
+		document.getElementById('salientFeature_popup').style.display="none";
+		document.getElementById('salientFeature_popup2').style.display="none";
+		document.getElementById('product_img_bkp').style.display="none";
+		var bkp = document.getElementById('drawout_bkp');
+		bkp.style.display='block';
+		
+		break;
+
+		case 4:
+		document.getElementById('drawout').innerHTML="";
+		document.getElementById('SalientFeature').innerHTML="";
+		document.getElementById('plugin').innerHTML="";
+		var menu = document.getElementById('salientFeature2');
+		var SalientFeature = document.createElement('img');
+		//SalientFeature.setAttribute('id', 'SalientFeature');
+		SalientFeature.setAttribute('src', 'Assets/data/Withdrawable_Offerings/SalientFeature_Y.png');
+		SalientFeature.setAttribute('class', 'right_menu_img');	
+		menu.appendChild(SalientFeature);
+			document.getElementById('salientFeature_popup').style.display="none";
+		document.getElementById('drawout_bkp').style.display="none";
+		document.getElementById('product_img_bkp').style.display="none";
+		var popup = document.getElementById('salientFeature_popup2');
+		popup.style.display='block';
+
+		break;	
+
+	}
+
+}
+
+	function close_div()
+	{
+		document.getElementById('salientFeature_popup').style.display="none";
+		document.getElementById('salientFeature_popup2').style.display="none";
+		document.getElementById('salientFeature2').innerHTML="";
+		document.getElementById('salientFeature').innerHTML="";
+	}
+		function dravideo_play(vid_id)
+		{
+			var video = document.getElementById(vid_id);
+			video.style.display="block";
+			video.play();
+		}
+	
+</script>
+</head>
+<body>
+<div class="container">
+
+	 <div class="row content center">
+	<div class="menu_with">
+		<div id="right_menu">
+			<div id="SalientFeature" onclick="main(1)"></div>
+			<div id="plugin" onclick="main(2)"></div>
+		</div>
+		<div id="product_img_bkp" style="display: none;"></div>
+		<div id="salientFeature_popup" style="display: none;"><video style="display: none;" id="silent_video" ><source src="Assets/data/Withdrawable_Offerings/SalientFeature_DrawoutVideo.webm" type="video/webm"></video><img src="Assets/data/Withdrawable_Offerings/salientFeature_Plugin.png"><a href="#" onclick="close_div()"><img class="cloase_btn" src="Assets/data/Withdrawable_Offerings/close.png"></a><a href="#" onclick="dravideo_play('silent_video')"><img class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a></div>
+		<div id="drawout_bkp" style="display: none;"></div>
+		<div id="salientFeature_popup2" style="display: none;"><video style="display: none;" id="drawout_video" ><source src="Assets/data/Withdrawable_Offerings/SalientFeature_PluginVideo.webm" type="video/webm"></video><img src="Assets/data/Withdrawable_Offerings/SalientFeature_Drawout.png"><a href="#" onclick="close_div()"><img class="cloase_btn" src="Assets/data/Withdrawable_Offerings/close.png"></a><a href="#" onclick="dravideo_play('drawout_video')"><img class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a></div>
+		<div id="product_img">
+			<!--img class="scaler7" src="Assets/data/Withdrawable_Offerings/UI_05_WO_IMG1.png"/-->
+			<img src="Assets/data/Withdrawable_Offerings/Product_01.png" class="img_sps">
+			<img src="Assets/data/Withdrawable_Offerings/Product_02.png" class="img_sps">
+			<img src="Assets/data/Withdrawable_Offerings/Product_03.png" class="img_sps">
+			<img src="Assets/data/Withdrawable_Offerings/Product_04.png" class="img_sps">
+			<img src="Assets/data/Withdrawable_Offerings/Product_05.png" class="img_sps">
+		</div>
+
+		<div id="left_menu">
+			<div id="drawout" onclick="main(3)"></div>
+			<div id="salientFeature2" onclick="main(4)"></div>
+		</div>
+	</div>	
+
+
+	</div>
+</div>
+<!--/div-->
+</body>
+</html>

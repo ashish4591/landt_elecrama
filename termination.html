@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.parent {
+  position: relative;
+  left: 0;
+  padding:0;
+}
+.center{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+	
+}
+
+</style>
+<script>
+	function main(id) {
+		switch(id)
+		{
+			case 1:
+			document.getElementById('termination1').innerHTML="";
+			document.getElementById('termination3').innerHTML="";
+			document.getElementById('termination2').innerHTML="";
+			document.getElementById('term_video').innerHTML="";
+			document.getElementById('term_img').innerHTML="";
+			var container = document.getElementById('termination1'); 
+			// var btn_play = document.getElementById('video_play_btn');
+			// btn_play.style.display='block';
+			 var img = document.createElement('img');
+			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button1_1.png');
+		//	img.setAttribute('id','1');
+			container.appendChild(img);
+			active_video('Assets/data/Termination_Offerings/vid1.webm');
+			 active_image('Assets/data/Termination_Offerings/SPREADER-Links.png');
+			break;
+
+			case 2:
+			document.getElementById('termination2').innerHTML="";
+			document.getElementById('termination1').innerHTML="";
+			document.getElementById('termination3').innerHTML="";
+			document.getElementById('term_video').innerHTML="";
+			document.getElementById('term_img').innerHTML="";
+			// var btn_play = document.getElementById('video_play_btn');
+			// btn_play.style.display='block';
+			 var container = document.getElementById('termination2'); 
+			 var img = document.createElement('img');
+			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button2_2.png');
+			//img.setAttribute('id','2');
+			container.appendChild(img);
+			active_video('Assets/data/Termination_Offerings/vid2.webm');
+			active_image('Assets/data/Termination_Offerings/BOX-CLAMP.png');
+			break;
+
+			case 3:
+			document.getElementById('termination3').innerHTML="";
+			document.getElementById('termination1').innerHTML="";
+			document.getElementById('termination2').innerHTML="";
+			document.getElementById('term_video').innerHTML="";
+			document.getElementById('term_img').innerHTML="";
+			// var btn_play = document.getElementById('video_play_btn');
+			// btn_play.style.display='block';
+			 var container = document.getElementById('termination3'); 
+			 var img = document.createElement('img');
+			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button3_3.png');
+			//img.setAttribute('id','3');
+			container.appendChild(img);
+			active_video('Assets/data/Termination_Offerings/vid3.webm');
+			active_image('Assets/data/Termination_Offerings/REAR-TERMINATION.png');
+			 break;
+		}
+		}
+		function active_video(src)
+		{
+			var vid = document.getElementById('term_video'); 
+			var video = document.createElement('video');
+			video.setAttribute('id','vid');
+			//video.setAttribute('width','1000px');
+			vid.appendChild(video);
+			var source = document.createElement('source');
+			source.setAttribute('src',src);
+			video.appendChild(source);
+			video.play();
+		}
+
+
+		function active_image(src)
+		{
+			var img = document.getElementById('term_img'); 
+			var image = document.createElement('img');
+			img.appendChild(image);
+			var source = document.createElement('source');
+			image.setAttribute('src',src);
+
+		}
+
+		function term_video()
+		{
+			var vid = document.getElementById('vid'); 
+			vid.play();
+		}
+	
+</script>
+</head>
+<body>
+<div class="container">
+
+	 <div class="row">
+	 	<div class="main_term_container">
+	 		<div id="term_video"></div>
+		<div class="terms_btn">
+		<div class="back_line">
+				<div id="termination1" onclick="main(1)"></div>
+				<div id="termination2" onclick="main(2)"></div>
+				<div id="termination3" onclick="main(3)"></div>
+			</div>
+		</div>
+	 		<div id="term_img"></div>
+	</div>
+
+		</div>
+	</div>
+</div>
+<!--/div-->
+</body>
+</html>

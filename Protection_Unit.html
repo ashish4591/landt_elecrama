@@ -1,0 +1,416 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link href="resources/css/magic_carousel.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="resources/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8">
+
+
+<style>
+.leftNav,.rightNav{
+	top:60px;
+}
+</style>
+
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" type="text/javascript"></script-->
+<script src="resources/js/jquery-ui.min.js"></script>
+<script src="resources/js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+<script src="resources/js/magic_carousel.js" type="text/javascript"></script>
+<script src="resources/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+var count=1,vsrc1,isrc1;
+jQuery(function() {
+			var slide_id=1;
+			jQuery('#magic_carousel_white1').magic_carousel({
+				width: 640,
+				height: 400,
+				responsive:true,
+				imageWidth:252,
+				//imageHeight:200,
+				//absUrl: "rmenu\resources",				
+				border:5,
+				circleColor: "Transparent",
+				circleRadius: 0,
+				elementsHorizontalSpacing: 120,
+				/*borderColorOFF:'#000000',
+				borderColorON:'#FF0000',	*/		
+				autoPlay: 0,
+				autoHideNavArrows: false,
+				autoHideBottomNav:false,
+				enableTouchScreen:false,
+				showElementTitle:true,
+				showPreviewThumbs:false,
+				titleColor:'Transparent',
+				verticalAdjustment:50,
+				numberOfVisibleItems:7,
+				nextPrevMarginTop:-150,
+				playMovieMarginTop:0,
+				bottomNavMarginBottom:0
+			});
+			$('.rightNav').click(function(){
+				if(slide_id<6){
+					slide_id=slide_id+1;
+					PId=slide_id;
+					//alert(slide_id);
+					slideshow(PId);
+				}
+				else if(slide_id=>6){
+					slide_id=0;
+					slide_id=slide_id+1;
+					PId=slide_id;
+					//alert(slide_id);
+					slideshow(PId);
+				}
+			});
+			$('.leftNav').click(function(){
+				//alert("outside"+slide_id);
+				if(slide_id<=1){
+					slide_id=6;
+					PId=slide_id;
+					slideshow(PId);
+					//alert(slide_id);
+					//$('#Pimage_'+SId).removeClass('Ractive');
+				}
+				else if(slide_id<=6){
+					slide_id=slide_id-1;
+					PId=slide_id;
+					slideshow(PId);
+					//alert(slide_id);
+					//(Pimage_'+SId).removeClass('Ractive');
+				}
+			});
+				//alert(PId);
+				//$('#Pimage_'+SId).removeClass('Ractive');
+			});
+			function slideshow(id) {
+					var container = document.getElementById('p3'); 
+					container.innerHTML='';
+					var img = document.createElement('img');
+					img.setAttribute('src', 'Assets/data/Protection_Unit/Itrip'+id+'.png');
+					//img.setAttribute('class', 'scaler7');
+					container.appendChild(img);
+					if(id==4 ||	id==5){
+						document.getElementById('p4').style.display="block";
+					}
+					else
+					{
+						document.getElementById('p4').style.display="none";
+					}
+			}
+			function showtable(){
+				$("#pi6").attr('src', 'assets/data/Protection_Unit/Table_Y.png');
+				document.getElementById('p1').style.display="none";
+				document.getElementById('p2').style.display="none";
+				document.getElementById('p7').style.display="block";
+				document.getElementById('pclose').style.display="block";
+				var buttonClk=document.getElementById('pclose');
+				buttonClk.addEventListener("click", function() {
+					document.getElementById('p1').style.display="block";
+					document.getElementById('p2').style.display="block";
+					document.getElementById('p7').style.display="none";
+					buttonClk.style.display="none";
+					$("#pi6").attr('src', 'assets/data/Protection_Unit/Table_B.png');
+				});
+				
+			}
+			function showmoduledesc(){
+				$("#pdesc").attr('src', 'assets/data/Protection_Unit/PRM.png');
+			}
+			function showmodule(){
+				$("#pi4").attr('src', 'assets/data/Protection_Unit/Modules_Y.png');
+				document.getElementById('p1').style.display="none";
+				document.getElementById('p2').style.display="none";
+				document.getElementById('p8').style.display="block";
+				document.getElementById('pdclose').style.display="block";
+				document.getElementById('pdesc').style.display="block";
+				document.getElementById('backbtn').style.display="block";
+				document.getElementById('nextbtn').style.display="block";
+				var buttonClk1=document.getElementById('pdclose');
+				buttonClk1.addEventListener("click", function() {
+					document.getElementById('p2').style.display="block";
+					document.getElementById('p1').style.display="block";
+					document.getElementById('p8').style.display="none";
+					buttonClk1.style.display="none";
+					$("#pi4").attr('src', 'assets/data/Protection_Unit/Modules_B.png');
+				});
+				
+			}
+			/*function showvideo(id,pvsrc,pisrc){
+						//console.log(vsrc1);
+						//console.log(isrc1);
+						
+			}*/
+			function pplayvideo(){
+							//alert('play');
+							//var vidplay=document.getElementById('ppvid1');
+							//vidplay.play();
+
+							$('#ppvid1').get(0).play();
+			}
+			function showmoduledesc(id){
+				var pisrc="assets/data/Protection_Unit/video.png";
+				switch(id)
+				{
+					case 1:
+						//$('video')[0].pause();	
+						$("#pdesc").attr('src', 'assets/data/Protection_Unit/M3U.png');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
+						//showvideo(id,'Assets/data/Protection_Unit/256.mp4','Assets/data/Protection_Unit/video.png');
+						/*var div = document.getElementById('p8'); 
+						/*var video = document.createElement('video');
+						video.setAttribute('id','vid1');
+						video.setAttribute('class','pvsrc');
+						var image=document.createElement('img');
+						image.setAttribute('id','pvimg1');
+						image.setAttribute('src',pisrc);
+						image.setAttribute('class','pvimg1');
+						div.appendChild(image);
+						div.appendChild(video);
+						var source = document.createElement('source');
+						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
+						video.appendChild(source);
+						var buttonClk1=document.getElementById('pvimg1');
+						//console.log(buttonRef);
+						buttonClk1.addEventListener("click", function() {
+							alert('play');
+							var vidplay=document.getElementById('vid1');
+							vidplay.play;
+						});*/
+						
+					break;
+					case 2:
+						$('video')[0].pause();	
+						$("#pdesc").attr('src', 'assets/data/Protection_Unit/PRM.png');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
+						//showvideo(id);
+						/*var div = document.getElementById('p8'); 
+						var video = document.createElement('video');
+						video.setAttribute('id','vid2');
+						video.setAttribute('class','pvsrc');
+						var image=document.createElement('img');
+						image.setAttribute('id','pvimg1');
+						image.setAttribute('src',pisrc);
+						image.setAttribute('class','pvimg1');
+						div.appendChild(image);
+						div.appendChild(video);
+						var source = document.createElement('source');
+						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
+						video.appendChild(source);
+						buttonClk=document.getElementById('pvimg1');
+						//console.log(buttonRef);
+						buttonClk.addEventListener("click", function() {
+							$('#p8').children().filter("video").each(function(){
+								this.pause(); 
+								delete this; 
+								$(this).remove(); 
+							});
+							$('#p8').children().filter("img").each(function(){
+								delete this; 
+								$(this).remove();
+							});
+						});*/
+					break;
+					case 3:
+						$("#pdesc").attr('src', 'assets/data/Protection_Unit/TM.png');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
+						//showvideo(id);
+						/*var div = document.getElementById('p8'); 
+						var video = document.createElement('video');
+						video.setAttribute('id','vid3');
+						video.setAttribute('class','pvsrc');
+						var image=document.createElement('img');
+						image.setAttribute('id','pvimg1');
+						image.setAttribute('src',pisrc);
+						image.setAttribute('class','pvimg1');
+						div.appendChild(image);
+						div.appendChild(video);
+						var source = document.createElement('source');
+						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
+						video.appendChild(source);
+						buttonClk=document.getElementById('pvimg1');
+						//console.log(buttonRef);
+						buttonClk.addEventListener("click", function() {
+							$('#p8').children().filter("video").each(function(){
+								this.pause(); 
+								delete this; 
+								$(this).remove(); 
+							});
+							$('#p8').children().filter("img").each(function(){
+								delete this; 
+								$(this).remove();
+							});
+						});*/
+					break;
+					case 4:
+						$("#pdesc").attr('src', 'assets/data/Protection_Unit/ZSI.png');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
+						//showvideo(id);
+						/*var div = document.getElementById('p8'); 
+						var video = document.createElement('video');
+						video.setAttribute('id','vid4');
+						video.setAttribute('class','pvsrc');
+						var image=document.createElement('img');
+						image.setAttribute('id','pvimg1');
+						image.setAttribute('src',pisrc);
+						image.setAttribute('class','pvimg1');
+						div.appendChild(image);
+						div.appendChild(video);
+						var source = document.createElement('source');
+						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
+						video.appendChild(source);
+						buttonClk=document.getElementById('pvimg1');
+						//console.log(buttonRef);
+						buttonClk.addEventListener("click", function() {
+							$('#p8').children().filter("video").each(function(){
+								this.pause(); 
+								delete this; 
+								$(this).remove(); 
+							});
+							$('#p8').children().filter("img").each(function(){
+								delete this; 
+								$(this).remove();
+							});
+						});*/
+					break;
+					case 5:
+						$("#pdesc").attr('src', 'assets/data/Protection_Unit/panorama.png');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
+						//showvideo(id);
+						/*var div = document.getElementById('p8'); 
+						var video = document.createElement('video');
+						video.setAttribute('id','vid5');
+						video.setAttribute('class','pvsrc');
+						var image=document.createElement('img');
+						image.setAttribute('id','pvimg1');
+						image.setAttribute('src',pisrc);
+						image.setAttribute('class','pvimg1');
+						div.appendChild(image);
+						div.appendChild(video);
+						var source = document.createElement('source');
+						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
+						video.appendChild(source);
+						buttonClk=document.getElementById('pvimg1');
+						//console.log(buttonRef);
+						buttonClk.addEventListener("click", function() {
+							$('#p8').children().filter("video").each(function(){
+								this.pause(); 
+								delete this; 
+								$(this).remove(); 
+							});
+							$('#p8').children().filter("img").each(function(){
+								delete this; 
+								$(this).remove();
+							});
+						});*/
+					break;
+					default:
+					
+				}
+			}
+			function nextpm(){
+				$("video").each(function () { this.pause() });
+				//alert("nextpm"+count);
+				//showmoduledesc();
+				if(count<5){
+					count=count+1;
+					showmoduledesc(count);
+				}
+				else if(count=>5){
+					count=0;
+					count=count+1;
+					//PId=slide_id;
+					//alert(slide_id);
+					showmoduledesc(count);
+				}
+			}
+			function backpm(){
+				$("video").each(function () { this.pause() });
+				//alert("backpm"+count);
+				if(count<=1){
+					count=5;
+					showmoduledesc(count);
+				}
+				else if(count<=5){
+					count=count-1;;
+					showmoduledesc(count);
+				}
+				//showmoduledesc();
+			}
+</script>
+</head>
+<body>
+	<div id="Protection_Unit" class="clr">
+				<div id="p1">
+					<img class="p1" src="assets/data/Protection_Unit/UI_05_PU_BG.png"/>
+				</div>
+				<div id="p2">
+				<div class="magic_carousel white ui-draggable">
+					<div id="magic_carousel_white1">
+						<div class="myloader" style="display: none;"></div>
+						<!-- CONTENT -->
+						<ul id="mylist" class="magic_carousel_list">
+						
+							<li data-title="1">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_itrp1.png" alt=""></li>
+							
+							<li data-title="2">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_itrp2.png" alt=""></li>
+							
+							<li data-title="3">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_itrp3.png" alt=""></li>
+							
+							<li data-title="4">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_itrp4.png" alt=""></li>
+							
+							<li data-title="5">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_itrp5.png" alt=""></li>
+							
+							<li data-title="6">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_M3.png" alt=""></li>    
+							
+							<li data-title="6">
+							<img src="Assets/data/Protection_Unit/UI_05_PU_TMR.png" alt=""></li>      
+						</ul>            
+				   </div>
+				   <canvas class="mycanvas" width="36" height="36" style="left: 271px; top: 64px;"></canvas>
+				 </div>
+				</div>
+				<div id="p7">
+					<img id="pclose" class="pclose" src="Assets/data/Protection_Unit/close.png" alt="">
+					<img class="scaler7" src="Assets/data/Protection_Unit/Table.png" alt="">
+				</div>
+				<div id="p8">
+					<img id="backbtn" onclick="backpm()" class="backbtn" src="Assets/data/Protection_Unit/backbutton.png" alt="">
+					<img id="pdclose" class="pdclose" src="Assets/data/Protection_Unit/close.png" alt="">
+					<img id="mbg" class="mbg" src="Assets/data/Protection_Unit/MOdule_BG.png" alt="">
+					<div id="pmodvid">
+						<video id="ppvid1" class="pvsrc"><source src="assets/data/Protection_Unit/256.mp4"></video>
+						<img onclick="pplayvideo()" id="pvimg1" src="assets/data/Protection_Unit/video.png" class="pvimg1">
+					</div>
+					<img id="pdesc" class="scaler7 pdesc" src="Assets/data/Protection_Unit/M3U.png" alt="">
+					<img id="nextbtn" onclick="nextpm()" class="nextbtn" src="Assets/data/Protection_Unit/nextbtt.png" alt="">
+				</div>
+				<div id="p4">
+						<img id="pi4" onclick="showmodule()" src="Assets/data/Protection_Unit/Modules_B.png" alt="">
+				</div>
+				<div id="p5">
+						<img src="Assets/data/Protection_Unit/salientfeatures_B.png" alt="">
+				</div>
+				<div id="p6">
+						<img id="pi6" src="Assets/data/Protection_Unit/Table_B.png" onclick="showtable();" alt="">
+				</div>
+				<div id="p3">	
+					<img src="Assets/data/Protection_Unit/Itrip1.png"/>
+				</div>
+			</div>
+</body>
+</html>
