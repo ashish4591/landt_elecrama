@@ -6,15 +6,31 @@
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
-document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
+document.getElementById('drawout_Disable').style.display="block";
+document.getElementById('drawout_active').style.display="none";
 
 });
 	function main(id)
 	{
-		function dravideo_play(vid_id)
+		function dravideo_play(vid_id,vid)
 		{
+			//alert(vid);
+			//var video = document.getElementById(vid_id);
+			//video.load();
+			//video.style.display="block";
+			var pImg="product_img"+id;
+			var iImg="itrp_img"+id;
+			//alert(iImg);
 			vid_id.play();
+			vid_id.onended = function(e) {
+			alert("the end");
+			vid_id.style.display="none";
+			$("#"+pImg).css("display", "block");
+			$("#"+iImg).css("display", "block");
+			document.getElementById("'"+pImg+"'").style.display="block";
+			document.getElementById("'"+iImg+"'").style.display="block";
+			//$("#itrp_img").css("display", "block");
+			}
 		}
 		switch(id)
 		{
@@ -33,25 +49,17 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
 			
-
+			$('#drawout_Disable').show();
+			$('#drawout_active').hide();
 			
 			//document.getElementById('drawout_active').style.display="block";
 			//document.getElementById('drawout_Disable').style.display="none";
 	
 			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-			document.getElementById('box_champ_unable').style.display="none";
-
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
-			document.getElementById('PlugIn_Disable').style.display="none";
+			document.getElementById('box_champ_active').style.display="block";
 
 			document.getElementById('PlugIn_Disable').style.display="none";
 			document.getElementById('plug_in_active').style.display="block";
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="none";
-			document.getElementById('drawout_Disable').style.display="inline";
 			
 			document.getElementById('dz1_rating').style.display="inline";
 			document.getElementById('dz2_rating').style.display="none";
@@ -71,9 +79,16 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz4_title').style.display="none";
 			document.getElementById('dz6_title').style.display="none";
 			document.getElementById('dz7_title').style.display="none";
+			
 
-			document.getElementById('trip_icon6').style.display="inline";
-			document.getElementById('trip_icon7').style.display="inline";
+			/*document.getElementById('product_display1').style.display="block";
+    		document.getElementById('product_display2').style.display="none";
+			document.getElementById('product_display3').style.display="none";
+			document.getElementById('product_display4').style.display="none";
+			document.getElementById('product_display5').style.display="none";*/
+
+			//document.getElementById('trip_icon6').style.display="inline";
+			//document.getElementById('trip_icon7').style.display="inline";
 			
 			document.getElementById('dz1_graph').style.display="block";
 			document.getElementById('dz2_graph').style.display="none";
@@ -83,12 +98,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			/*$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');*/
 			$("#product_video").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
 			/*$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP1.png');*/
+			//dravideo_play('product_video');
 			
-			document.getElementById('product_display1').style.display="block";
-    		document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
 			
 			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
 			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4');
@@ -100,6 +111,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Drawout.mp4');
 			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/MIL.mp4');
 			
+			
+			
 			$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');
 			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ1-160/Images/TMR.png');
 			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png');
@@ -108,7 +121,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP3.png');
 			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP4.png');
 			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP5.png');
-			dravideo_play(product_video1);
+			
+			//$(".g1").attr('src','Assets/data/Configurator/Asset/Graphs/DZ1.png');
+		
 
 
 			break;
@@ -132,17 +147,12 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$('#drawout_active').hide();
 			//document.getElementById('drawout_active').style.display="block";
 			//document.getElementById('drawout_Disable').style.display="none";
+
 			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-			document.getElementById('box_champ_unable').style.display="none";
+			document.getElementById('box_champ_active').style.display="block";
 
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
 			document.getElementById('PlugIn_Disable').style.display="none";
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="none";
-			document.getElementById('drawout_Disable').style.display="inline";
+			document.getElementById('plug_in_active').style.display="block";
 
 			
 			document.getElementById('dz1_rating').style.display="none";
@@ -165,8 +175,14 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz6_title').style.display="none";
 			document.getElementById('dz7_title').style.display="none";
 
-			document.getElementById('trip_icon6').style.display="inline";
-			document.getElementById('trip_icon7').style.display="inline";
+			//document.getElementById('trip_icon6').style.display="inline";
+			//document.getElementById('trip_icon7').style.display="inline";
+
+			/*document.getElementById('product_display1').style.display="none";
+    		document.getElementById('product_display2').style.display="block";
+			document.getElementById('product_display3').style.display="none";
+			document.getElementById('product_display4').style.display="none";
+			document.getElementById('product_display5').style.display="none";*/
 
 
 			document.getElementById('dz2_graph').style.display="block";
@@ -174,6 +190,12 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz4_graph').style.display="none";
 			document.getElementById('dz6_graph').style.display="none";
 			document.getElementById('dz7_graph').style.display="none";
+
+			$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+			$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+			
+			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 			
 			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
 			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
@@ -185,13 +207,16 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
 			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
 			
-
 			$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
 			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
-			dravideo_play(product_video1)
+			
 			break;
 
 			case 3:
@@ -210,17 +235,14 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
 
-			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-			document.getElementById('box_champ_unable').style.display="none";
-
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
-			document.getElementById('PlugIn_Disable').style.display="none";
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
+			document.getElementById('drawout_active').style.display="block";
 			document.getElementById('drawout_Disable').style.display="none";
+
+			document.getElementById('box_champ_Disable').style.display="none";
+			document.getElementById('box_champ_active').style.display="block";
+
+			document.getElementById('PlugIn_Disable').style.display="none";
+			document.getElementById('plug_in_active').style.display="block";
 
 			document.getElementById('dz1_rating').style.display="none";
 			document.getElementById('dz2_rating').style.display="none";
@@ -241,16 +263,31 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz6_title').style.display="none";
 			document.getElementById('dz7_title').style.display="none";
 
-			document.getElementById('trip_icon6').style.display="inline";
-			document.getElementById('trip_icon7').style.display="inline";
-			document.getElementById('trip_icon1').style.display="none";
+			/*document.getElementById('product_display1').style.display="none";
+    		document.getElementById('product_display2').style.display="none";
+			document.getElementById('product_display3').style.display="block";
+			document.getElementById('product_display4').style.display="none";
+			document.getElementById('product_display5').style.display="none";*/
+
+			//document.getElementById('trip_icon6').style.display="inline";
+			//document.getElementById('trip_icon7').style.display="inline";
+			//document.getElementById('trip_icon1').style.display="none";
 
 			document.getElementById('dz2_graph').style.display="none";
 			document.getElementById('dz1_graph').style.display="none";
 			document.getElementById('dz4_graph').style.display="block";
 			document.getElementById('dz6_graph').style.display="none";
 			document.getElementById('dz7_graph').style.display="none";
+
+			$("#product_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/Frame.png');
+			$("#product_video").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4');
+			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP1.png');
 			
+			//dravideo_play('product_video');
+			
+			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+			
+				
 			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4');
 			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/uv or shunt.mp4');
 			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Box Clamp.mp4');
@@ -260,14 +297,18 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Plugin.mp4');
 			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Drawout.mp4');
 			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/MIL.mp4');
-
+			
 			$("#product_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP1.png');
+			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ4-250/Images/TMR.png');
+			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP-M3.png');
+			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP1.png');
+			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP2.png');
+			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP3.png');
+			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP4.png');
+			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP5.png');
 			
-			dravideo_play(product_video1)
-			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+			//$(".g1").attr('src','Assets/data/Configurator/Asset/Graphs/DZ4.png');
+			//$(".g2").attr('src','Assets/data/Configurator/Asset/Graphs/DZ4_A.png');
 			
 			break;
 
@@ -287,19 +328,14 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
 
+			document.getElementById('drawout_active').style.display="block";
+			document.getElementById('drawout_Disable').style.display="none";
+
 			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-			document.getElementById('box_champ_unable').style.display="none";
+			document.getElementById('box_champ_active').style.display="block";
 
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
 			document.getElementById('PlugIn_Disable').style.display="none";
-
-			document.getElementById('dz1_rating').style.display="none";
-			document.getElementById('dz2_rating').style.display="none";
-			document.getElementById('dz4_rating').style.display="none";
-			document.getElementById('dz6_rating').style.display="inline";
-			document.getElementById('dz7_rating').style.display="none";
+			document.getElementById('plug_in_active').style.display="block";
 
 			document.getElementById('dz1_rating').style.display="none";
 			document.getElementById('dz2_rating').style.display="none";
@@ -320,9 +356,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz6_title').style.display="block";
 			document.getElementById('dz7_title').style.display="none";
 
-			document.getElementById('trip_icon6').style.display="inline";
-			document.getElementById('trip_icon7').style.display="inline";
-			document.getElementById('trip_icon1').style.display="inline";
+			//document.getElementById('trip_icon6').style.display="inline";
+			//document.getElementById('trip_icon7').style.display="inline";
+			//document.getElementById('trip_icon1').style.display="inline";
 			
 			document.getElementById('dz2_graph').style.display="none";
 			document.getElementById('dz1_graph').style.display="none";
@@ -330,6 +366,18 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz6_graph').style.display="block";
 			document.getElementById('dz7_graph').style.display="none";;
 
+			/*document.getElementById('product_display1').style.display="none";
+    		document.getElementById('product_display2').style.display="nonw";
+			document.getElementById('product_display3').style.display="none";
+			document.getElementById('product_display4').style.display="block";
+			document.getElementById('product_display5').style.display="none";*/
+
+			//$("#product_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/Frame.png');
+			$("#product_video").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4');
+			//$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP1.png');
+			
+			//dravideo_play('product_video');
+				
 			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4');
 			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/uv or shunt.mp4');
 			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Box Clamp.mp4');
@@ -340,11 +388,14 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Drawout.mp4');
 			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/MIL.mp4');
 			
-			//$("#product_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4');
-			//$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP1.png');
-			
-			dravideo_play(product_video1)
+		    $("#product_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/Frame.png');
+			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ6-400/Images/TMR.png');
+			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP-M3.png');
+			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP1.png');
+			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP2.png');
+			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP3.png');
+			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP4.png');
+			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP5.png');
 			
 			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 
@@ -371,11 +422,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 
 			document.getElementById('box_champ_Disable').style.display="block";
 			document.getElementById('box_champ_active').style.display="none";
-			document.getElementById('box_champ_unable').style.display="none";
 
+			document.getElementById('PlugIn_Disable').style.display="block";
 			document.getElementById('plug_in_active').style.display="none";
-			document.getElementById('PlugIn_unable').style.display="none";
-			document.getElementById('PlugIn_Disable').style.display="inline";
 
 			document.getElementById('dz1_rating').style.display="none";
 			document.getElementById('dz2_rating').style.display="none";
@@ -396,15 +445,28 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('dz6_title').style.display="none";
 			document.getElementById('dz7_title').style.display="block";
 
-			document.getElementById('trip_icon6').style.display="inline";
-			document.getElementById('trip_icon7').style.display="inline";
-			document.getElementById('trip_icon1').style.display="inline";
+		
+			/*document.getElementById('product_display1').style.display="none";
+    		document.getElementById('product_display2').style.display="none";
+			document.getElementById('product_display3').style.display="none";
+			document.getElementById('product_display4').style.display="none";
+			document.getElementById('product_display5').style.display="block";*/
+
+			//document.getElementById('trip_icon6').style.display="inline";
+			//document.getElementById('trip_icon7').style.display="inline";
+			//document.getElementById('trip_icon1').style.display="inline";
 
 			document.getElementById('dz2_graph').style.display="none";
 			document.getElementById('dz1_graph').style.display="none";
 			document.getElementById('dz4_graph').style.display="none";
 			document.getElementById('dz6_graph').style.display="none";
 			document.getElementById('dz7_graph').style.display="block";
+			
+			$("#product_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/Frame.png');
+			$("#product_video").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4');
+			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP1.png');
+			
+			//dravideo_play('product_video');
 			
 			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4');
 			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/uv or shunt.mp4');
@@ -417,10 +479,13 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/MIL.mp4');
 			
 			$("#product_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP1.png');
-			
-			dravideo_play(product_video1)
+			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ7-800/Images/TMR.png');
+			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP-M3.png');
+			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP1.png');
+			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP2.png');
+			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP3.png');
+			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP4.png');
+			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP5.png');
 			
 			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 
@@ -442,8 +507,7 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 
 
 			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
+			document.getElementById('plug_in_active').style.display="none";
 		//	document.getElementById('box_champ_unable').style.display="none";
 
 			var dz1 = document.getElementById('aux_tac');
@@ -454,7 +518,6 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
 
-			//document.getElementById('box_champ_active').style.display="inline";
 			document.getElementById('product_display1').style.display="block";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="none";
@@ -464,7 +527,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display7').style.display="none";
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
-			dravideo_play(product_video1);
+			//document.getElementById('box_champ_active').style.display="inline";
+			
+			dravideo_play(product_video1,1);
 			break;
 
 			case 7:
@@ -479,8 +544,7 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('box_champ_active').style.display="inline";
 
 			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
+			document.getElementById('plug_in_active').style.display="none";
 
 			var dz1 = document.getElementById('uv_shunt');
 			var dz1_bkp = document.createElement('img');
@@ -492,7 +556,6 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 
 			//document.getElementById('box_champ_active').style.display="inline";
 			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-
 			document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="block";
 			document.getElementById('product_display3').style.display="none";
@@ -503,7 +566,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
 			
-			dravideo_play(product_video2);
+			dravideo_play(product_video2,2);
+			
 			break;
 
 			case 8:
@@ -518,17 +582,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 
 			document.getElementById('box_champ_unable').style.display="inline";
 			document.getElementById('box_champ_active').style.display="none";
-			document.getElementById('box_champ_Disable').style.display="none";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
 
 			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-			
+		
 			document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="block";
@@ -537,9 +593,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display6').style.display="none";
 			document.getElementById('product_display7').style.display="none";
 			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
+			document.getElementById('product_display9').style.display="none";	
 			
-			dravideo_play(product_video3);
+			dravideo_play(product_video3,3);
 			
 			break;
 
@@ -551,17 +607,13 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('rom').innerHTML="";
 			document.getElementById('mil').innerHTML="";
 			//document.getElementById('box_champ').innerHTML="";
+
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
 
 
 			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
-			//document.getElementById('box_champ_active').style.display="none";
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
+			document.getElementById('plug_in_active').style.display="none";
 
 			//document.getElementById('box_champ_active').style.display="none";
 
@@ -585,7 +637,7 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
 			
-			dravideo_play(product_video4);
+			dravideo_play(product_video4,4);
 			
 			break;
 
@@ -599,16 +651,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('rom').innerHTML="";
 			document.getElementById('mil').innerHTML="";
 			//document.getElementById('box_champ').innerHTML="";
+
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
-
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
-			//document.getElementById('box_champ_active').style.display="none";
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
 
 			//document.getElementById('box_champ_active').style.display="none";
 
@@ -619,9 +664,6 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/RearStud_Y.png');
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
-			
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-
 			document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="none";
@@ -631,9 +673,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display7').style.display="none";
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video5);
-			
+
+			dravideo_play(product_video5,5);
 			break;
 
 			case 11:
@@ -649,15 +690,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
 
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('PlugIn_unable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
 			//document.getElementById('box_champ_active').style.display="none";
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
 
-			//document.getElementById('box_champ_active').style.display="none";
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
 
 			var dz1 = document.getElementById('rom');
 			var dz1_bkp = document.createElement('img');
@@ -666,7 +700,7 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/ROM_Y.png');
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
-
+			
 			document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="none";
@@ -677,7 +711,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
 			
-			dravideo_play(product_video6);
+			dravideo_play(product_video6,6);
+			
 			break;
 
 			case 12:
@@ -691,23 +726,21 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('mil').innerHTML="";
 			//document.getElementById('box_champ').innerHTML="";
 
-
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
 
-
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-			document.getElementById('plug_in_active').style.display="none";
-			document.getElementById('PlugIn_unable').style.display="inline";
 			document.getElementById('PlugIn_Disable').style.display="none";
+			document.getElementById('plug_in_active').style.display="none";
 
 			//document.getElementById('box_champ_active').style.display="none";
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
 
+			var dz1 = document.getElementById('plugin_con');
+			var dz1_bkp = document.createElement('img');
+
+			//SalientFeature.setAttribute('id', 'SalientFeature');
+			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Plugiin_Y.png');
+			dz1_bkp.setAttribute('class', 'right_menu_img');
+			dz1.appendChild(dz1_bkp);
 			document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="none";
@@ -717,8 +750,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display7').style.display="block";
 			document.getElementById('product_display8').style.display="none";
 			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video7);
+
+			dravideo_play(product_video7,7);
 			
 			break;
 
@@ -732,20 +765,26 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('rom').innerHTML="";
 			document.getElementById('mil').innerHTML="";
 			//document.getElementById('box_champ').innerHTML="";
+
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
 
 
-			document.getElementById('plug_in_active').style.display="inline";
-			document.getElementById('PlugIn_unable').style.display="none";
 			document.getElementById('PlugIn_Disable').style.display="none";
-
+			document.getElementById('plug_in_active').style.display="none";
 						
-			document.getElementById('drawout_unable').style.display="inline";
-			document.getElementById('drawout_active').style.display="none";
+			document.getElementById('drawout_disable').style.display="inline";
 
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-			document.getElementById('product_display1').style.display="none";
+			document.getElementById('box_champ_active').style.display="none";
+
+			var dz1 = document.getElementById('drawout');
+			var dz1_bkp = document.createElement('img');
+
+			//SalientFeature.setAttribute('id', 'SalientFeature');
+			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Drawout_Y.png');
+			dz1_bkp.setAttribute('class', 'right_menu_img');
+			dz1.appendChild(dz1_bkp);
+				document.getElementById('product_display1').style.display="none";
 			document.getElementById('product_display2').style.display="none";
 			document.getElementById('product_display3').style.display="none";
 			document.getElementById('product_display4').style.display="none";
@@ -754,8 +793,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('product_display7').style.display="none";
 			document.getElementById('product_display8').style.display="block";
 			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video8);
+
+			dravideo_play(product_video8,8);
 			
 			break;
 
@@ -771,18 +810,10 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			document.getElementById('mil').innerHTML="";
 			//document.getElementById('box_champ').innerHTML="";
 
-
 			document.getElementById('box_champ_unable').style.display="none";
 			document.getElementById('box_champ_active').style.display="inline";
 
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('PlugIn_unable').style.display="none";
-			document.getElementById('plug_in_active').style.display="inline";
 
-			document.getElementById('drawout_unable').style.display="none";
-			document.getElementById('drawout_active').style.display="inline";
-
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
 			//document.getElementById('box_champ_active').style.display="none";
 
 			var dz1 = document.getElementById('mil');
@@ -793,18 +824,9 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 			dz1_bkp.setAttribute('class', 'right_menu_img');
 			dz1.appendChild(dz1_bkp);
 
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="block";
-			
-			dravideo_play(product_video9);
+			dravideo_play(product_video9,9);
 			break;
+
 
 		}
 	}
@@ -815,138 +837,214 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 		switch(trip_id)
 		{
 			case 1:
+			
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
-			document.getElementById('tmr').style.display="inline";
-			document.getElementById('m3').style.display="none";
+
+			document.getElementById('itrp_img1').style.display="inline";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="none";
+			
+			
+			document.getElementById('itriptmr').style.display="inline";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="none";
+			document.getElementById('itripm3').style.display="none";
+			
+			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/ROM_Y.png');
+	
 
 			break;
 
 			case 2:
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="inline";
+			document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="inline";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="none";
+			
+	
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="none";
+			document.getElementById('itripm3').style.display="inline"; 
+			
 			break;
 
 			case 3:
-			
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1_Y.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+	
+			document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="inline";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="none";
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="none";
+			
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="inline";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="none";
+			document.getElementById('itripm3').style.display="none";
 
 			break;
 
 			case 4:
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2_Y.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="none";
+		    document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="inline";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="none";
+	
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="inline";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="none";
-
+			document.getElementById('itripm3').style.display="none";
+			
 			break;
 
 			case 5:
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3_Y.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="none";
+			document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="inline";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="none";
+
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="inline";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="none";
+			document.getElementById('itripm3').style.display="none";
 
 			break;
 
 			case 6:
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="none";
+			document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="inline";
+			document.getElementById('itrp_img7').style.display="none";
+			
+			
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="inline";
 			document.getElementById('itrip5').style.display="none";
-
+			document.getElementById('itripm3').style.display="none";
+		
 			break;
 			
 			case 7:
+
+				
 			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
 			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
 			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
 			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
 			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
 			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
 			
-			document.getElementById('tmr').style.display="none";
-			document.getElementById('m3').style.display="none";
+			document.getElementById('itrp_img1').style.display="none";
+			document.getElementById('itrp_img2').style.display="none";
+			document.getElementById('itrp_img3').style.display="none";
+			document.getElementById('itrp_img4').style.display="none";
+			document.getElementById('itrp_img5').style.display="none";
+			document.getElementById('itrp_img6').style.display="none";
+			document.getElementById('itrp_img7').style.display="inline";
+			
+			document.getElementById('itriptmr').style.display="none";
 			document.getElementById('itrip1').style.display="none";
 			document.getElementById('itrip2').style.display="none";
 			document.getElementById('itrip3').style.display="none";
 			document.getElementById('itrip4').style.display="none";
 			document.getElementById('itrip5').style.display="inline";
-
-			break;
+			document.getElementById('itripm3').style.display="none";
 			
+			break;
 
 		}
 	}
@@ -968,19 +1066,17 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 		<div class="acc_main_menu">
 			<div id="aux_tac" onclick="main(6)"></div>
 			<div id="uv_shunt" onclick="main(7)"></div>
-			<div id="box_champ" ><img style="display: none"  src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_unable"><img onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_active"><img style="display: none;" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable"></div>
+			<div id="box_champ" onclick="main(8)"><img style="display: none"  src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_unable"><img  src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_active"><img style="display: none;" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable"></div>
 			<div id="spreaders" onclick="main(9)"></div>
 			<div id="rear_stud" onclick="main(10)"></div>	
 			<div id="rom" onclick="main(11)"></div>
 			<div id="plugin_con" onclick="main(12)">
-					<img  onclick="main(12)" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plug_in_active">
-					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="PlugIn_unable">
+					<img  onclick="unable_video_play(2)" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plug_in_active">
 					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="PlugIn_Disable">
 			</div>
 			<div id="drawout">
 						<img  onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_active">
-						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable">
-						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_unable"></div>
+						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable"></div>
 			<div id="mil" onclick="main(14)"></div>
 		</div>
 
@@ -994,20 +1090,19 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
     	</div>
 		<div class="tmr_bkp"><img src="Assets/data/Configurator/Asset/line2.png"></div>
 		<div class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/DZ1-160/submenu/TMR.png"   class="trip_icon" id="trip_icon1">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP-M3.png"  id="trip_icon2">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP1.png" class="trip_icon" id="trip_icon3">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP2.png" class="trip_icon" id="trip_icon4">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP3.png" class="trip_icon" id="trip_icon5">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP4.png" class="trip_icon" id="trip_icon6">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/DZ1-160/submenu/iTRP5.png" class="trip_icon" id="trip_icon7">
-		
+			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon1">
+			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon2">
+			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon3">
+			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon4">
+			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon5">
+			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon6">
+			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon7">
 		</div>
 		<div class="graph"><img id="dz1_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png"><img id="dz2_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png" style="display:none;"><img id="dz4_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph.png" style="display:none;"><img id="dz6_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png" style="display:none;"><img id="dz7_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png" style="display:none;">
 		</div>
 		<div id="product_display1" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video id="product_video1" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img1" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video1" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video1')"><img id="video_btn1" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1020,8 +1115,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display2" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video id="product_video2" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img2" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video2" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video2')"><img id="video_btn2" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1034,8 +1129,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display3" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video id="product_video3" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img3" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video3" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video3')"><img id="video_btn3" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1048,8 +1143,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display4" style="display:none;"  class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video id="product_video4" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img4" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video4" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video4')"><img id="video_btn4" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1062,8 +1157,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display5" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video id="product_video5" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img5" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video5" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video5')"><img id="video_btn5" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1076,8 +1171,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display6" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video6" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img6" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video6" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/ROM.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video6')"><img id="video_btn6" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1090,8 +1185,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div> 
 		<div id="product_display7" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video id="product_video7" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img7" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video7" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video7')"><img id="video_btn7" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1104,8 +1199,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display8" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video id="product_video8" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img8" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video8" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/Drawout.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video8')"><img id="video_btn8" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1118,8 +1213,8 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div id="product_display9" style="display:none;" class="product_display">
-				<img id="product_img" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video id="product_video9" class="product_video" poster="Assets/data/Configurator/Asset/poster.png">
+				<img id="product_img9" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
+				<video style="width:100%;" id="product_video9" class="product_video"  autoplay>
                     <source src="Assets/data/Configurator/DZ1-160/Videos/MIL.mp4" type="video/mp4">
                 </video>
 				<a href="#" onclick="dravideo_play('product_video9')"><img id="video_btn9" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
@@ -1132,14 +1227,15 @@ document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configura
 				<img id="itrp_img7" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
 		</div>
 		<div class="cur_rating"><img src="Assets/data/Configurator/DZ1-160/160-Rating.png" id="dz1_rating" > <img src="Assets/data/Configurator/DZ2-160/160-Rating.png" id="dz2_rating" style="display: none;"> <img src="Assets/data/Configurator/DZ4-250/250-Rating.png" id="dz4_rating" style="display: none;"> <img src="Assets/data/Configurator/DZ6-400/400-Rating.png"  id="dz6_rating" style="display: none;"> <img src="Assets/data/Configurator/DZ7-800/800-Rating.png" id="dz7_rating" style="display: none;"></div>
-		<div class="footer"><img src="Assets/data/Configurator/DZ1-160/Dimensions-mm.png"  id="dz1_dimension">
+		<div class="footer">
+		<img src="Assets/data/Configurator/DZ1-160/Dimensions-mm.png"  id="dz1_dimension">
 		<img src="Assets/data/Configurator/DZ2-160/Dimensions-mm.png" style="display: none;" id="dz2_dimension" >
-		<img src="Assets/data/Configurator/DZ4-250/Dimensions-mm.png"  style="display: none;" id="dz4_dimension" > 
+		<img src="Assets/data/Configurator/DZ4-250/Dimensions-mm.png"  style="display: none;" id="dz4_dimension" >
 		<img src="Assets/data/Configurator/DZ6-400//Dimensions-mm.png" style="display: none;" id="dz6_dimension" > 
 		<img src="Assets/data/Configurator/DZ7-800//Dimensions-mm.png" style="display: none;" id="dz7_dimension" >
-		<img src="Assets/data/Configurator/Asset/TMR.png"  id="tmr" >
-		<img src="Assets/data/Configurator/Asset/iTrp-M3.png"  id="m3" style="display: none;" >
-		<img  src="Assets/data/Configurator/Asset/iTrp1.png"  id="itrip1" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/TMR.png"  id="itriptmr" >
+		<img src="Assets/data/Configurator/Asset/iTrp-M3.png"  id="itripm3" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp1.png"  id="itrip1" style="display: none;">
 		<img src="Assets/data/Configurator/Asset/iTrp2.png"  id="itrip2" style="display: none;">
 		<img src="Assets/data/Configurator/Asset/iTrp3.png"  id="itrip3" style="display: none;">
 		<img src="Assets/data/Configurator/Asset/iTrp4.png"  id="itrip4" style="display: none;">

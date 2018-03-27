@@ -167,9 +167,17 @@ overflow-x:hidden;
 		height: auto;
 		float: right;
 		margin-top: 69px;
-		margin-right: 14%;
-		transform:scale(0.85);
+		margin-right: 15%;
+		transform:scale(0.8);
 	}
+.product_img{
+	position: absolute;
+    z-index: 199;
+	/*display:none;*/
+	transform: scale(0.9);
+    margin-left:165px;
+    margin-top: 10px;
+}
 .product_display
 {
     position: absolute;
@@ -180,8 +188,12 @@ overflow-x:hidden;
 .itrp_img{
 		position: absolute;
 		top: 0px;
+		/*display:none;*/
 		left: 0px;
-			z-index: 0;
+		z-index: 0;
+		transform: scale(0.9);
+		margin-left: 165px;
+		margin-top: 15px;
 		}
 
 .product_video
@@ -199,6 +211,7 @@ overflow-x:hidden;
     left: 160px;
     z-index: 1;
 	height: 500px;
+	/* display:none; */
 }
 .video_btn{
 	margin-top: -125px;
