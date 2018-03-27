@@ -5,13 +5,10 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-document.getElementById('drawout_Disable').style.display="block";
-document.getElementById('drawout_active').style.display="none";
 
-});
-	function main(id)
+	function main(dz_id,id)
 	{
+		
 		function dravideo_play(vid_id,vid)
 		{
 			//alert(vid);
@@ -32,802 +29,1399 @@ document.getElementById('drawout_active').style.display="none";
 			//$("#itrp_img").css("display", "block");
 			}
 		}
-		switch(id)
+		if(dz_id == 'dz1')
 		{
-			case 1:
-			document.getElementById('dz1').innerHTML="";
-			document.getElementById('dz2').innerHTML="";
-			document.getElementById('dz4').innerHTML="";
-			document.getElementById('dz5').innerHTML="";
-			document.getElementById('dz7').innerHTML="";
+			switch(id)
+			{
+				case '1':
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
 
-			var dz1 = document.getElementById('dz1');
-			var dz1_bkp = document.createElement('img');
-			
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ1-160/DZ1_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-			
-			$('#drawout_Disable').show();
-			$('#drawout_active').hide();
-			
-			//document.getElementById('drawout_active').style.display="block";
-			//document.getElementById('drawout_Disable').style.display="none";
-	
-			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="block";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="block";
-			
-			document.getElementById('dz1_rating').style.display="inline";
-			document.getElementById('dz2_rating').style.display="none";
-			document.getElementById('dz4_rating').style.display="none";
-			document.getElementById('dz6_rating').style.display="none";
-			document.getElementById('dz7_rating').style.display="none";
-
-
-			document.getElementById('dz1_dimension').style.display="inline";
-			document.getElementById('dz2_dimension').style.display="none";
-			document.getElementById('dz4_dimension').style.display="none";
-			document.getElementById('dz6_dimension').style.display="none";
-			document.getElementById('dz7_dimension').style.display="none";
-
-			document.getElementById('dz1_title').style.display="block";
-    		document.getElementById('dz2_title').style.display="none";
-			document.getElementById('dz4_title').style.display="none";
-			document.getElementById('dz6_title').style.display="none";
-			document.getElementById('dz7_title').style.display="none";
-			
-
-			/*document.getElementById('product_display1').style.display="block";
-    		document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";*/
-
-			//document.getElementById('trip_icon6').style.display="inline";
-			//document.getElementById('trip_icon7').style.display="inline";
-			
-			document.getElementById('dz1_graph').style.display="block";
-			document.getElementById('dz2_graph').style.display="none";
-			document.getElementById('dz4_graph').style.display="none";
-			document.getElementById('dz6_graph').style.display="none";
-			document.getElementById('dz7_graph').style.display="none";
-			/*$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');*/
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
-			/*$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP1.png');*/
-			//dravideo_play('product_video');
-			
-			
-			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
-			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4');
-			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4');
-			$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4');
-			$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4');
-			$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/ROM.mp4');
-			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4');
-			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Drawout.mp4');
-			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/MIL.mp4');
-			
-			
-			
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');
-			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ1-160/Images/TMR.png');
-			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png');
-			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP1.png');
-			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP2.png');
-			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP3.png');
-			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP4.png');
-			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP5.png');
-			
-			//$(".g1").attr('src','Assets/data/Configurator/Asset/Graphs/DZ1.png');
-		
-
-
-			break;
-
-			case 2:
-
-			document.getElementById('dz1').innerHTML="";
-			document.getElementById('dz2').innerHTML="";
-			document.getElementById('dz4').innerHTML="";
-			document.getElementById('dz5').innerHTML="";
-			document.getElementById('dz7').innerHTML="";
-			var dz1 = document.getElementById('dz2');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			$('#drawout_Disable').show();
-			$('#drawout_active').hide();
-			//document.getElementById('drawout_active').style.display="block";
-			//document.getElementById('drawout_Disable').style.display="none";
-
-			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="block";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="block";
-
-			
-			document.getElementById('dz1_rating').style.display="none";
-			document.getElementById('dz2_rating').style.display="inline";
-			document.getElementById('dz4_rating').style.display="none";
-			document.getElementById('dz6_rating').style.display="none";
-			document.getElementById('dz7_rating').style.display="none";
-
-
-			document.getElementById('dz1_dimension').style.display="none";
-			document.getElementById('dz2_dimension').style.display="inline";
-			document.getElementById('dz4_dimension').style.display="none";
-			document.getElementById('dz6_dimension').style.display="none";
-			document.getElementById('dz7_dimension').style.display="none";
-
-
-			document.getElementById('dz1_title').style.display="none";
-    		document.getElementById('dz2_title').style.display="block";
-			document.getElementById('dz4_title').style.display="none";
-			document.getElementById('dz6_title').style.display="none";
-			document.getElementById('dz7_title').style.display="none";
-
-			//document.getElementById('trip_icon6').style.display="inline";
-			//document.getElementById('trip_icon7').style.display="inline";
-
-			/*document.getElementById('product_display1').style.display="none";
-    		document.getElementById('product_display2').style.display="block";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";*/
-
-
-			document.getElementById('dz2_graph').style.display="block";
-			document.getElementById('dz1_graph').style.display="none";
-			document.getElementById('dz4_graph').style.display="none";
-			document.getElementById('dz6_graph').style.display="none";
-			document.getElementById('dz7_graph').style.display="none";
-
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
-			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
-			
-			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
-			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
-			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
-			$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
-			$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
-			$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
-			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
-			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
-			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
-			
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
-			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
-			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
-			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
-			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
-			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
-			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
-			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
-			
-			
-			break;
-
-			case 3:
-
-			document.getElementById('dz1').innerHTML="";
-			document.getElementById('dz2').innerHTML="";
-			document.getElementById('dz4').innerHTML="";
-			document.getElementById('dz5').innerHTML="";
-			document.getElementById('dz7').innerHTML="";
-
-			var dz1 = document.getElementById('dz4');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ4-250/DZ4_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			document.getElementById('drawout_active').style.display="block";
-			document.getElementById('drawout_Disable').style.display="none";
-
-			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="block";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="block";
-
-			document.getElementById('dz1_rating').style.display="none";
-			document.getElementById('dz2_rating').style.display="none";
-			document.getElementById('dz4_rating').style.display="inline";
-			document.getElementById('dz6_rating').style.display="none";
-			document.getElementById('dz7_rating').style.display="none";
-
-
-			document.getElementById('dz1_dimension').style.display="none";
-			document.getElementById('dz2_dimension').style.display="none";
-			document.getElementById('dz4_dimension').style.display="inline";
-			document.getElementById('dz6_dimension').style.display="none";
-			document.getElementById('dz7_dimension').style.display="none";
-			
-			document.getElementById('dz1_title').style.display="none";
-    		document.getElementById('dz2_title').style.display="none";
-			document.getElementById('dz4_title').style.display="block";
-			document.getElementById('dz6_title').style.display="none";
-			document.getElementById('dz7_title').style.display="none";
-
-			/*document.getElementById('product_display1').style.display="none";
-    		document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="block";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";*/
-
-			//document.getElementById('trip_icon6').style.display="inline";
-			//document.getElementById('trip_icon7').style.display="inline";
-			//document.getElementById('trip_icon1').style.display="none";
-
-			document.getElementById('dz2_graph').style.display="none";
-			document.getElementById('dz1_graph').style.display="none";
-			document.getElementById('dz4_graph').style.display="block";
-			document.getElementById('dz6_graph').style.display="none";
-			document.getElementById('dz7_graph').style.display="none";
-
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP1.png');
-			
-			//dravideo_play('product_video');
-			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
-			
+				var dz1 = document.getElementById('dz1');
+				var dz1_bkp = document.createElement('img');
 				
-			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4');
-			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/uv or shunt.mp4');
-			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Box Clamp.mp4');
-			$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Spreaders.mp4');
-			$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Rear stud.mp4');
-			$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/ROM.mp4');
-			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Plugin.mp4');
-			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/Drawout.mp4');
-			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ4-250/Videos/MIL.mp4');
-			
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ4-250/Images/Frame.png');
-			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ4-250/Images/TMR.png');
-			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP-M3.png');
-			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP1.png');
-			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP2.png');
-			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP3.png');
-			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP4.png');
-			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ4-250/Images/iTRP5.png');
-			
-			//$(".g1").attr('src','Assets/data/Configurator/Asset/Graphs/DZ4.png');
-			//$(".g2").attr('src','Assets/data/Configurator/Asset/Graphs/DZ4_A.png');
-			
-			break;
-
-     		case 4:
-
-			document.getElementById('dz1').innerHTML="";
-			document.getElementById('dz2').innerHTML="";
-			document.getElementById('dz4').innerHTML="";
-			document.getElementById('dz5').innerHTML="";
-			document.getElementById('dz7').innerHTML="";
-
-			var dz1 = document.getElementById('dz5');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ6-400/DZ6_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			document.getElementById('drawout_active').style.display="block";
-			document.getElementById('drawout_Disable').style.display="none";
-
-			document.getElementById('box_champ_Disable').style.display="none";
-			document.getElementById('box_champ_active').style.display="block";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="block";
-
-			document.getElementById('dz1_rating').style.display="none";
-			document.getElementById('dz2_rating').style.display="none";
-			document.getElementById('dz4_rating').style.display="none";
-			document.getElementById('dz6_rating').style.display="inline";
-			document.getElementById('dz7_rating').style.display="none";
-
-
-			document.getElementById('dz1_dimension').style.display="none";
-			document.getElementById('dz2_dimension').style.display="none";
-			document.getElementById('dz4_dimension').style.display="none";
-			document.getElementById('dz6_dimension').style.display="inline";
-			document.getElementById('dz7_dimension').style.display="none";
-
-			document.getElementById('dz1_title').style.display="none";
-    		document.getElementById('dz2_title').style.display="none";
-			document.getElementById('dz4_title').style.display="none";
-			document.getElementById('dz6_title').style.display="block";
-			document.getElementById('dz7_title').style.display="none";
-
-			//document.getElementById('trip_icon6').style.display="inline";
-			//document.getElementById('trip_icon7').style.display="inline";
-			//document.getElementById('trip_icon1').style.display="inline";
-			
-			document.getElementById('dz2_graph').style.display="none";
-			document.getElementById('dz1_graph').style.display="none";
-			document.getElementById('dz4_graph').style.display="none";
-			document.getElementById('dz6_graph').style.display="block";
-			document.getElementById('dz7_graph').style.display="none";;
-
-			/*document.getElementById('product_display1').style.display="none";
-    		document.getElementById('product_display2').style.display="nonw";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="block";
-			document.getElementById('product_display5').style.display="none";*/
-
-			//$("#product_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4');
-			//$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP1.png');
-			
-			//dravideo_play('product_video');
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ1-160/DZ1_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
 				
-			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4');
-			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/uv or shunt.mp4');
-			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Box Clamp.mp4');
-			$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Spreaders.mp4');
-			$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Rear stud.mp4');
-			$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/ROM.mp4');
-			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ6-400Videos/Plugin.mp4');
-			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/Drawout.mp4');
-			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ6-400/Videos/MIL.mp4');
-			
-		    $("#product_img").attr('src', 'Assets/data/Configurator/DZ6-400/Images/Frame.png');
-			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ6-400/Images/TMR.png');
-			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP-M3.png');
-			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP1.png');
-			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP2.png');
-			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP3.png');
-			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP4.png');
-			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ6-400/Images/iTRP5.png');
-			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
-
-			break;
-
-			case 5:
-
-			document.getElementById('dz1').innerHTML="";
-			document.getElementById('dz2').innerHTML="";
-			document.getElementById('dz4').innerHTML="";
-			document.getElementById('dz5').innerHTML="";
-			document.getElementById('dz7').innerHTML="";
-
-			var dz1 = document.getElementById('dz7');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ7-800/DZ7_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			document.getElementById('drawout_active').style.display="block";
-			document.getElementById('drawout_Disable').style.display="none";
-
-			document.getElementById('box_champ_Disable').style.display="block";
-			document.getElementById('box_champ_active').style.display="none";
-
-			document.getElementById('PlugIn_Disable').style.display="block";
-			document.getElementById('plug_in_active').style.display="none";
-
-			document.getElementById('dz1_rating').style.display="none";
-			document.getElementById('dz2_rating').style.display="none";
-			document.getElementById('dz4_rating').style.display="none";
-			document.getElementById('dz6_rating').style.display="none";
-			document.getElementById('dz7_rating').style.display="inline";
-
-
-			document.getElementById('dz1_dimension').style.display="none";
-			document.getElementById('dz2_dimension').style.display="none";
-			document.getElementById('dz4_dimension').style.display="none";
-			document.getElementById('dz6_dimension').style.display="none";
-			document.getElementById('dz7_dimension').style.display="inline";
-
-			document.getElementById('dz1_title').style.display="none";
-    		document.getElementById('dz2_title').style.display="none";
-			document.getElementById('dz4_title').style.display="none";
-			document.getElementById('dz6_title').style.display="none";
-			document.getElementById('dz7_title').style.display="block";
-
+				
+				//document.getElementById('drawout_Disable').style.display="none";
 		
-			/*document.getElementById('product_display1').style.display="none";
-    		document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="block";*/
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
 
-			//document.getElementById('trip_icon6').style.display="inline";
-			//document.getElementById('trip_icon7').style.display="inline";
-			//document.getElementById('trip_icon1').style.display="inline";
+				document.getElementById('aux_tac_unable_dz1').style.display="inline";
+				document.getElementById('uv_shunt_unable_dz1').style.display="inline";
+				document.getElementById('box_champ_unable_dz1').style.display="inline";
+				document.getElementById('spreaders_unable_dz1').style.display="inline";
+				document.getElementById('rear_stud_unable_dz1').style.display="inline";
+				document.getElementById('plugin_in_unable_dz1').style.display="inline";
+				document.getElementById('rom_unable_dz1').style.display="inline";
+				document.getElementById('mil_unable_dz1').style.display="inline";
 
-			document.getElementById('dz2_graph').style.display="none";
-			document.getElementById('dz1_graph').style.display="none";
-			document.getElementById('dz4_graph').style.display="none";
-			document.getElementById('dz6_graph').style.display="none";
-			document.getElementById('dz7_graph').style.display="block";
+				document.getElementById('aux_tac_unable_dz2').style.display="none";
+				document.getElementById('uv_shunt_unable_dz2').style.display="none";
+				document.getElementById('box_champ_unable_dz2').style.display="none";
+				document.getElementById('spreaders_unable_dz2').style.display="none";
+				document.getElementById('rear_stud_unable_dz2').style.display="none";
+				document.getElementById('rom_unable_dz2').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz4').style.display="none";
+				document.getElementById('uv_shunt_unable_dz4').style.display="none";
+				document.getElementById('box_champ_unable_dz4').style.display="none";
+				document.getElementById('spreaders_unable_dz4').style.display="none";
+				document.getElementById('rear_stud_unable_dz4').style.display="none";
+				document.getElementById('rom_unable_dz4').style.display="none";
+				document.getElementById('plugin_in_unable_dz4').style.display="none";
+				document.getElementById('mil_unable_dz4').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz6').style.display="none";
+				document.getElementById('uv_shunt_unable_dz6').style.display="none";
+				document.getElementById('box_champ_unable_dz6').style.display="none";
+				document.getElementById('spreaders_unable_dz6').style.display="none";
+				document.getElementById('rear_stud_unable_dz6').style.display="none";
+				document.getElementById('rom_unable_dz6').style.display="none";
+				document.getElementById('plugin_in_unable_dz6').style.display="none";
+				document.getElementById('mil_unable_dz6').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz7').style.display="none";
+				document.getElementById('uv_shunt_unable_dz7').style.display="none";
+				document.getElementById('box_champ_unable_dz7').style.display="none";
+				document.getElementById('spreaders_unable_dz7').style.display="none";
+				document.getElementById('rear_stud_unable_dz7').style.display="none";
+				document.getElementById('rom_unable_dz7').style.display="none";
+				document.getElementById('plugin_in_unable_dz7').style.display="none";
+				document.getElementById('mil_unable_dz7').style.display="none";
+
+				document.getElementById('plugin_in_unable_dz2').style.display="none";
+				document.getElementById('mil_unable_dz2').style.display="none";
+				
+
+				document.getElementById('box_champ_unable_dz1').style.display="inline";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('box_champ_active_dz2').style.display="none";
+				document.getElementById('box_champ_Disable_dz2').style.display="none";
+
+				document.getElementById('box_champ_active_dz4').style.display="none";
+				document.getElementById('box_champ_Disable_dz4').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('box_champ_active_dz7').style.display="none";
+				document.getElementById('box_champ_Disable_dz7').style.display="none";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="inline";
+
+				document.getElementById('drawout_unable_dz2').style.display="none";
+				document.getElementById('drawout_active_dz2').style.display="none";
+				document.getElementById('drawout_Disable_dz2').style.display="none";				
+
+				document.getElementById('drawout_unable_dz4').style.display="none";
+				document.getElementById('drawout_active_dz4').style.display="none";
+				document.getElementById('drawout_Disable_dz4').style.display="none";
+
+				document.getElementById('drawout_unable_dz6').style.display="none";
+				document.getElementById('drawout_active_dz6').style.display="none";
+				document.getElementById('drawout_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz7').style.display="none";
+				document.getElementById('drawout_active_dz7').style.display="none";
+				document.getElementById('drawout_Disable_dz7').style.display="none";
+
+				document.getElementById('plugin_in_active_dz1').style.display="none";
+				document.getElementById('plugin_in_Disable_dz1').style.display="none";
+
+				document.getElementById('plugin_in_active_dz4').style.display="none";
+				document.getElementById('plugin_in_Disable_dz4').style.display="none";
+
+				document.getElementById('plugin_in_active_dz6').style.display="none";
+				document.getElementById('plugin_in_Disable_dz6').style.display="none";
+
+				document.getElementById('plugin_in_active_dz7').style.display="none";
+				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+				
+				document.getElementById('dz1_rating').style.display="inline";
+				document.getElementById('dz2_rating').style.display="none";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="inline";
+				document.getElementById('dz2_dimension').style.display="none";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+				document.getElementById('dz1_title').style.display="block";
+	    		document.getElementById('dz2_title').style.display="none";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+				
+
+				/*document.getElementById('product_display1').style.display="block";
+	    		document.getElementById('product_display2').style.display="none";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+				
+				document.getElementById('dz1_graph').style.display="block";
+				document.getElementById('dz2_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+				/*$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');*/
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
+				/*$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP1.png');*/
+				//dravideo_play('product_video');
+				
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ1-160/Videos/MIL.mp4');
+				
+				
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ1-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ1-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ1-160/Images/iTRP5.png');
+				
+				//$(".g1").attr('src','Assets/data/Configurator/Asset/Graphs/DZ1.png');
 			
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/Frame.png');
-			$("#product_video").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4');
-			$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP1.png');
-			
-			//dravideo_play('product_video');
-			
-			$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4');
-			$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/uv or shunt.mp4');
-			$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Box Clamp.mp4');
-			$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Spreaders.mp4');
-			$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Rear stud.mp4');
-			$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/ROM.mp4');
-			$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ7-800Videos/Plugin.mp4');
-			$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/Drawout.mp4');
-			$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ7-800/Videos/MIL.mp4');
-			
-			$("#product_img").attr('src', 'Assets/data/Configurator/DZ7-800/Images/Frame.png');
-			$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ7-800/Images/TMR.png');
-			$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP-M3.png');
-			$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP1.png');
-			$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP2.png');
-			$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP3.png');
-			$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP4.png');
-			$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ7-800/Images/iTRP5.png');
-			
-			$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
-
-
-			break;
-
-
-			case 6:
-			
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="none";
-		//	document.getElementById('box_champ_unable').style.display="none";
-
-			var dz1 = document.getElementById('aux_tac');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			document.getElementById('product_display1').style.display="block";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-			//document.getElementById('box_champ_active').style.display="inline";
-			
-			dravideo_play(product_video1,1);
-			break;
-
-			case 7:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			document.getElementById('box_champ_unable').style.display="none";			
-			document.getElementById('box_champ_active').style.display="inline";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="none";
-
-			var dz1 = document.getElementById('uv_shunt');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/UV_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			//document.getElementById('box_champ_active').style.display="inline";
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="block";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video2,2);
-			
-			break;
-
-			case 8:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="inline";
-			document.getElementById('box_champ_active').style.display="none";
-
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-		
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="block";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";	
-			
-			dravideo_play(product_video3,3);
-			
-			break;
-
-			case 9:
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="none";
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-			var dz1 = document.getElementById('spreaders');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Spreaders_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			$('#aux_tac').css("background-image", "url(Assets/data/Configurator/Asset/Button/Aux-Tac_B.png");
-
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="block";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video4,4);
-			
-			break;
-
-			case 10:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-			var dz1 = document.getElementById('rear_stud');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/RearStud_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="block";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-
-			dravideo_play(product_video5,5);
-			break;
-
-			case 11:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-
-			var dz1 = document.getElementById('rom');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/ROM_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-			
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="block";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-			
-			dravideo_play(product_video6,6);
-			
-			break;
-
-			case 12:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="none";
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-			var dz1 = document.getElementById('plugin_con');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Plugiin_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-			document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="block";
-			document.getElementById('product_display8').style.display="none";
-			document.getElementById('product_display9').style.display="none";
-
-			dravideo_play(product_video7,7);
-			
-			break;
-
-			case 13:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-
-			document.getElementById('PlugIn_Disable').style.display="none";
-			document.getElementById('plug_in_active').style.display="none";
-						
-			document.getElementById('drawout_disable').style.display="inline";
-
-			document.getElementById('box_champ_active').style.display="none";
-
-			var dz1 = document.getElementById('drawout');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/Drawout_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-				document.getElementById('product_display1').style.display="none";
-			document.getElementById('product_display2').style.display="none";
-			document.getElementById('product_display3').style.display="none";
-			document.getElementById('product_display4').style.display="none";
-			document.getElementById('product_display5').style.display="none";
-			document.getElementById('product_display6').style.display="none";
-			document.getElementById('product_display7').style.display="none";
-			document.getElementById('product_display8').style.display="block";
-			document.getElementById('product_display9').style.display="none";
-
-			dravideo_play(product_video8,8);
-			
-			break;
-
-			case 14:
-
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('aux_tac').innerHTML="";
-			document.getElementById('uv_shunt').innerHTML="";
-			document.getElementById('spreaders').innerHTML="";
-			document.getElementById('rear_stud').innerHTML="";
-			document.getElementById('rom').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			document.getElementById('mil').innerHTML="";
-			//document.getElementById('box_champ').innerHTML="";
-
-			document.getElementById('box_champ_unable').style.display="none";
-			document.getElementById('box_champ_active').style.display="inline";
-
-
-			//document.getElementById('box_champ_active').style.display="none";
-
-			var dz1 = document.getElementById('mil');
-			var dz1_bkp = document.createElement('img');
-
-			//SalientFeature.setAttribute('id', 'SalientFeature');
-			dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/MIL_Y.png');
-			dz1_bkp.setAttribute('class', 'right_menu_img');
-			dz1.appendChild(dz1_bkp);
-
-			dravideo_play(product_video9,9);
-			break;
 
 
+				break;
+
+				case 2:
+
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz2').style.display="block";
+				document.getElementById('uv_shunt_unable_dz2').style.display="block";
+				document.getElementById('box_champ_unable_dz2').style.display="block";
+				document.getElementById('spreaders_unable_dz2').style.display="block";
+				document.getElementById('rear_stud_unable_dz2').style.display="block";
+				document.getElementById('plugin_in_unable_dz2').style.display="block";
+				document.getElementById('mil_unable_dz2').style.display="block";
+				
+
+
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="block";
+
+				
+				document.getElementById('plugin_in_active_dz1').style.display="block";
+				document.getElementById('plugin_in_Disable_dz1').style.display="block";
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+			}
+		}
+
+		if(dz_id == 'dz2')
+		{
+
+			switch(id)
+			{
+				case '1':
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz1').style.display="none";
+				document.getElementById('uv_shunt_unable_dz1').style.display="none";
+				document.getElementById('box_champ_unable_dz1').style.display="none";
+				document.getElementById('spreaders_unable_dz1').style.display="none";
+				document.getElementById('rear_stud_unable_dz1').style.display="none";
+				document.getElementById('plugin_in_unable_dz1').style.display="none";
+				document.getElementById('rom_unable_dz1').style.display="none";
+				document.getElementById('mil_unable_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz2').style.display="inline";
+				document.getElementById('uv_shunt_unable_dz2').style.display="inline";
+				document.getElementById('box_champ_unable_dz2').style.display="inline";
+				document.getElementById('spreaders_unable_dz2').style.display="inline";
+				document.getElementById('rear_stud_unable_dz2').style.display="inline";
+				document.getElementById('rom_unable_dz2').style.display="inline";
+
+				document.getElementById('aux_tac_unable_dz4').style.display="none";
+				document.getElementById('uv_shunt_unable_dz4').style.display="none";
+				document.getElementById('box_champ_unable_dz4').style.display="none";
+				document.getElementById('spreaders_unable_dz4').style.display="none";
+				document.getElementById('rear_stud_unable_dz4').style.display="none";
+				document.getElementById('rom_unable_dz4').style.display="none";
+				document.getElementById('plugin_in_unable_dz4').style.display="none";
+				document.getElementById('mil_unable_dz4').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz6').style.display="none";
+				document.getElementById('uv_shunt_unable_dz6').style.display="none";
+				document.getElementById('box_champ_unable_dz6').style.display="none";
+				document.getElementById('spreaders_unable_dz6').style.display="none";
+				document.getElementById('rear_stud_unable_dz6').style.display="none";
+				document.getElementById('rom_unable_dz6').style.display="none";
+				document.getElementById('plugin_in_unable_dz6').style.display="none";
+				document.getElementById('mil_unable_dz6').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz7').style.display="none";
+				document.getElementById('uv_shunt_unable_dz7').style.display="none";
+				document.getElementById('box_champ_unable_dz7').style.display="none";
+				document.getElementById('spreaders_unable_dz7').style.display="none";
+				document.getElementById('rear_stud_unable_dz7').style.display="none";
+				document.getElementById('rom_unable_dz7').style.display="none";
+				document.getElementById('plugin_in_unable_dz7').style.display="none";
+				document.getElementById('mil_unable_dz7').style.display="none";
+
+				document.getElementById('plugin_in_unable_dz2').style.display="inline";
+				document.getElementById('mil_unable_dz2').style.display="inline";
+				
+
+
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('box_champ_active_dz2').style.display="none";
+				document.getElementById('box_champ_Disable_dz2').style.display="none";
+
+				document.getElementById('box_champ_active_dz4').style.display="none";
+				document.getElementById('box_champ_Disable_dz4').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="none";
+
+				document.getElementById('drawout_unable_dz2').style.display="none";
+				document.getElementById('drawout_active_dz2').style.display="none";
+				document.getElementById('drawout_Disable_dz2').style.display="inline";
+
+				document.getElementById('drawout_unable_dz4').style.display="none";
+				document.getElementById('drawout_active_dz4').style.display="none";
+				document.getElementById('drawout_Disable_dz4').style.display="none";
+
+				document.getElementById('drawout_unable_dz6').style.display="none";
+				document.getElementById('drawout_active_dz6').style.display="none";
+				document.getElementById('drawout_Disable_dz6').style.display="none";
+				
+				document.getElementById('plugin_in_active_dz1').style.display="none";
+				document.getElementById('plugin_in_Disable_dz1').style.display="none";
+
+				document.getElementById('plugin_in_active_dz2').style.display="none";
+				document.getElementById('plugin_in_Disable_dz2').style.display="none";
+
+				document.getElementById('plugin_in_active_dz4').style.display="none";
+				document.getElementById('plugin_in_Disable_dz4').style.display="none";
+
+				document.getElementById('plugin_in_active_dz6').style.display="none";
+				document.getElementById('plugin_in_Disable_dz6').style.display="none";
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+				case 2:
+
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				$('#drawout_Disable').show();
+				$('#drawout_active').hide();
+				//document.getElementById('drawout_active').style.display="block";
+				//document.getElementById('drawout_Disable').style.display="none";
+
+				document.getElementById('box_champ_Disable').style.display="none";
+				document.getElementById('box_champ_active').style.display="block";
+
+				document.getElementById('PlugIn_Disable').style.display="none";
+				document.getElementById('plug_in_active').style.display="block";
+
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+			}
+		}
+
+
+		if(dz_id == 'dz4')
+		{
+
+			switch(id)
+			{
+				case '1':
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz4');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ4-250/DZ4_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz1').style.display="none";
+				document.getElementById('uv_shunt_unable_dz1').style.display="none";
+				document.getElementById('box_champ_unable_dz1').style.display="none";
+				document.getElementById('spreaders_unable_dz1').style.display="none";
+				document.getElementById('rear_stud_unable_dz1').style.display="none";
+				document.getElementById('plugin_in_unable_dz1').style.display="none";
+				document.getElementById('rom_unable_dz1').style.display="none";
+				document.getElementById('mil_unable_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz2').style.display="none";
+				document.getElementById('uv_shunt_unable_dz2').style.display="none";
+				document.getElementById('box_champ_unable_dz2').style.display="none";
+				document.getElementById('spreaders_unable_dz2').style.display="none";
+				document.getElementById('rear_stud_unable_dz2').style.display="none";
+				document.getElementById('rom_unable_dz2').style.display="none";
+				document.getElementById('plugin_in_unable_dz2').style.display="none";
+				document.getElementById('mil_unable_dz2').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz4').style.display="inline";
+				document.getElementById('uv_shunt_unable_dz4').style.display="inline";
+				document.getElementById('box_champ_unable_dz4').style.display="inline";
+				document.getElementById('spreaders_unable_dz4').style.display="inline";
+				document.getElementById('rear_stud_unable_dz4').style.display="inline";
+				document.getElementById('rom_unable_dz4').style.display="inline";
+				document.getElementById('plugin_in_unable_dz4').style.display="inline";
+				document.getElementById('mil_unable_dz4').style.display="inline";
+				
+				document.getElementById('aux_tac_unable_dz6').style.display="none";
+				document.getElementById('uv_shunt_unable_dz6').style.display="none";
+				document.getElementById('box_champ_unable_dz6').style.display="none";
+				document.getElementById('spreaders_unable_dz6').style.display="none";
+				document.getElementById('rear_stud_unable_dz6').style.display="none";
+				document.getElementById('rom_unable_dz6').style.display="none";
+				document.getElementById('plugin_in_unable_dz6').style.display="none";
+				document.getElementById('mil_unable_dz6').style.display="none";
+
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('box_champ_active_dz2').style.display="none";
+				document.getElementById('box_champ_Disable_dz2').style.display="none";
+
+				document.getElementById('box_champ_active_dz4').style.display="none";
+				document.getElementById('box_champ_Disable_dz4').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="none";
+
+				document.getElementById('drawout_unable_dz2').style.display="none";
+				document.getElementById('drawout_active_dz2').style.display="none";
+				document.getElementById('drawout_Disable_dz2').style.display="none";
+
+				document.getElementById('drawout_unable_dz4').style.display="inline";
+				document.getElementById('drawout_active_dz4').style.display="none";
+				document.getElementById('drawout_Disable_dz4').style.display="none";
+
+				document.getElementById('drawout_unable_dz6').style.display="none";
+				document.getElementById('drawout_active_dz6').style.display="none";
+				document.getElementById('drawout_Disable_dz6').style.display="none";
+				
+				document.getElementById('plugin_in_active_dz1').style.display="none";
+				document.getElementById('plugin_in_Disable_dz1').style.display="none";
+
+				document.getElementById('plugin_in_active_dz2').style.display="none";
+				document.getElementById('plugin_in_Disable_dz2').style.display="none";
+
+				document.getElementById('plugin_in_active_dz4').style.display="none";
+				document.getElementById('plugin_in_Disable_dz4').style.display="none";
+
+				document.getElementById('plugin_in_active_dz6').style.display="none";
+				document.getElementById('plugin_in_Disable_dz6').style.display="none";
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+				case 2:
+
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				$('#drawout_Disable').show();
+				$('#drawout_active').hide();
+				//document.getElementById('drawout_active').style.display="block";
+				//document.getElementById('drawout_Disable').style.display="none";
+
+				document.getElementById('box_champ_Disable').style.display="none";
+				document.getElementById('box_champ_active').style.display="block";
+
+				document.getElementById('PlugIn_Disable').style.display="none";
+				document.getElementById('plug_in_active').style.display="block";
+
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+			}
+		}
+
+	if(dz_id == 'dz6')
+		{
+
+			switch(id)
+			{
+				case '1':
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz5');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ6-400/DZ6_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz1').style.display="none";
+				document.getElementById('uv_shunt_unable_dz1').style.display="none";
+				document.getElementById('box_champ_unable_dz1').style.display="none";
+				document.getElementById('spreaders_unable_dz1').style.display="none";
+				document.getElementById('rear_stud_unable_dz1').style.display="none";
+				document.getElementById('plugin_in_unable_dz1').style.display="none";
+				document.getElementById('rom_unable_dz1').style.display="none";
+				document.getElementById('mil_unable_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz2').style.display="none";
+				document.getElementById('uv_shunt_unable_dz2').style.display="none";
+				document.getElementById('box_champ_unable_dz2').style.display="none";
+				document.getElementById('spreaders_unable_dz2').style.display="none";
+				document.getElementById('rear_stud_unable_dz2').style.display="none";
+				document.getElementById('rom_unable_dz2').style.display="none";
+				document.getElementById('plugin_in_unable_dz2').style.display="none";
+				document.getElementById('mil_unable_dz2').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz4').style.display="none";
+				document.getElementById('uv_shunt_unable_dz4').style.display="none";
+				document.getElementById('box_champ_unable_dz4').style.display="none";
+				document.getElementById('spreaders_unable_dz4').style.display="none";
+				document.getElementById('rear_stud_unable_dz4').style.display="none";
+				document.getElementById('rom_unable_dz4').style.display="none";
+				document.getElementById('plugin_in_unable_dz4').style.display="none";
+				document.getElementById('mil_unable_dz4').style.display="none";
+				
+				document.getElementById('aux_tac_unable_dz6').style.display="inline";
+				document.getElementById('uv_shunt_unable_dz6').style.display="inline";
+				document.getElementById('box_champ_unable_dz6').style.display="inline";
+				document.getElementById('spreaders_unable_dz6').style.display="inline";
+				document.getElementById('rear_stud_unable_dz6').style.display="inline";
+				document.getElementById('rom_unable_dz6').style.display="inline";
+				document.getElementById('plugin_in_unable_dz6').style.display="inline";
+				document.getElementById('mil_unable_dz6').style.display="inline";
+
+				document.getElementById('aux_tac_unable_dz7').style.display="none";
+				document.getElementById('uv_shunt_unable_dz7').style.display="none";
+				document.getElementById('box_champ_unable_dz7').style.display="none";
+				document.getElementById('spreaders_unable_dz7').style.display="none";
+				document.getElementById('rear_stud_unable_dz7').style.display="none";
+				document.getElementById('rom_unable_dz7').style.display="none";
+				document.getElementById('plugin_in_unable_dz7').style.display="none";
+				document.getElementById('mil_unable_dz7').style.display="none";
+
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('box_champ_active_dz2').style.display="none";
+				document.getElementById('box_champ_Disable_dz2').style.display="none";
+
+				document.getElementById('box_champ_active_dz4').style.display="none";
+				document.getElementById('box_champ_Disable_dz4').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('box_champ_active_dz7').style.display="none";
+				document.getElementById('box_champ_Disable_dz7').style.display="none";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="none";
+
+				document.getElementById('drawout_unable_dz2').style.display="none";
+				document.getElementById('drawout_active_dz2').style.display="none";
+				document.getElementById('drawout_Disable_dz2').style.display="none";
+
+				document.getElementById('drawout_unable_dz4').style.display="none";
+				document.getElementById('drawout_active_dz4').style.display="none";
+				document.getElementById('drawout_Disable_dz4').style.display="none";
+
+				document.getElementById('drawout_unable_dz6').style.display="inline";
+				document.getElementById('drawout_active_dz6').style.display="none";
+				document.getElementById('drawout_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz7').style.display="none";
+				document.getElementById('drawout_active_dz7').style.display="none";
+				document.getElementById('drawout_Disable_dz7').style.display="none";
+				
+				document.getElementById('plugin_in_active_dz1').style.display="none";
+				document.getElementById('plugin_in_Disable_dz1').style.display="none";
+
+				document.getElementById('plugin_in_active_dz2').style.display="none";
+				document.getElementById('plugin_in_Disable_dz2').style.display="none";
+
+				document.getElementById('plugin_in_active_dz4').style.display="none";
+				document.getElementById('plugin_in_Disable_dz4').style.display="none";
+
+				document.getElementById('plugin_in_active_dz6').style.display="none";
+				document.getElementById('plugin_in_Disable_dz6').style.display="none";
+
+				document.getElementById('plugin_in_active_dz7').style.display="none";
+				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+				case 2:
+
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				$('#drawout_Disable').show();
+				$('#drawout_active').hide();
+				//document.getElementById('drawout_active').style.display="block";
+				//document.getElementById('drawout_Disable').style.display="none";
+
+				document.getElementById('box_champ_Disable').style.display="none";
+				document.getElementById('box_champ_active').style.display="block";
+
+				document.getElementById('PlugIn_Disable').style.display="none";
+				document.getElementById('plug_in_active').style.display="block";
+
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+			}
+		}
+
+	if(dz_id == 'dz7')
+		{
+
+			switch(id)
+			{
+				case '1':
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz7');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ7-800/DZ7_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('aux_tac_active_dz1').style.display="none";
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('spreaders_active_dz1').style.display="none";
+				document.getElementById('rear_stud_active_dz1').style.display="none";
+				document.getElementById('rom_active_dz1').style.display="none";
+				document.getElementById('mil_active_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz1').style.display="none";
+				document.getElementById('uv_shunt_unable_dz1').style.display="none";
+				document.getElementById('box_champ_unable_dz1').style.display="none";
+				document.getElementById('spreaders_unable_dz1').style.display="none";
+				document.getElementById('rear_stud_unable_dz1').style.display="none";
+				document.getElementById('plugin_in_unable_dz1').style.display="none";
+				document.getElementById('rom_unable_dz1').style.display="none";
+				document.getElementById('mil_unable_dz1').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz2').style.display="none";
+				document.getElementById('uv_shunt_unable_dz2').style.display="none";
+				document.getElementById('box_champ_unable_dz2').style.display="none";
+				document.getElementById('spreaders_unable_dz2').style.display="none";
+				document.getElementById('rear_stud_unable_dz2').style.display="none";
+				document.getElementById('rom_unable_dz2').style.display="none";
+				document.getElementById('plugin_in_unable_dz2').style.display="none";
+				document.getElementById('mil_unable_dz2').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz4').style.display="none";
+				document.getElementById('uv_shunt_unable_dz4').style.display="none";
+				document.getElementById('box_champ_unable_dz4').style.display="none";
+				document.getElementById('spreaders_unable_dz4').style.display="none";
+				document.getElementById('rear_stud_unable_dz4').style.display="none";
+				document.getElementById('rom_unable_dz4').style.display="none";
+				document.getElementById('plugin_in_unable_dz4').style.display="none";
+				document.getElementById('mil_unable_dz4').style.display="none";
+				
+				document.getElementById('aux_tac_unable_dz6').style.display="none";
+				document.getElementById('uv_shunt_unable_dz6').style.display="none";
+				document.getElementById('box_champ_unable_dz6').style.display="none";
+				document.getElementById('spreaders_unable_dz6').style.display="none";
+				document.getElementById('rear_stud_unable_dz6').style.display="none";
+				document.getElementById('rom_unable_dz6').style.display="none";
+				document.getElementById('plugin_in_unable_dz6').style.display="none";
+				document.getElementById('mil_unable_dz6').style.display="none";
+
+				document.getElementById('aux_tac_unable_dz7').style.display="inline";
+				document.getElementById('uv_shunt_unable_dz7').style.display="inline";
+				document.getElementById('box_champ_unable_dz7').style.display="none";
+				document.getElementById('spreaders_unable_dz7').style.display="inline";
+				document.getElementById('rear_stud_unable_dz7').style.display="inline";
+				document.getElementById('rom_unable_dz7').style.display="inline";
+				document.getElementById('plugin_in_unable_dz7').style.display="none";
+				document.getElementById('mil_unable_dz7').style.display="inline";
+
+				document.getElementById('box_champ_active_dz1').style.display="none";
+				document.getElementById('box_champ_Disable_dz1').style.display="none";
+
+				document.getElementById('box_champ_active_dz2').style.display="none";
+				document.getElementById('box_champ_Disable_dz2').style.display="none";
+
+				document.getElementById('box_champ_active_dz4').style.display="none";
+				document.getElementById('box_champ_Disable_dz4').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('box_champ_active_dz6').style.display="none";
+				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+				document.getElementById('box_champ_active_dz7').style.display="none";
+				document.getElementById('box_champ_Disable_dz7').style.display="inline";
+
+				document.getElementById('drawout_unable_dz1').style.display="none";
+				document.getElementById('drawout_active_dz1').style.display="none";
+				document.getElementById('drawout_Disable_dz1').style.display="none";
+
+				document.getElementById('drawout_unable_dz2').style.display="none";
+				document.getElementById('drawout_active_dz2').style.display="none";
+				document.getElementById('drawout_Disable_dz2').style.display="none";
+
+				document.getElementById('drawout_unable_dz4').style.display="none";
+				document.getElementById('drawout_active_dz4').style.display="none";
+				document.getElementById('drawout_Disable_dz4').style.display="none";
+
+				document.getElementById('drawout_unable_dz6').style.display="none";
+				document.getElementById('drawout_active_dz6').style.display="none";
+				document.getElementById('drawout_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz7').style.display="inline";
+				document.getElementById('drawout_active_dz7').style.display="none";
+				document.getElementById('drawout_Disable_dz7').style.display="none";
+				
+				document.getElementById('plugin_in_active_dz1').style.display="none";
+				document.getElementById('plugin_in_Disable_dz1').style.display="none";
+
+				document.getElementById('plugin_in_active_dz2').style.display="none";
+				document.getElementById('plugin_in_Disable_dz2').style.display="none";
+
+				document.getElementById('plugin_in_active_dz4').style.display="none";
+				document.getElementById('plugin_in_Disable_dz4').style.display="none";
+
+				document.getElementById('plugin_in_active_dz6').style.display="none";
+				document.getElementById('plugin_in_Disable_dz6').style.display="none";
+
+				document.getElementById('plugin_in_active_dz7').style.display="none";
+				document.getElementById('plugin_in_Disable_dz7').style.display="inline";
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+				case 2:
+
+				document.getElementById('dz1').innerHTML="";
+				document.getElementById('dz2').innerHTML="";
+				document.getElementById('dz4').innerHTML="";
+				document.getElementById('dz5').innerHTML="";
+				document.getElementById('dz7').innerHTML="";
+				var dz1 = document.getElementById('dz2');
+				var dz1_bkp = document.createElement('img');
+
+				//SalientFeature.setAttribute('id', 'SalientFeature');
+				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
+				dz1_bkp.setAttribute('class', 'right_menu_img');
+				dz1.appendChild(dz1_bkp);
+
+				$('#drawout_Disable').show();
+				$('#drawout_active').hide();
+				//document.getElementById('drawout_active').style.display="block";
+				//document.getElementById('drawout_Disable').style.display="none";
+
+				document.getElementById('box_champ_Disable').style.display="none";
+				document.getElementById('box_champ_active').style.display="block";
+
+				document.getElementById('PlugIn_Disable').style.display="none";
+				document.getElementById('plug_in_active').style.display="block";
+
+				
+				document.getElementById('dz1_rating').style.display="none";
+				document.getElementById('dz2_rating').style.display="inline";
+				document.getElementById('dz4_rating').style.display="none";
+				document.getElementById('dz6_rating').style.display="none";
+				document.getElementById('dz7_rating').style.display="none";
+
+
+				document.getElementById('dz1_dimension').style.display="none";
+				document.getElementById('dz2_dimension').style.display="inline";
+				document.getElementById('dz4_dimension').style.display="none";
+				document.getElementById('dz6_dimension').style.display="none";
+				document.getElementById('dz7_dimension').style.display="none";
+
+
+				document.getElementById('dz1_title').style.display="none";
+	    		document.getElementById('dz2_title').style.display="block";
+				document.getElementById('dz4_title').style.display="none";
+				document.getElementById('dz6_title').style.display="none";
+				document.getElementById('dz7_title').style.display="none";
+
+				//document.getElementById('trip_icon6').style.display="inline";
+				//document.getElementById('trip_icon7').style.display="inline";
+
+				/*document.getElementById('product_display1').style.display="none";
+	    		document.getElementById('product_display2').style.display="block";
+				document.getElementById('product_display3').style.display="none";
+				document.getElementById('product_display4').style.display="none";
+				document.getElementById('product_display5').style.display="none";*/
+
+
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#product_video").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#itrp_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				
+				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+				
+				$("#product_video1 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4');
+				$("#product_video2 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4');
+				$("#product_video3 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4');
+				$("#product_video4 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4');
+				$("#product_video5 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4');
+				$("#product_video6 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/ROM.mp4');
+				$("#product_video7 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4');
+				$("#product_video8 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/Drawout.mp4');
+				$("#product_video9 > source").attr('src', 'Assets/data/Configurator/DZ2-160/Videos/MIL.mp4');
+				
+				$("#product_img").attr('src', 'Assets/data/Configurator/DZ2-160/Images/Frame.png');
+				$("#itrp_img1").attr('src', 'Assets/data/Configurator/DZ2-160/Images/TMR.png');
+				$("#itrp_img2").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP-M3.png');
+				$("#itrp_img3").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP1.png');
+				$("#itrp_img4").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP2.png');
+				$("#itrp_img5").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP3.png');
+				$("#itrp_img6").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP4.png');
+				$("#itrp_img7").attr('src', 'Assets/data/Configurator/DZ2-160/Images/iTRP5.png');
+				
+				
+				break;
+
+			}
 		}
 	}
 
@@ -1054,30 +1648,265 @@ document.getElementById('drawout_active').style.display="none";
 <div id="main_container">
 	<div class="main_header"><a href="index.html"><img src="Assets/RangeOverview_White.png" /></a><img src="Assets/ProductDefinition_Blue.png" class="prod_def"/></div>
 	<div class="dz_product">
-		<div id="dz1" onclick="main(1)"></div>
-		<div id="dz2" onclick="main(2)"></div>
-		<div id="dz4" onclick="main(3)"></div>
-		<div id="dz5" onclick="main(4)"></div>
-		<div id="dz7" onclick="main(5)"></div>		
+		<div id="dz1" onclick="main('dz1','1')"></div>
+		<div id="dz2" onclick="main('dz2','1')"></div>
+		<div id="dz4" onclick="main('dz4','1')"></div>
+		<div id="dz5" onclick="main('dz6','1')"></div>
+		<div id="dz7" onclick="main('dz7','1')"></div>		
 	</div>
 
 	<div class="acc_menu">
 		<div class="access"><img src="Assets/data/Configurator/Asset/line1.png"></div>
 		<div class="acc_main_menu">
-			<div id="aux_tac" onclick="main(6)"></div>
-			<div id="uv_shunt" onclick="main(7)"></div>
-			<div id="box_champ" onclick="main(8)"><img style="display: none"  src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_unable"><img  src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_active"><img style="display: none;" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable"></div>
-			<div id="spreaders" onclick="main(9)"></div>
-			<div id="rear_stud" onclick="main(10)"></div>	
-			<div id="rom" onclick="main(11)"></div>
-			<div id="plugin_con" onclick="main(12)">
-					<img  onclick="unable_video_play(2)" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plug_in_active">
-					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="PlugIn_Disable">
+			<div id="aux_tac_dz1" onclick="main(6)" style="display: inline;">
+				<img  src="Assets/data/Configurator/Asset/Button/Aux-Tac_B.png" id="aux_tac_unable_dz1">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png" id="aux_tac_active_dz1">
 			</div>
-			<div id="drawout">
-						<img  onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_active">
-						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable"></div>
-			<div id="mil" onclick="main(14)"></div>
+
+			<div id="uv_shunt_dz1" onclick="main(7)" style="display: inline;">
+				<img src="Assets/data/Configurator/Asset/Button/UV_B.png" id="uv_shunt_unable_dz1">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/UV_Y.png" id="uv_shunt_active_dz1">
+			</div>
+
+			<div id="box_champ" style="display: inline;">
+				<img  src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_unable_dz1">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_active_dz1">
+				<img style="display: none;" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable_dz1">
+			</div>
+
+			<div id="spreaders_dz1" onclick="main(9)" style="display: inline;">
+				<img src="Assets/data/Configurator/Asset/Button/Spreaders_B.png" id="spreaders_unable_dz1">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/Spreaders_Y.png" id="spreaders_active_dz1">
+			</div>
+
+			<div id="rear_stud_dz1" onclick="main(10)" style="display: inline;">
+				<img  src="Assets/data/Configurator/Asset/Button/RearStud_B.png" id="rear_stud_unable_dz1">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_Y.png" id="rear_stud_active_dz1">
+			</div>	
+
+			<div id="rom_dz1" onclick="main(11)" style="display: inline;">
+				<img  src="Assets/data/Configurator/Asset/Button/ROM_B.png" id="rom_unable_dz1">
+				<img style="display: none" onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/ROM_Y.png" id="rom_active_dz1">
+			</div>
+
+			<div id="plugin_con_dz1" style="display: inline;">
+					<img  onclick="main(12)" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plugin_in_unable_dz1">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="plugin_in_active_dz1">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="plugin_in_Disable_dz1">
+			</div>
+
+			<div id="drawout_dz1" style="display: inline;">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_unable_dz1">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_active_dz1">
+						<img  src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable_dz1"></div>
+
+			<div id="mil_dz1" onclick="main(14)" style="display: inline;">
+				<img src="Assets/data/Configurator/Asset/Button/MIL_B.png" id="mil_unable_dz1">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/MIL_Y.png" id="mil_active_dz1">
+			</div>
+
+			<!-- DZ2 -->
+			<div id="aux_tac_dz2" onclick="main(6)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_B.png" id="aux_tac_unable_dz2">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png" id="aux_tac_active_dz2">
+			</div>
+			
+			<div id="uv_shunt_dz2" onclick="main(7)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/UV_B.png" id="uv_shunt_unable_dz2">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/UV_Y.png" id="uv_shunt_active_dz2">
+			</div>
+
+			<div id="box_champ"  style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_unable_dz2">
+				<img style="display: none"   src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_active_dz2">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable_dz2">
+			</div>
+
+			<div id="spreaders_dz2" onclick="main(9)" style="display: inline;">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/Spreaders_B.png" id="spreaders_unable_dz2">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/Spreaders_Y.png" id="spreaders_active_dz2">
+			</div>
+
+			<div id="rear_stud_dz2" onclick="main(10)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_B.png" id="rear_stud_unable_dz2">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_Y.png" id="rear_stud_dz2">
+			</div>	
+
+			<div id="rom_dz2" onclick="main(11)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/ROM_B.png" id="rom_unable_dz2">
+				<img style="display: none" onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/ROM_Y.png" id="rom_active_dz2">
+			</div>
+
+			<div id="plugin_con_dz2" style="display: inline;">
+					<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plugin_in_unable_dz2">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="plugin_in_active_dz2">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="plugin_in_Disable_dz2">
+			</div>
+
+			<div id="drawout_dz2" style="display: inline;">
+						<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_unable_dz2">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_active_dz2">
+						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable_dz2">
+			</div>
+
+			<div id="mil_dz2" onclick="main(14)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/MIL_B.png" id="mil_unable_dz2">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/MIL_Y.png" id="mil_active_dz2">
+			</div>
+
+
+			<!-- DZ4 -->
+
+			<div id="aux_tac_dz4" onclick="main(6)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_B.png" id="aux_tac_unable_dz4">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png" id="aux_tac_active_dz4">
+			</div>
+			
+			<div id="uv_shunt_dz4" onclick="main(7)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/UV_B.png" id="uv_shunt_unable_dz4">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/UV_Y.png" id="uv_shunt_active_dz4">
+			</div>
+
+			<div id="box_champ"  style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_unable_dz4">
+				<img style="display: none"   src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_active_dz4">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable_dz4">
+			</div>
+
+			<div id="spreaders_dz4" onclick="main(9)" style="display: inline;">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/Spreaders_B.png" id="spreaders_unable_dz4">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/Spreaders_Y.png" id="spreaders_active_dz4">
+			</div>
+
+			<div id="rear_stud_dz4" onclick="main(10)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_B.png" id="rear_stud_unable_dz4">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_Y.png" id="rear_stud_dz4">
+			</div>	
+
+			<div id="rom_dz4" onclick="main(11)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/ROM_B.png" id="rom_unable_dz4">
+				<img style="display: none" onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/ROM_Y.png" id="rom_active_dz4">
+			</div>
+
+			<div id="plugin_con_dz4" style="display: inline;">
+					<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plugin_in_unable_dz4">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="plugin_in_active_dz4">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="plugin_in_Disable_dz4">
+			</div>
+
+			<div id="drawout_dz4" style="display: inline;">
+						<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_unable_dz4">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_active_dz4">
+						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable_dz4">
+			</div>
+
+			<div id="mil_dz4" onclick="main(14)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/MIL_B.png" id="mil_unable_dz4">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/MIL_Y.png" id="mil_active_dz4">
+			</div>
+
+
+			<!-- DZ6 -->
+
+			<div id="aux_tac_dz6" onclick="main(6)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_B.png" id="aux_tac_unable_dz6">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png" id="aux_tac_active_dz6">
+			</div>
+			
+			<div id="uv_shunt_dz6" onclick="main(7)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/UV_B.png" id="uv_shunt_unable_dz6">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/UV_Y.png" id="uv_shunt_active_dz6">
+			</div>
+
+			<div id="box_champ"  style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_unable_dz6">
+				<img style="display: none"   src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_active_dz6">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable_dz6">
+			</div>
+
+			<div id="spreaders_dz6" onclick="main(9)" style="display: inline;">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/Spreaders_B.png" id="spreaders_unable_dz6">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/Spreaders_Y.png" id="spreaders_active_dz6">
+			</div>
+
+			<div id="rear_stud_dz6" onclick="main(10)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_B.png" id="rear_stud_unable_dz6">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_Y.png" id="rear_stud_dz6">
+			</div>	
+
+			<div id="rom_dz6" onclick="main(11)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/ROM_B.png" id="rom_unable_dz6">
+				<img style="display: none" onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/ROM_Y.png" id="rom_active_dz6">
+			</div>
+
+			<div id="plugin_con_dz6" style="display: inline;">
+					<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plugin_in_unable_dz6">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="plugin_in_active_dz6">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="plugin_in_Disable_dz6">
+			</div>
+
+			<div id="drawout_dz6" style="display: inline;">
+						<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_unable_dz6">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_active_dz6">
+						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable_dz6">
+			</div>
+
+			<div id="mil_dz6" onclick="main(14)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/MIL_B.png" id="mil_unable_dz6">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/MIL_Y.png" id="mil_active_dz6">
+			</div>
+
+
+			<!-- DZ7 -->
+
+			<div id="aux_tac_dz7" onclick="main(6)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_B.png" id="aux_tac_unable_dz7">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png" id="aux_tac_active_dz7">
+			</div>
+			
+			<div id="uv_shunt_dz7" onclick="main(7)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/UV_B.png" id="uv_shunt_unable_dz7">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/UV_Y.png" id="uv_shunt_active_dz7">
+			</div>
+
+			<div id="box_champ"  style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_B.png" id="box_champ_unable_dz7">
+				<img style="display: none"   src="Assets/data/Configurator/Asset/Button/BoxClamp_Y.png" id="box_champ_active_dz7">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/BoxClamp_G.png" id="box_champ_Disable_dz7">
+			</div>
+
+			<div id="spreaders_dz7" onclick="main(9)" style="display: inline;">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/Spreaders_B.png" id="spreaders_unable_dz7">
+				<img onclick="main(8)" style="display: none" src="Assets/data/Configurator/Asset/Button/Spreaders_Y.png" id="spreaders_active_dz7">
+			</div>
+
+			<div id="rear_stud_dz7" onclick="main(10)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_B.png" id="rear_stud_unable_dz7">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/RearStud_Y.png" id="rear_stud_dz7">
+			</div>	
+
+			<div id="rom_dz7" onclick="main(11)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/ROM_B.png" id="rom_unable_dz7">
+				<img style="display: none" onclick="main(8)"  src="Assets/data/Configurator/Asset/Button/ROM_Y.png" id="rom_active_dz7">
+			</div>
+
+			<div id="plugin_con_dz7" style="display: inline;">
+					<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Plugiin_B.png" id="plugin_in_unable_dz7">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_Y.png" id="plugin_in_active_dz7">
+					<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Plugiin_G.png" id="plugin_in_Disable_dz7">
+			</div>
+
+			<div id="drawout_dz7" style="display: inline;">
+						<img  style="display: none" src="Assets/data/Configurator/Asset/Button/Drawout_B.png" id="drawout_unable_dz7">
+						<img style="display: none;" onclick="main(13)" src="Assets/data/Configurator/Asset/Button/Drawout_Y.png" id="drawout_active_dz7">
+						<img style="display: none;" src="Assets/data/Configurator/Asset/Button/Drawout_G.png" id="drawout_Disable_dz7">
+			</div>
+
+			<div id="mil_dz7" onclick="main(14)" style="display: inline;">
+				<img style="display: none" src="Assets/data/Configurator/Asset/Button/MIL_B.png" id="mil_unable_dz7">
+				<img style="display: none"  src="Assets/data/Configurator/Asset/Button/MIL_Y.png" id="mil_active_dz7">
+			</div>
+
 		</div>
 
         <div class="trip_section">
