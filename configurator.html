@@ -5,7 +5,350 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
+	function trp_main(dz_id,trp_id){
+			//alert(dz_id);
+			//alert(trp_id);
+			/*$("#product_img").attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/Frame.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/TMR.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP-M3.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP1.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP2.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP3.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP4.png');
+			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP5.png');*/
+			if(dz_id == 'DZ1-160')
+			{
+				//alert('if');	
+				switch(trp_id)
+				{
+					case 'TMR':
+						//alert('TMR');
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'M3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-1':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-2':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-4':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-5':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+					break;
+				}
+			
+			}
+			if(dz_id == 'DZ2-160')
+			{
+				switch(trp_id)
+				{
+					case 'TMR':
+						//alert('TMR');
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'M3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-1':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-2':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-4':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-5':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+					break;
+				}
+			
+			}
+			if(dz_id == 'DZ4-250')
+			{
+				switch(trp_id)
+				{
+		
+					case 'M3':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-1':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-2':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-3':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-4':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-5':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+					break;
+				}
+			
+			}
+			if(dz_id == 'DZ6-400')
+			{
+				switch(trp_id)
+				{
+					case 'TMR':
+						//alert('TMR');
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'M3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-1':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-2':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-3':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-4':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-5':
+						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+					break;
+				}
+			
+			}
+			if(dz_id == 'DZ7-800')
+			{
+				switch(trp_id)
+				{
+					case 'M3':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-1':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-2':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-3':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-4':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					break;
+					case 'iTRP-5':
+						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
+						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
+						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
+						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
+						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
+						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+					break;
+				}
+			
+			}
 
+
+
+
+
+
+
+	}
 	function main(dz_id,id)
 	{
 		
@@ -47,7 +390,21 @@
 				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ1-160/DZ1_Y.png');
 				dz1_bkp.setAttribute('class', 'right_menu_img');
 				dz1.appendChild(dz1_bkp);
-				
+
+				document.getElementById('trip_menu_dz1').style.display="block";
+				document.getElementById('trip_menu_dz2').style.display="none";
+				document.getElementById('trip_menu_dz4').style.display="none";
+				document.getElementById('trip_menu_dz6').style.display="none";
+				document.getElementById('trip_menu_dz7').style.display="none";
+
+				document.getElementById('itrpTMR').style.display="inline";
+				document.getElementById('itrpM3').style.display="none";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
+
 				
 				//document.getElementById('drawout_Disable').style.display="none";
 		
@@ -1641,6 +1998,20 @@
 				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ2-160/DZ2_Y.png');
 				dz1_bkp.setAttribute('class', 'right_menu_img');
 				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('trip_menu_dz1').style.display="none";
+				document.getElementById('trip_menu_dz2').style.display="block";
+				document.getElementById('trip_menu_dz4').style.display="none";
+				document.getElementById('trip_menu_dz6').style.display="none";
+				document.getElementById('trip_menu_dz7').style.display="none";
+
+				document.getElementById('itrpTMR').style.display="inline";
+				document.getElementById('itrpM3').style.display="none";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
 
 				document.getElementById('aux_tac_active_dz1').style.display="none";
 				document.getElementById('uv_shunt_active_dz1').style.display="none";
@@ -3250,6 +3621,20 @@
 				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ4-250/DZ4_Y.png');
 				dz1_bkp.setAttribute('class', 'right_menu_img');
 				dz1.appendChild(dz1_bkp);
+
+				document.getElementById('trip_menu_DZ1-160').style.display="none";
+				document.getElementById('trip_menu_DZ2-160').style.display="none";
+				document.getElementById('trip_menu_DZ4-250').style.display="block";
+				document.getElementById('trip_menu_DZ6-400').style.display="none";
+				document.getElementById('trip_menu_DZ7-800').style.display="none";
+
+				document.getElementById('itrpTMR').style.display="none";
+				document.getElementById('itrpM3').style.display="inline";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
 
 				document.getElementById('aux_tac_active_dz1').style.display="none";
 				document.getElementById('box_champ_active_dz1').style.display="none";
@@ -5036,6 +5421,21 @@
 				dz1_bkp.setAttribute('class', 'right_menu_img');
 				dz1.appendChild(dz1_bkp);
 
+				document.getElementById('trip_menu_DZ1-160').style.display="none";
+				document.getElementById('trip_menu_DZ2-160').style.display="none";
+				document.getElementById('trip_menu_DZ4-250').style.display="none";
+				document.getElementById('trip_menu_DZ6-400').style.display="block";
+				document.getElementById('trip_menu_DZ7-800').style.display="none";
+
+
+				document.getElementById('itrpTMR').style.display="inline";
+				document.getElementById('itrpM3').style.display="none";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
+
 				document.getElementById('aux_tac_active_dz1').style.display="none";
 				document.getElementById('box_champ_active_dz1').style.display="none";
 				document.getElementById('spreaders_active_dz1').style.display="none";
@@ -6715,6 +7115,21 @@
 				dz1_bkp.setAttribute('class', 'right_menu_img');
 				dz1.appendChild(dz1_bkp);
 
+				document.getElementById('trip_menu_DZ1-160').style.display="none";
+				document.getElementById('trip_menu_DZ2-160').style.display="none";
+				document.getElementById('trip_menu_DZ4-250').style.display="none";
+				document.getElementById('trip_menu_DZ6-400').style.display="none";
+				document.getElementById('trip_menu_DZ7-800').style.display="block";
+
+
+				document.getElementById('itrpTMR').style.display="none";
+				document.getElementById('itrpM3').style.display="inline";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
+
 				document.getElementById('aux_tac_active_dz1').style.display="none";
 				document.getElementById('box_champ_active_dz1').style.display="none";
 				document.getElementById('spreaders_active_dz1').style.display="none";
@@ -8271,15 +8686,6 @@
 		switch(trip_id)
 		{
 			case 1:
-			
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
-			
 
 			document.getElementById('itrp_img1').style.display="inline";
 			document.getElementById('itrp_img2').style.display="none";
@@ -8305,15 +8711,6 @@
 
 			case 2:
 
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
-			
 			document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="inline";
 			document.getElementById('itrp_img3').style.display="none";
@@ -8334,15 +8731,6 @@
 			break;
 
 			case 3:
-
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1_Y.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 	
 			document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="none";
@@ -8365,15 +8753,6 @@
 
 			case 4:
 
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2_Y.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
-			
 		    document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="none";
 			document.getElementById('itrp_img3').style.display="none";
@@ -8393,15 +8772,6 @@
 			break;
 
 			case 5:
-
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3_Y.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
 			document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="none";
@@ -8422,15 +8792,6 @@
 			break;
 
 			case 6:
-
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
 			
 			document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="none";
@@ -8453,15 +8814,6 @@
 			
 			case 7:
 
-				
-			document.getElementById('trip_icon1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-			document.getElementById('trip_icon2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-			document.getElementById('trip_icon3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-1.png');
-			document.getElementById('trip_icon4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-2.png');
-			document.getElementById('trip_icon5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/ITRP-3.png');
-			document.getElementById('trip_icon6').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-			document.getElementById('trip_icon7').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
-			
 			document.getElementById('itrp_img1').style.display="none";
 			document.getElementById('itrp_img2').style.display="none";
 			document.getElementById('itrp_img3').style.display="none";
@@ -8759,49 +9111,47 @@
     	</div>
 		<div class="tmr_bkp"><img src="Assets/data/Configurator/Asset/line2.png"></div>
 		<div id="trip_menu_dz1" class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_iconTMR_dz1">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_iconM3_dz1">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon1_dz1">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_dz1">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon3_dz1">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_dz1">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon5_dz1">
+			<img onclick="trp_main('DZ1-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
+			<img onclick="trp_main('DZ1-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ1-160','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+			<img onclick="trp_main('DZ1-160','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+			<img onclick="trp_main('DZ1-160','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+			<img onclick="trp_main('DZ1-160','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+			<img onclick="trp_main('DZ1-160','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
 		</div>
-		<div id="trip_menu_dz2" class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_iconTMR_dz2">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_iconM3_dz2">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon1_dz2">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_dz2">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon3_dz2">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_dz2">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon5_dz2">
+		<div id="trip_menu_dz2" class="trip_menu" style="display: none;">
+			<img onclick="trp_main('DZ2-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
+			<img onclick="trp_main('DZ2-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ2-160','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+			<img onclick="trp_main('DZ2-160','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+			<img onclick="trp_main('DZ2-160','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+			<img onclick="trp_main('DZ2-160','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+			<img onclick="trp_main('DZ2-160','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
 		</div>
-		<div id="trip_menu_dz4" class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_iconTMR_dz4">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_iconM3_dz4">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon1_dz4">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_dz4">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon3_dz4">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_dz4">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon5_dz4">
+		<div id="trip_menu_dz4" class="trip_menu" style="display: none;">
+			<img onclick="trp_main('DZ4-250','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ4-250','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+			<img onclick="trp_main('DZ4-250','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+			<img onclick="trp_main('DZ4-250','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+			<img onclick="trp_main('DZ4-250','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+			<img onclick="trp_main('DZ4-250','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
 		</div>
-		<div id="trip_menu_dz6" class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_iconTMR_dz6">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_iconM3_dz6">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon1_dz6">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_dz6">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon3_dz6">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_dz6">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon5_dz6">
+		<div id="trip_menu_dz6" class="trip_menu" style="display: none;">
+			<img onclick="trp_main('DZ6-400','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
+			<img onclick="trp_main('DZ6-400','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ6-400','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+			<img onclick="trp_main('DZ6-400','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+			<img onclick="trp_main('DZ6-400','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+			<img onclick="trp_main('DZ6-400','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+			<img onclick="trp_main('DZ6-400','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
 		</div>
-		<div id="trip_menu_dz7" class="trip_menu">
-			<img onclick="trip_selection(1)" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_iconTMR_dz7">
-			<img onclick="trip_selection(2)" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_iconM3_dz7">
-			<img onclick="trip_selection(3)" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon1_dz7">
-			<img onclick="trip_selection(4)" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_dz7">
-			<img onclick="trip_selection(5)" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon3_dz7">
-			<img onclick="trip_selection(6)" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_dz7">
-			<img onclick="trip_selection(7)" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon5_dz7">
+		<div id="trip_menu_dz7" class="trip_menu" style="display: none;">
+			<img onclick="trp_main('DZ7-800','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ7-800','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+			<img onclick="trp_main('DZ7-800','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+			<img onclick="trp_main('DZ7-800','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+			<img onclick="trp_main('DZ7-800','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+			<img onclick="trp_main('DZ7-800','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
 		</div>
 		<div class="graph"><img id="dz1_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png"><img id="dz2_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png" style="display:none;"><img id="dz4_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph.png" style="display:none;"><img id="dz6_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png" style="display:none;"><img id="dz7_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png" style="display:none;">
 		</div>
