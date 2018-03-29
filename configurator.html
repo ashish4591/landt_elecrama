@@ -22,139 +22,381 @@
 				switch(trp_id)
 				{
 					case 'TMR':
-						//alert('TMR');
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					
+						document.getElementById('trip_icon_TMR_active').style.display="inline";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="none";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="inline";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
+
 					case 'M3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="none";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="inline";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-1':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="none";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="inline";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-2':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="none";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="inline";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="none";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="inline";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-4':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="none";
+						document.getElementById('trip_icon_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="inline";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-5':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+						document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon_M3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon_iTRP-5_active').style.display="inline";
+
+						document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon_M3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon_iTRP-5').style.display="none";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="inline";
+
 					break;
 				}
 			
 			}
+
 			if(dz_id == 'DZ2-160')
 			{
+				//alert(dz_id);
 				switch(trp_id)
 				{
 					case 'TMR':
-						//alert('TMR');
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					
+						document.getElementById('trip_icon2_TMR_active').style.display="inline";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="none";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="inline";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
+
 					case 'M3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="inline";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-1':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="inline";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-2':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="inline";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="inline";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-4':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="inline";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-5':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+						document.getElementById('trip_icon2_TMR_active').style.display="none";
+						document.getElementById('trip_icon2_M3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon2_iTRP-5_active').style.display="inline";
+
+						document.getElementById('trip_icon2_TMR').style.display="inline";
+						document.getElementById('trip_icon2_M3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon2_iTRP-5').style.display="none";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="inline";
+
 					break;
 				}
 			
@@ -165,52 +407,160 @@
 				{
 		
 					case 'M3':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="inline";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-1':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="inline";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-2':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="inline";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-3':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="inline";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-4':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="inline";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-5':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon4_M3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon4_iTRP-5_active').style.display="inline";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon4_M3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon4_iTRP-5').style.display="none";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="inline";
+
 					break;
 				}
 			
@@ -220,68 +570,188 @@
 				switch(trp_id)
 				{
 					case 'TMR':
-						//alert('TMR');
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR_Y.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+					
+						document.getElementById('trip_icon6_TMR_active').style.display="inline";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="none";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="inline";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
+
 					case 'M3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="inline";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-1':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="inline";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-2':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="inline";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-3':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="inline";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-4':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="none";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5').style.display="inline";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="inline";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-5':
-						document.getElementById('trip_icon_TMR').setAttribute('src', 'Assets/data/Configurator/Asset/Button/TMR.png');
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+						document.getElementById('trip_icon6_TMR_active').style.display="none";
+						document.getElementById('trip_icon6_M3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon6_iTRP-5_active').style.display="inline";
+
+						document.getElementById('trip_icon6_TMR').style.display="inline";
+						document.getElementById('trip_icon6_M3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon6_iTRP-5').style.display="none";
+
+						document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="inline";
+
 					break;
 				}
 			
@@ -290,63 +760,166 @@
 			{
 				switch(trp_id)
 				{
+					
 					case 'M3':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="inline";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-1':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1_Y.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="inline";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-2':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2_Y.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//ocument.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="inline";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-3':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3_Y.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="inline";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-4':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4_Y.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="none";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5').style.display="inline";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="inline";
+						document.getElementById('itrp5').style.display="none";
+
 					break;
 					case 'iTRP-5':
-						document.getElementById('trip_icon_M3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-M3.png');
-						document.getElementById('trip_icon_iTRP-1').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-1.png');
-						document.getElementById('trip_icon_iTRP-2').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-2.png');
-						document.getElementById('trip_icon_iTRP-3').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-3.png');
-						document.getElementById('trip_icon_iTRP-4').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-4.png');
-						document.getElementById('trip_icon_iTRP-5').setAttribute('src', 'Assets/data/Configurator/Asset/Button/iTRP-5_Y.png');
+						//document.getElementById('trip_icon_TMR_active').style.display="none";
+						document.getElementById('trip_icon7_M3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-2_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-3_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-4_active').style.display="none";
+						document.getElementById('trip_icon7_iTRP-5_active').style.display="inline";
+
+						//document.getElementById('trip_icon_TMR').style.display="inline";
+						document.getElementById('trip_icon7_M3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-1').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-2').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-3').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-4').style.display="inline";
+						document.getElementById('trip_icon7_iTRP-5').style.display="none";
+
+						//document.getElementById('itrpTMR').style.display="none";
+						document.getElementById('itrpM3').style.display="none";
+						document.getElementById('itrp1').style.display="none";
+						document.getElementById('itrp2').style.display="none";
+						document.getElementById('itrp3').style.display="none";
+						document.getElementById('itrp4').style.display="none";
+						document.getElementById('itrp5').style.display="inline";
+
 					break;
 				}
 			
 			}
-
-
-
-
-
-
 
 	}
 	function main(dz_id,id)
@@ -377,40 +950,10 @@
 			switch(id)
 			{
 				case '1':
-<<<<<<< HEAD
-				document.getElementById('dz1').innerHTML="";
-				document.getElementById('dz2').innerHTML="";
-				document.getElementById('dz4').innerHTML="";
-				document.getElementById('dz5').innerHTML="";
-				document.getElementById('dz7').innerHTML="";
 
-				var dz1 = document.getElementById('dz1');
-				var dz1_bkp = document.createElement('img');
-				
-				//SalientFeature.setAttribute('id', 'SalientFeature');
-				dz1_bkp.setAttribute('src', 'Assets/data/Configurator/DZ1-160/DZ1_Y.png');
-				dz1_bkp.setAttribute('class', 'right_menu_img');
-				dz1.appendChild(dz1_bkp);
-
-				document.getElementById('trip_menu_dz1').style.display="block";
-				document.getElementById('trip_menu_dz2').style.display="none";
-				document.getElementById('trip_menu_dz4').style.display="none";
-				document.getElementById('trip_menu_dz6').style.display="none";
-				document.getElementById('trip_menu_dz7').style.display="none";
-
-				document.getElementById('itrpTMR').style.display="inline";
-				document.getElementById('itrpM3').style.display="none";
-				document.getElementById('itrp1').style.display="none";
-				document.getElementById('itrp2').style.display="none";
-				document.getElementById('itrp3').style.display="none";
-				document.getElementById('itrp4').style.display="none";
-				document.getElementById('itrp5').style.display="none";
-
-				
-=======
 	
 				common_code(dz_id);
->>>>>>> 1dc6dd3a1a11a8600db06a6f2038ba966bf538d3
+
 				//document.getElementById('drawout_Disable').style.display="none";
 		
 				document.getElementById('aux_tac_active_dz1').style.display="inline";
@@ -545,6 +1088,20 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById('trip_menu_dz1').style.display="block";
+				document.getElementById('trip_menu_dz2').style.display="none";
+				document.getElementById('trip_menu_dz4').style.display="none";
+				document.getElementById('trip_menu_dz6').style.display="none";
+				document.getElementById('trip_menu_dz7').style.display="none";
+
+				document.getElementById('itrpTMR').style.display="inline";
+				document.getElementById('itrpM3').style.display="none";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
 				
 				break;
 
@@ -2985,11 +3542,11 @@
 
 				common_code(dz_id);
 
-				document.getElementById('trip_menu_DZ1-160').style.display="none";
-				document.getElementById('trip_menu_DZ2-160').style.display="none";
-				document.getElementById('trip_menu_DZ4-250').style.display="block";
-				document.getElementById('trip_menu_DZ6-400').style.display="none";
-				document.getElementById('trip_menu_DZ7-800').style.display="none";
+				document.getElementById('trip_menu_dz1').style.display="none";
+				document.getElementById('trip_menu_dz2').style.display="none";
+				document.getElementById('trip_menu_dz4').style.display="block";
+				document.getElementById('trip_menu_dz6').style.display="none";
+				document.getElementById('trip_menu_dz7').style.display="none";
 
 				document.getElementById('itrpTMR').style.display="none";
 				document.getElementById('itrpM3').style.display="inline";
@@ -4435,11 +4992,11 @@
 
 				common_code(dz_id);
 
-				document.getElementById('trip_menu_DZ1-160').style.display="none";
-				document.getElementById('trip_menu_DZ2-160').style.display="none";
-				document.getElementById('trip_menu_DZ4-250').style.display="none";
-				document.getElementById('trip_menu_DZ6-400').style.display="block";
-				document.getElementById('trip_menu_DZ7-800').style.display="none";
+				document.getElementById('trip_menu_dz1').style.display="none";
+				document.getElementById('trip_menu_dz2').style.display="none";
+				document.getElementById('trip_menu_dz4').style.display="none";
+				document.getElementById('trip_menu_dz6').style.display="block";
+				document.getElementById('trip_menu_dz7').style.display="none";
 
 
 				document.getElementById('itrpTMR').style.display="inline";
@@ -5749,20 +6306,7 @@
 
 				//common_code(dz_id);
 
-				document.getElementById('trip_menu_DZ1-160').style.display="none";
-				document.getElementById('trip_menu_DZ2-160').style.display="none";
-				document.getElementById('trip_menu_DZ4-250').style.display="none";
-				document.getElementById('trip_menu_DZ6-400').style.display="none";
-				document.getElementById('trip_menu_DZ7-800').style.display="block";
-
-
-				document.getElementById('itrpTMR').style.display="none";
-				document.getElementById('itrpM3').style.display="inline";
-				document.getElementById('itrp1').style.display="none";
-				document.getElementById('itrp2').style.display="none";
-				document.getElementById('itrp3').style.display="none";
-				document.getElementById('itrp4').style.display="none";
-				document.getElementById('itrp5').style.display="none";
+				
 
 				document.getElementById('aux_tac_active_dz1').style.display="none";
 				document.getElementById('box_champ_active_dz1').style.display="none";
@@ -6054,7 +6598,20 @@
 			
 				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 				
-				
+				document.getElementById('trip_menu_dz1').style.display="none";
+				document.getElementById('trip_menu_dz2').style.display="none";
+				document.getElementById('trip_menu_dz4').style.display="none";
+				document.getElementById('trip_menu_dz6').style.display="none";
+				document.getElementById('trip_menu_dz7').style.display="block";
+
+
+				document.getElementById('itrpTMR').style.display="none";
+				document.getElementById('itrpM3').style.display="inline";
+				document.getElementById('itrp1').style.display="none";
+				document.getElementById('itrp2').style.display="none";
+				document.getElementById('itrp3').style.display="none";
+				document.getElementById('itrp4').style.display="none";
+				document.getElementById('itrp5').style.display="none";
 				
 				break;
 
@@ -7715,47 +8272,144 @@
     	</div>
 		<div class="tmr_bkp"><img src="Assets/data/Configurator/Asset/line2.png"></div>
 		<div id="trip_menu_dz1" class="trip_menu">
-			<img onclick="trp_main('DZ1-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
+
+			<img onclick="trp_main('DZ1-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR.png"   class="trip_icon" id="trip_icon_TMR">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR_active">
+
 			<img onclick="trp_main('DZ1-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3_active">
+
 			<img onclick="trp_main('DZ1-160','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-1_Y.png" class="trip_icon" id="trip_icon_iTRP-1_active">
+
 			<img onclick="trp_main('DZ1-160','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-2_Y.png" class="trip_icon" id="trip_icon_iTRP-2_active">
+
 			<img onclick="trp_main('DZ1-160','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-3_Y.png" class="trip_icon" id="trip_icon_iTRP-3_active">
+
 			<img onclick="trp_main('DZ1-160','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-4_Y.png" class="trip_icon" id="trip_icon_iTRP-4_active">
+
 			<img onclick="trp_main('DZ1-160','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
+	
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz2" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ2-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
-			<img onclick="trp_main('DZ2-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
-			<img onclick="trp_main('DZ2-160','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
-			<img onclick="trp_main('DZ2-160','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
-			<img onclick="trp_main('DZ2-160','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
-			<img onclick="trp_main('DZ2-160','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
-			<img onclick="trp_main('DZ2-160','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
+
+			<img onclick="trp_main('DZ2-160','TMR')" src="Assets/data/Configurator/Asset/Button/TMR.png"   class="trip_icon" id="trip_icon2_TMR">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon2_TMR_active">
+
+			<img onclick="trp_main('DZ2-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon2_M3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon2_M3_active">
+
+			<img onclick="trp_main('DZ2-160','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon2_iTRP-1">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-1_Y.png" class="trip_icon" id="trip_icon2_iTRP-1_active">
+
+			<img onclick="trp_main('DZ2-160','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon2_iTRP-2">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-2_Y.png" class="trip_icon" id="trip_icon2_iTRP-2_active">
+
+			<img onclick="trp_main('DZ2-160','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon2_iTRP-3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-3_Y.png" class="trip_icon" id="trip_icon2_iTRP-3_active">
+
+			<img onclick="trp_main('DZ2-160','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon2_iTRP-4">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-4_Y.png" class="trip_icon" id="trip_icon2_iTRP-4_active">
+
+			<img onclick="trp_main('DZ2-160','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon2_iTRP-5">
+	
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon2_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz4" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ4-250','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3">
-			<img onclick="trp_main('DZ4-250','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
-			<img onclick="trp_main('DZ4-250','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
-			<img onclick="trp_main('DZ4-250','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
-			<img onclick="trp_main('DZ4-250','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
-			<img onclick="trp_main('DZ4-250','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
+			<img onclick="trp_main('DZ4-250','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon4_M3">
+			
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon4_M3_active">
+
+			<img onclick="trp_main('DZ4-250','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon4_iTRP-1">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-1_Y.png" class="trip_icon" id="trip_icon4_iTRP-1_active">
+			
+			<img onclick="trp_main('DZ4-250','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon4_iTRP-2">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-2_Y.png" class="trip_icon" id="trip_icon4_iTRP-2_active">
+			
+			<img onclick="trp_main('DZ4-250','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon4_iTRP-3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-3_Y.png" class="trip_icon" id="trip_icon4_iTRP-3_active">
+			
+			<img onclick="trp_main('DZ4-250','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon4_iTRP-4">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-4_Y.png" class="trip_icon" id="trip_icon4_iTRP-4_active">
+						
+			<img onclick="trp_main('DZ4-250','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon4_iTRP-5">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon4_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz6" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ6-400','TMR')" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR">
-			<img onclick="trp_main('DZ6-400','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
-			<img onclick="trp_main('DZ6-400','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
-			<img onclick="trp_main('DZ6-400','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
-			<img onclick="trp_main('DZ6-400','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
-			<img onclick="trp_main('DZ6-400','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
-			<img onclick="trp_main('DZ6-400','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
+
+			<img onclick="trp_main('DZ6-400','TMR')" src="Assets/data/Configurator/Asset/Button/TMR.png"   class="trip_icon" id="trip_icon6_TMR">
+
+			<img  style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon6_TMR_active">
+
+			<img onclick="trp_main('DZ6-400','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon6_M3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon6_M3_active">
+
+			<img onclick="trp_main('DZ6-400','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon6_iTRP-1">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-1_Y.png" class="trip_icon" id="trip_icon6_iTRP-1_active">
+
+			<img onclick="trp_main('DZ6-400','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon6_iTRP-2">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-2_Y.png" class="trip_icon" id="trip_icon6_iTRP-2_active">
+
+			<img onclick="trp_main('DZ6-400','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon6_iTRP-3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-3_Y.png" class="trip_icon" id="trip_icon6_iTRP-3_active">
+
+			<img onclick="trp_main('DZ6-400','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon6_iTRP-4">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-4_Y.png" class="trip_icon" id="trip_icon6_iTRP-4_active">
+
+			<img onclick="trp_main('DZ6-400','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon6_iTRP-5">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon6_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz7" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ7-800','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3">
-			<img onclick="trp_main('DZ7-800','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon_iTRP-1">
-			<img onclick="trp_main('DZ7-800','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon_iTRP-2">
-			<img onclick="trp_main('DZ7-800','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon_iTRP-3">
-			<img onclick="trp_main('DZ7-800','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon_iTRP-4">
-			<img onclick="trp_main('DZ7-800','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon_iTRP-5">
+			<img onclick="trp_main('DZ7-800','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon7_M3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon7_M3_active">
+
+			<img onclick="trp_main('DZ7-800','iTRP-1')" src="Assets/data/Configurator/Asset/Button/iTRP-1.png" class="trip_icon" id="trip_icon7_iTRP-1">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-1_Y.png" class="trip_icon" id="trip_icon7_iTRP-1_active">
+
+			<img onclick="trp_main('DZ7-800','iTRP-2')" src="Assets/data/Configurator/Asset/Button/iTRP-2.png" class="trip_icon" id="trip_icon7_iTRP-2">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-2_Y.png" class="trip_icon" id="trip_icon7_iTRP-2_active">
+
+			<img onclick="trp_main('DZ7-800','iTRP-3')" src="Assets/data/Configurator/Asset/Button/iTRP-3.png" class="trip_icon" id="trip_icon7_iTRP-3">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-3_Y.png" class="trip_icon" id="trip_icon7_iTRP-3_active">
+
+			<img onclick="trp_main('DZ7-800','iTRP-4')" src="Assets/data/Configurator/Asset/Button/iTRP-4.png" class="trip_icon" id="trip_icon7_iTRP-4">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-4_Y.png" class="trip_icon" id="trip_icon7_iTRP-4_active">
+
+			<img onclick="trp_main('DZ7-800','iTRP-5')" src="Assets/data/Configurator/Asset/Button/iTRP-5.png" class="trip_icon" id="trip_icon7_iTRP-5">
+
+			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon7_iTRP-5_active">
 		</div>
 		<div class="graph">
 			<img id="dz1_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png">
