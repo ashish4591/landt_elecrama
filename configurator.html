@@ -5,6 +5,30 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
+	function dravideo_play(vid_id,vid)
+		{
+			//console.log(vid_id);
+			var vi=document.getElementById(("product_video"));
+			//var vid=$("#"+vid_id).get(0);
+			//console.log(vi);
+			//$("#"+vid_id).get(0).play();
+			vi.play();
+			var pImg="product_img";
+			var iImg="itrp_img";
+			//alert(iImg);
+			//vid_id.play();
+			//vid_id.onended = function(e) {
+			//vi.on('ended',function(){
+			vi.addEventListener("ended", function() {
+  			//alert("the end");
+			$("#"+vid_id).css("display","none");
+			$("#"+pImg).css("display", "block");
+			//$("#"+iImg).css("display", "block");
+			//document.getElementById("'"+pImg+"'").style.display="block";
+			//document.getElementById("'"+iImg+"'").style.display="block";
+			});	
+			
+			}
 	function trp_main(dz_id,trp_id){
 			//alert(dz_id);
 			//alert(trp_id);
@@ -19,10 +43,14 @@
 			if(dz_id == 'DZ1-160')
 			{
 				//alert('if');	
+				
 				switch(trp_id)
 				{
 					case 'TMR':
-					
+
+						
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="inline";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -47,9 +75,21 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 
-					case 'M3':
+					case 'iTRP-M3':
+
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="inline";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -74,8 +114,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="block";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-1':
+
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="inline";
@@ -100,8 +152,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="block";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-2':
+
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -126,8 +190,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="block";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-3':
+
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -152,8 +228,19 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="block";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-4':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -178,8 +265,20 @@
 						document.getElementById('itrp4').style.display="inline";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="block";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-5':
+
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon_M3_active').style.display="none";
 						document.getElementById('trip_icon_iTRP-1_active').style.display="none";
@@ -204,6 +303,14 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="inline";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
 					break;
 				}
 			
@@ -215,7 +322,8 @@
 				switch(trp_id)
 				{
 					case 'TMR':
-					
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="inline";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -240,9 +348,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 
-					case 'M3':
+					case 'iTRP-M3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="inline";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -267,8 +386,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="block";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-1':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="inline";
@@ -293,8 +424,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="block";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-2':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -319,8 +462,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="block";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -345,8 +500,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="block";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-4':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -371,8 +538,20 @@
 						document.getElementById('itrp4').style.display="inline";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="block";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-5':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
 						document.getElementById('trip_icon2_M3_active').style.display="none";
 						document.getElementById('trip_icon2_iTRP-1_active').style.display="none";
@@ -397,6 +576,15 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="inline";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
 					break;
 				}
 			
@@ -406,7 +594,10 @@
 				switch(trp_id)
 				{
 		
-					case 'M3':
+					case 'iTRP-M3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="inline";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
@@ -431,8 +622,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="block";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-1':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="none";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="inline";
@@ -457,8 +660,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="block";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-2':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="none";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
@@ -483,8 +698,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="block";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="none";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
@@ -509,8 +736,19 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="block";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-4':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="none";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
@@ -535,8 +773,20 @@
 						document.getElementById('itrp4').style.display="inline";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="block";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-5':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon4_M3_active').style.display="none";
 						document.getElementById('trip_icon4_iTRP-1_active').style.display="none";
@@ -561,6 +811,15 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="inline";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
 					break;
 				}
 			
@@ -570,6 +829,8 @@
 				switch(trp_id)
 				{
 					case 'TMR':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 					
 						document.getElementById('trip_icon6_TMR_active').style.display="inline";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
@@ -595,9 +856,21 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 
-					case 'M3':
+					case 'iTRP-M3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="inline";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
@@ -622,8 +895,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="block";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-1':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="inline";
@@ -648,8 +933,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="block";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-2':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
@@ -674,8 +971,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="block";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
@@ -700,8 +1009,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="block";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-4':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
@@ -726,8 +1047,19 @@
 						document.getElementById('itrp4').style.display="inline";
 						document.getElementById('itrp5').style.display="none";
 
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="block";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-5':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
 						document.getElementById('trip_icon6_M3_active').style.display="none";
 						document.getElementById('trip_icon6_iTRP-1_active').style.display="none";
@@ -752,6 +1084,15 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="inline";
 
+
+						document.getElementById('itrp_imgTMR').style.display="none";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
 					break;
 				}
 			
@@ -761,7 +1102,10 @@
 				switch(trp_id)
 				{
 					
-					case 'M3':
+					case 'iTRP-M3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="inline";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
@@ -786,8 +1130,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="block";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-1':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="none";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="inline";
@@ -812,8 +1168,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="block";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-2':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//ocument.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="none";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
@@ -838,8 +1206,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="block";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-3':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="none";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
@@ -864,8 +1244,20 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="block";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-4':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="none";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
@@ -890,8 +1282,20 @@
 						document.getElementById('itrp4').style.display="inline";
 						document.getElementById('itrp5').style.display="none";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="block";
+						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
 					break;
 					case 'iTRP-5':
+
+						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
+
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
 						document.getElementById('trip_icon7_M3_active').style.display="none";
 						document.getElementById('trip_icon7_iTRP-1_active').style.display="none";
@@ -916,6 +1320,15 @@
 						document.getElementById('itrp4').style.display="none";
 						document.getElementById('itrp5').style.display="inline";
 
+
+						//document.getElementById('itrp_imgTMR').style.display="block";
+						document.getElementById('itrp_imgiTRP-M3').style.display="none";
+						document.getElementById('itrp_imgiTRP-1').style.display="none";
+						document.getElementById('itrp_imgiTRP-2').style.display="none";
+						document.getElementById('itrp_imgiTRP-3').style.display="none";
+						document.getElementById('itrp_imgiTRP-4').style.display="none";
+						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
 					break;
 				}
 			
@@ -924,27 +1337,6 @@
 	}
 	function main(dz_id,id)
 	{
-		
-		function dravideo_play(vid_id,vid)
-		{
-			//alert(vid);
-			//var video = document.getElementById(vid_id);
-			//video.load();
-			//video.style.display="block";
-			var pImg="product_img"+id;
-			var iImg="itrp_img"+id;
-			//alert(iImg);
-			vid_id.play();
-			vid_id.onended = function(e) {
-			alert("the end");
-			vid_id.style.display="none";
-			$("#"+pImg).css("display", "block");
-			$("#"+iImg).css("display", "block");
-			document.getElementById("'"+pImg+"'").style.display="block";
-			document.getElementById("'"+iImg+"'").style.display="block";
-			//$("#itrp_img").css("display", "block");
-			}
-		}
 		if(dz_id == 'dz1')
 		{
 			switch(id)
@@ -1102,7 +1494,10 @@
 				document.getElementById('itrp3').style.display="none";
 				document.getElementById('itrp4').style.display="none";
 				document.getElementById('itrp5').style.display="none";
-				
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/Frame.png");
+
 				break;
 
 				case '2':
@@ -1239,6 +1634,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
 				
 				
 				break;
@@ -1381,7 +1778,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4");
+
 				break;
 
 				case '4':
@@ -1516,6 +1914,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4");
 				
 				break;
 
@@ -1662,7 +2061,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4");
+
 				break;
 
 				case '6':
@@ -1808,7 +2208,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4");
 				
 				break;
 
@@ -1947,7 +2347,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/ROM.mp4");
 				
 				break;
 
@@ -2087,7 +2487,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4");
 				
 				break;
 
@@ -2225,7 +2625,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/MIL.mp4");
 				
 				break;
 
@@ -2394,6 +2794,9 @@
 				
 				
 				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/Frame.png");
 				
 				break;
 
@@ -2534,6 +2937,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
 				
 				
 				break;
@@ -2676,7 +3081,9 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4");
+
+
 				break;
 
 				case '4':
@@ -2816,7 +3223,9 @@
 				document.getElementById('plugin_in_Disable_dz6').style.display="none";
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
-				document.getElementById('plugin_in_Disable_dz7').style.display="none";				
+				document.getElementById('plugin_in_Disable_dz7').style.display="none";		
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4");		
 				
 				break;
 
@@ -2957,7 +3366,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4");
+
 				break;
 
 				case '6':
@@ -3103,6 +3513,8 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4");
+
 				break;
 
 				case '7':
@@ -3243,6 +3655,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 							
 				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/ROM.mp4");
+
 				break;
 
 				case '8':
@@ -3383,6 +3797,9 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4");
+
 				
 				break;
 
@@ -3525,6 +3942,9 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/MIL.mp4");
+
 				
 				break;
 
@@ -3673,6 +4093,9 @@
 				
 				
 				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
+				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/Frame.png");
 				
 				break;
 
@@ -3816,6 +4239,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
 								
 				break;
 
@@ -3966,6 +4391,8 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/uv or shunt.mp4");
+
 				break;
 
 				case '4':
@@ -4114,6 +4541,8 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Box Clamp.mp4");
+
 				break;
 
 				case '5':
@@ -4262,6 +4691,9 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Spreaders.mp4");
+
 				
 				break;
 
@@ -4405,6 +4837,9 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Rear stud.mp4");
+
 								
 				break;
 
@@ -4546,6 +4981,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/ROM.mp4");
 				
 				break;
 
@@ -4690,6 +5127,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";			
 				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Plugin.mp4");
+
 				break;
 
 				case '9':
@@ -4832,7 +5271,9 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
-				
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Drawout.mp4");
+
 				break;
 
 				case '10':
@@ -4975,6 +5416,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/MIL.mp4");
 
 				break;
 
@@ -5143,7 +5586,8 @@
 				
 				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");
+				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/Frame.png");
 				
 				break;
 
@@ -5285,7 +5729,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");	
 				
 				break;
 
@@ -5438,7 +5882,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 							
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/uv or shunt.mp4");
+
 				break;
 
 				case '4':
@@ -5580,6 +6025,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Box Clamp.mp4");
+
 				break;
 
 				case '5':
@@ -5723,6 +6170,8 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Spreaders.mp4");
 
 				break;
 
@@ -5868,6 +6317,8 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Rear stud.mp4");
+
 				break;
 
 				case '7':
@@ -6006,7 +6457,9 @@
 				document.getElementById('plugin_in_Disable_dz6').style.display="none";
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
-				document.getElementById('plugin_in_Disable_dz7').style.display="none";			
+				document.getElementById('plugin_in_Disable_dz7').style.display="none";	
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/ROM.mp4");		
 				
 				break;
 
@@ -6151,6 +6604,8 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Plugin.mp4");
 
 				break;
 
@@ -6299,6 +6754,8 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Drawout.mp4");
 				
 				break;
 
@@ -6443,6 +6900,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/MIL.mp4");
 
 				break;
 
@@ -6612,7 +7071,10 @@
 				document.getElementById('itrp3').style.display="none";
 				document.getElementById('itrp4').style.display="none";
 				document.getElementById('itrp5').style.display="none";
-				
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
+				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/Frame.png");
+
 				break;
 
 				case '2':
@@ -6755,7 +7217,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";
 			
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
+
 				break;
 
 				case '3':
@@ -6898,6 +7361,8 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/uv or shunt.mp4");
 
 				break;
 
@@ -7049,6 +7514,9 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Spreaders.mp4");
+
+
 				break;
 
 				case '6':
@@ -7194,6 +7662,8 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Rear stud.mp4");
+
 				break;
 
 				case '7':
@@ -7337,6 +7807,8 @@
 				document.getElementById('dz4_rating').style.display="none";
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
+
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/ROM.mp4");
 				
 				break;
 
@@ -7480,7 +7952,8 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";				
-				
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Drawout.mp4");
+
 				break;
 
 				case '10':
@@ -7625,164 +8098,12 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/MIL.mp4");
+
+
 				break;
 
 			}
-		}
-	}
-
-
-	function trip_selection(trip_id)
-	{
-		switch(trip_id)
-		{
-			case 1:
-
-			document.getElementById('itrp_img1').style.display="inline";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="none";
-			
-			
-			document.getElementById('itriptmr').style.display="inline";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="none";
-			
-			//dz1_bkp.setAttribute('src', 'Assets/data/Configurator/Asset/Button/ROM_Y.png');
-	
-
-			break;
-
-			case 2:
-
-			document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="inline";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="none";
-			
-	
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="inline"; 
-			
-			break;
-
-			case 3:
-	
-			document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="inline";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="none";
-			
-			
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="inline";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="none";
-
-			break;
-
-			case 4:
-
-		    document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="inline";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="none";
-	
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="inline";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="none";
-			
-			break;
-
-			case 5:
-			
-			document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="inline";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="none";
-
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="inline";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="none";
-
-			break;
-
-			case 6:
-			
-			document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="inline";
-			document.getElementById('itrp_img7').style.display="none";
-			
-			
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="inline";
-			document.getElementById('itrip5').style.display="none";
-			document.getElementById('itripm3').style.display="none";
-		
-			break;
-			
-			case 7:
-
-			document.getElementById('itrp_img1').style.display="none";
-			document.getElementById('itrp_img2').style.display="none";
-			document.getElementById('itrp_img3').style.display="none";
-			document.getElementById('itrp_img4').style.display="none";
-			document.getElementById('itrp_img5').style.display="none";
-			document.getElementById('itrp_img6').style.display="none";
-			document.getElementById('itrp_img7').style.display="inline";
-			
-			document.getElementById('itriptmr').style.display="none";
-			document.getElementById('itrip1').style.display="none";
-			document.getElementById('itrip2').style.display="none";
-			document.getElementById('itrip3').style.display="none";
-			document.getElementById('itrip4').style.display="none";
-			document.getElementById('itrip5').style.display="inline";
-			document.getElementById('itripm3').style.display="none";
-			
-			break;
-
 		}
 	}
 
@@ -8277,7 +8598,7 @@
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon_TMR_active">
 
-			<img onclick="trp_main('DZ1-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
+			<img onclick="trp_main('DZ1-160','iTRP-M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon_M3">
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon_M3_active">
 
@@ -8307,7 +8628,7 @@
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon2_TMR_active">
 
-			<img onclick="trp_main('DZ2-160','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon2_M3">
+			<img onclick="trp_main('DZ2-160','iTRP-M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon2_M3">
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon2_M3_active">
 
@@ -8332,7 +8653,7 @@
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon2_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz4" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ4-250','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon4_M3">
+			<img onclick="trp_main('DZ4-250','iTRP-M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon4_M3">
 			
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon4_M3_active">
 
@@ -8362,7 +8683,7 @@
 
 			<img  style="display:none;" src="Assets/data/Configurator/Asset/Button/TMR_Y.png"   class="trip_icon" id="trip_icon6_TMR_active">
 
-			<img onclick="trp_main('DZ6-400','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon6_M3">
+			<img onclick="trp_main('DZ6-400','iTRP-M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon6_M3">
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon6_M3_active">
 
@@ -8387,7 +8708,7 @@
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon6_iTRP-5_active">
 		</div>
 		<div id="trip_menu_dz7" class="trip_menu" style="display: none;">
-			<img onclick="trp_main('DZ7-800','M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon7_M3">
+			<img onclick="trp_main('DZ7-800','iTRP-M3')" src="Assets/data/Configurator/Asset/Button/iTRP-M3.png"  class="trip_icon"  id="trip_icon7_M3">
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-M3_Y.png"  class="trip_icon"  id="trip_icon7_M3_active">
 
@@ -8411,6 +8732,19 @@
 
 			<img style="display:none;" src="Assets/data/Configurator/Asset/Button/iTRP-5_Y.png" class="trip_icon" id="trip_icon7_iTRP-5_active">
 		</div>
+		<div id="product_display" class="product_display">
+			<img id="product_img" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png">
+			<video id="product_video" class="product_video">
+                    <source src="Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
+            </video>
+            <a href="#" onclick="dravideo_play('product_video')"><img id="video_btn" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>       
+		        <img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
+				<img id="itrp_imgiTRP-M3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
+				<img id="itrp_imgiTRP-1" style="display:block;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-1.png" width="100%">
+				<img id="itrp_imgiTRP-2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-2.png" width="100%">
+				<img id="itrp_imgiTRP-3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-3.png" width="100%">
+				<img id="itrp_imgiTRP-4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-4.png" width="100%">
+				<img id="itrp_imgiTRP-5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-5.png" width="100%">
 		<div class="graph">
 			<img id="dz1_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png">
 			<img id="dz2_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png" style="display:none;">
@@ -8418,131 +8752,7 @@
 			<img id="dz6_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png" style="display:none;">
 			<img id="dz7_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png" style="display:none;">
 		</div>
-		<div id="product_display1" class="product_display">
-				<img id="product_img1" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video1" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video1')"><img id="video_btn1" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display2" style="display:none;" class="product_display">
-				<img id="product_img2" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video2" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video2')"><img id="video_btn2" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display3" style="display:none;" class="product_display">
-				<img id="product_img3" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video3" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video3')"><img id="video_btn3" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display4" style="display:none;"  class="product_display">
-				<img id="product_img4" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video4" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video4')"><img id="video_btn4" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display5" style="display:none;" class="product_display">
-				<img id="product_img5" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video5" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video5')"><img id="video_btn5" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display6" style="display:none;" class="product_display">
-				<img id="product_img6" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video6" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/ROM.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video6')"><img id="video_btn6" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div> 
-		<div id="product_display7" style="display:none;" class="product_display">
-				<img id="product_img7" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video7" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video7')"><img id="video_btn7" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display8" style="display:none;" class="product_display">
-				<img id="product_img8" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video8" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Drawout.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video8')"><img id="video_btn8" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
-		<div id="product_display9" style="display:none;" class="product_display">
-				<img id="product_img9" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ7-800/Images/Frame.png" width="100%">
-				<video style="width:100%;" id="product_video9" class="product_video"  autoplay>
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/MIL.mp4" type="video/mp4">
-                </video>
-				<a href="#" onclick="dravideo_play('product_video9')"><img id="video_btn9" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>
-				<img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
-				<img id="itrp_imgM3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_img1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP1.png" width="100%">
-				<img id="itrp_img2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP2.png" width="100%">
-				<img id="itrp_img3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP3.png" width="100%">
-				<img id="itrp_img4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP4.png" width="100%">
-				<img id="itrp_img5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP5.png" width="100%">
-		</div>
+		
 		<div class="cur_rating">
 			<img src="Assets/data/Configurator/DZ1-160/160-Rating.png" id="dz1_rating" >
 			 <img src="Assets/data/Configurator/DZ2-160/160-Rating.png" id="dz2_rating" style="display: none;"> 
@@ -8566,7 +8776,6 @@
 		</div>
 		</div>
 		</div>
-
 	</div>
 </body>
 </html>
