@@ -28,18 +28,100 @@
 			//document.getElementById("'"+iImg+"'").style.display="block";
 			});	
 			
+		}
+		function showgraph(d_id,graph_id){
+		 console.log(d_id,graph_id);
+			if(d_id == 1)
+			{
+
 			}
+			if(d_id == 2)
+			{
+				alert("dz2");
+				switch(graph_id)
+				{
+					case 0:
+					document.getElementById("dz2_graph_img").style.zIndex=2;
+					document.getElementById("dz2_graph_img1").style.zIndex=1;
+					break;
+
+					case 1:
+					document.getElementById("dz2_graph_img1").style.zIndex=2;
+					document.getElementById("dz2_graph_img").style.zIndex=1;
+					break;
+				}
+			}
+			if(d_id == 4)
+			{
+				switch(graph_id)
+				{
+					case 0:
+					document.getElementById("dz4_graph_img").style.zIndex=2;
+					document.getElementById("dz4_graph_img1").style.zIndex=1;
+					document.getElementById("dz4_graph_img2").style.zIndex=1;
+					break;
+
+					case 1:
+					document.getElementById("dz4_graph_img1").style.zIndex=2;
+					document.getElementById("dz4_graph_img0").style.zIndex=1;
+					document.getElementById("dz4_graph_img2").style.zIndex=1;
+					break;
+
+					case 2:
+					document.getElementById("dz4_graph_img2").style.zIndex=2;
+					document.getElementById("dz4_graph_img0").style.zIndex=1;
+					document.getElementById("dz4_graph_img1").style.zIndex=1;
+					break;
+				}
+			}
+			if(d_id == 6)
+			{
+				switch(graph_id)
+				{
+					case 0:
+					document.getElementById("dz6_graph_img").style.zIndex=2;
+					document.getElementById("dz6_graph_img1").style.zIndex=1;
+					document.getElementById("dz6_graph_img2").style.zIndex=1;
+					break;
+
+					case 1:
+					document.getElementById("dz6_graph_img1").style.zIndex=2;
+					document.getElementById("dz6_graph_img0").style.zIndex=1;
+					document.getElementById("dz6_graph_img2").style.zIndex=1;
+					break;
+
+					case 2:
+					document.getElementById("dz6_graph_img2").style.zIndex=2;
+					document.getElementById("dz6_graph_img0").style.zIndex=1;
+					document.getElementById("dz6_graph_img1").style.zIndex=1;
+					break;
+				}	
+			}
+			if(d_id == 7)
+			{
+				switch(graph_id)
+				{
+					case 0:
+					document.getElementById("dz7_graph_img").style.zIndex=2;
+					document.getElementById("dz7_graph_img1").style.zIndex=1;
+					document.getElementById("dz7_graph_img2").style.zIndex=1;
+					break;
+
+					case 1:
+					document.getElementById("dz7_graph_img1").style.zIndex=2;
+					document.getElementById("dz7_graph_img0").style.zIndex=1;
+					document.getElementById("dz7_graph_img2").style.zIndex=1;
+					break;
+
+					case 2:
+					document.getElementById("dz7_graph_img2").style.zIndex=2;
+					document.getElementById("dz7_graph_img0").style.zIndex=1;
+					document.getElementById("dz7_graph_img1").style.zIndex=1;
+					break;
+				}	
+			}
+		}
 	function trp_main(dz_id,trp_id){
-			//alert(dz_id);
-			//alert(trp_id);
-			/*$("#product_img").attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/Frame.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/TMR.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP-M3.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP1.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP2.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP3.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP4.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP5.png');*/
 			if(dz_id == 'DZ1-160')
 			{
 				//alert('if');	
@@ -82,6 +164,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+						
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
 					break;
 
@@ -122,6 +206,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -159,6 +245,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
+
 
 					break;
 					case 'iTRP-2':
@@ -198,6 +288,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ1T0160NXG1AOOOO";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
+
+
 					break;
 					case 'iTRP-3':
 
@@ -236,6 +332,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ1T0160NXH1AOOOO";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+
+
+
 					break;
 					case 'iTRP-4':
 
@@ -272,6 +374,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
+
 
 					break;
 					case 'iTRP-5':
@@ -310,6 +416,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
+
+
 
 					break;
 				}
@@ -356,6 +466,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+
 					break;
 
 					case 'iTRP-M3':
@@ -395,6 +507,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -432,6 +546,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -471,6 +588,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -509,6 +628,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 					break;
 					case 'iTRP-4':
 
@@ -546,6 +666,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
 
 					break;
 					case 'iTRP-5':
@@ -585,6 +707,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 					break;
 				}
 			
@@ -631,6 +754,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -668,6 +793,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
 
 					break;
 					case 'iTRP-2':
@@ -707,6 +834,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -743,6 +872,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="block";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
@@ -782,6 +913,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 					break;
 					case 'iTRP-5':
 
@@ -819,6 +952,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -865,6 +1000,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+
 					break;
 
 					case 'iTRP-M3':
@@ -904,6 +1041,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-1':
 
@@ -941,6 +1081,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -980,6 +1123,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-3':
 
@@ -1018,6 +1164,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-4':
 
@@ -1054,6 +1203,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-5':
@@ -1092,6 +1244,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -1139,6 +1293,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -1176,6 +1332,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -1215,6 +1374,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -1252,6 +1413,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="block";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
@@ -1291,6 +1454,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 					break;
 					case 'iTRP-5':
 
@@ -1328,6 +1493,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -1496,7 +1663,18 @@
 				document.getElementById('itrp5').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
+				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/iTRP-1.png");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/Frame.png");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
+				document.getElementById('dz1_graph').style.display="block";
+				document.getElementById('dz2_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
 				break;
 
@@ -1636,6 +1814,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				
 				break;
@@ -1779,6 +1959,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -1915,6 +2097,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -2054,6 +2238,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -2201,6 +2387,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -2340,6 +2528,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/ROM.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -2480,6 +2670,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -2618,6 +2810,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/MIL.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -2789,6 +2983,17 @@
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/Frame.png");
+				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/iTRP-1.png");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz2_graph').style.display="block";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 				
 				break;
 
@@ -2931,6 +3136,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				
 				break;
@@ -3074,6 +3281,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 
 				break;
@@ -3217,7 +3426,9 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";		
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4");		
+				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4");	
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";	
 				
 				break;
 
@@ -3359,6 +3570,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -3506,6 +3719,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -3648,6 +3863,8 @@
 							
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/ROM.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -3791,6 +4008,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				
 				break;
@@ -3936,6 +4155,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/MIL.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				
 				break;
@@ -4105,8 +4326,19 @@
 				$('#dz1').css("background-image", "url(Assets/data/Configurator/DZ1-160/DZ1_B.png)");  
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
+				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/iTRP-1.png");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/Frame.png");
-				
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz2_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="block";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 				break;
 
 				case '2':
@@ -4251,6 +4483,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 								
 				break;
 
@@ -4402,6 +4636,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/uv or shunt.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -4552,6 +4788,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Box Clamp.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -4703,6 +4941,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Spreaders.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				
 				break;
@@ -4849,6 +5089,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Rear stud.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 								
 				break;
@@ -4993,6 +5235,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/ROM.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -5138,6 +5382,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";			
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Plugin.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -5283,6 +5529,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Drawout.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -5428,6 +5676,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/MIL.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -5598,7 +5848,18 @@
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/Frame.png");
+				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/iTRP-1.png");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz2_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="block";
+				document.getElementById('dz7_graph').style.display="none";
 				
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 				break;
 
 				case '2':
@@ -5740,6 +6001,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");	
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -5893,6 +6156,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 							
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/uv or shunt.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -6036,6 +6301,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Box Clamp.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -6182,6 +6449,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Spreaders.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -6328,6 +6597,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Rear stud.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -6470,7 +6741,9 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";	
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/ROM.mp4");		
-				
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
 				break;
 
 				case '8':
@@ -6616,6 +6889,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Plugin.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -6766,6 +7041,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Drawout.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -6912,6 +7189,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/MIL.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -7084,6 +7363,17 @@
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/Frame.png");
+				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/iTRP-1.png");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
+
+				document.getElementById('dz1_graph').style.display="none";
+				document.getElementById('dz2_graph').style.display="none";
+				document.getElementById('dz4_graph').style.display="none";
+				document.getElementById('dz6_graph').style.display="none";
+				document.getElementById('dz7_graph').style.display="block";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
 				break;
 
@@ -7228,6 +7518,8 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";
 			
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -7373,6 +7665,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/uv or shunt.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -7525,6 +7819,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Spreaders.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 
 				break;
@@ -7673,6 +7969,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Rear stud.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -7819,6 +8117,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/ROM.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 				
 				break;
 
@@ -7963,6 +8263,8 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";				
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Drawout.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 				break;
 
@@ -8109,6 +8411,8 @@
 				document.getElementById('dz7_rating').style.display="none";
 
 				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/MIL.mp4");
+				document.getElementById('product_img').style.display="none";
+				document.getElementById("product_video").style.display="block";
 
 
 				break;
@@ -8601,6 +8905,10 @@
 	        <img src="Assets/data/Configurator/DZ6-400/DZ6.png" id="dz6_title" style="display: none;">
 	        <img src="Assets/data/Configurator/DZ7-800/DZ7.png" id="dz7_title" style="display: none;">
     	</div>
+    	<div id="prod_text">
+    		<span class="prod_content" id="prod_code">Product Code:</span><br>
+    		<span class="prod_content" id="prod_id">DZ<span id="prod_dzid">1</span>T0<span id="prod_dzno">160</span><span id="prod_gid">N</span>X<span id="prod_iid">D</span>1AOOOO</span>
+    	</div>
 		<div class="tmr_bkp"><img src="Assets/data/Configurator/Asset/line2.png"></div>
 		<div id="trip_menu_dz1" class="trip_menu">
 
@@ -8756,11 +9064,29 @@
 				<img id="itrp_imgiTRP-4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-4.png" width="100%">
 				<img id="itrp_imgiTRP-5" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-5.png" width="100%">
 		<div class="graph">
-			<img id="dz1_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png">
-			<img id="dz2_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png" style="display:none;">
-			<img id="dz4_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph.png" style="display:none;">
-			<img id="dz6_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png" style="display:none;">
-			<img id="dz7_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png" style="display:none;">
+		<div id="dz1_graph" class="dz1_graph">
+			<img id="dz1_graph_img" onclick="showgraph(1,0);" class="dz_graph" src="Assets/data/Configurator/DZ1-160/Graph/Graph.png">
+			<img id="dz1_graph_img1" onclick="showgraph(1,1);" class="dz_graph" src="Assets/data/Configurator/DZ1-160/Graph/staticGraph.png">
+		</div>
+		<div id="dz2_graph" class="dz2_graph" style="display:none;">
+			<img id="dz2_graph_img1" onclick="showgraph(2,1);" class="dz_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png">
+			<img id="dz2_graph_img" onclick="showgraph(2,0);" class="dz_graph" src="Assets/data/Configurator/DZ2-160/Graph/Graph.png">
+		</div>
+		<div id="dz4_graph" class="dz4_graph" style="display:none;">	
+			<img id="dz6_graph_img2" onclick="showgraph(4,2);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph2.png">
+			<img id="dz6_graph_img1" onclick="showgraph(4,1);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph.png">
+			<img id="dz6_graph_img" onclick="showgraph(4,0);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/Graph.png">
+		</div>
+		<div id="dz6_graph" class="dz6_graph" style="display:none;">	
+			<img id="dz6_graph_img2" onclick="showgraph(6,2);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph2.png">
+			<img id="dz6_graph_img1" onclick="showgraph(6,1);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png">
+			<img id="dz6_graph_img" onclick="showgraph(6,0);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/Graph.png">
+		</div>
+		<div id="dz7_graph" class="dz7_graph" style="display:none;">	
+			<img id="dz7_graph_img2" onclick="showgraph(7,2);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph2.png">
+			<img id="dz7_graph_img1" onclick="showgraph(7,1);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png">
+			<img id="dz7_graph_img" onclick="showgraph(7,0);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/Graph.png">	
+		</div>
 		</div>
 		
 		<div class="cur_rating">
@@ -8771,18 +9097,18 @@
 			 <img src="Assets/data/Configurator/DZ7-800/800-Rating.png" id="dz7_rating" style="display: none;">
 		</div>
 		<div class="footer">
-		<img src="Assets/data/Configurator/DZ1-160/Dimensions-mm.png"  id="dz1_dimension">
-		<img src="Assets/data/Configurator/DZ2-160/Dimensions-mm.png" style="display: none;" id="dz2_dimension" >
-		<img src="Assets/data/Configurator/DZ4-250/Dimensions-mm.png"  style="display: none;" id="dz4_dimension" >
-		<img src="Assets/data/Configurator/DZ6-400//Dimensions-mm.png" style="display: none;" id="dz6_dimension" > 
-		<img src="Assets/data/Configurator/DZ7-800//Dimensions-mm.png" style="display: none;" id="dz7_dimension" >
-		<img src="Assets/data/Configurator/Asset/TMR.png"  id="itrpTMR" >
-		<img src="Assets/data/Configurator/Asset/iTrp-M3.png"  id="itrpM3" style="display: none;">
-		<img src="Assets/data/Configurator/Asset/iTrp1.png"  id="itrp1" style="display: none;">
-		<img src="Assets/data/Configurator/Asset/iTrp2.png"  id="itrp2" style="display: none;">
-		<img src="Assets/data/Configurator/Asset/iTrp3.png"  id="itrp3" style="display: none;">
-		<img src="Assets/data/Configurator/Asset/iTrp4.png"  id="itrp4" style="display: none;">
-		<img src="Assets/data/Configurator/Asset/iTrp5.png"  id="itrp5" style="display: none;">
+		<img src="Assets/data/Configurator/DZ1-160/Dimensions-mm.png"  class="dz_dimension" id="dz1_dimension">
+		<img src="Assets/data/Configurator/DZ2-160/Dimensions-mm.png"  class="dz_dimension"style="display: none;" id="dz2_dimension" >
+		<img src="Assets/data/Configurator/DZ4-250/Dimensions-mm.png"   class="dz_dimension" style="display: none;" id="dz4_dimension" >
+		<img src="Assets/data/Configurator/DZ6-400//Dimensions-mm.png"  class="dz_dimension" style="display: none;" id="dz6_dimension" > 
+		<img src="Assets/data/Configurator/DZ7-800//Dimensions-mm.png"  class="dz_dimension"style="display: none;" id="dz7_dimension" >
+		<img src="Assets/data/Configurator/Asset/TMR.png"  class="dz_trp_dimension" id="itrpTMR" >
+		<img src="Assets/data/Configurator/Asset/iTrp-M3.png" class="dz_trp_dimension" id="itrpM3" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp1.png" class="dz_trp_dimension" id="itrp1" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp2.png"  class="dz_trp_dimension"id="itrp2" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp3.png" class="dz_trp_dimension" id="itrp3" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp4.png"  class="dz_trp_dimension"id="itrp4" style="display: none;">
+		<img src="Assets/data/Configurator/Asset/iTrp5.png" class="dz_trp_dimension" id="itrp5" style="display: none;">
 		</div>
 		</div>
 		</div>
