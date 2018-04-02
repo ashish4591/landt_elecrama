@@ -3,74 +3,83 @@
 	src: url("../fonts/SOURCESANSPRO-SEMIBOLD.otf") format("opentype");
 }
 body{
-	background: url(../../Assets/BG_1920X1080.jpg) no-repeat center center; 
+	background: url(../../Assets/configurator/BG.png) no-repeat center center; 
 	overflow-x:hidden;
+	overflow-y:hidden;
     margin: 0 auto;
     padding: 0;
+	background-size:cover;
+	background-attachment:fixed;
 }
 
 #main_container
 {
 	position: absolute;
-	width: 1920px;
+	width: 1280px;
 	height: auto;
-    top: 0px;
-     transform: scale(0.8);
+    top: 0;
+}
+.main_header
+{
+	
 }
 
 .dz_product
 {
 	float: right;
-	width: 771px;
-	height: 135px;
 	display: inline-block;
-    margin-right: 22%;
-    margin-top: -40px;
+    margin-right:25px;
+    margin-top: 0px;
 }
 
 	#dz1
 	{
-		width: 118px;
-		height: 135px;
-		background-image: url("../../Assets/data/Configurator/DZ1-160/DZ1_Y.png");
+		width: 79px;
+		height: 90px;
+		background-image: url("../../Assets/configurator/Button/DZ1_Y.png");
 		background-repeat: no-repeat;
 		display: inline-block;
+		margin-right: 20px;
 	}
 
 	#dz2
 	{
-			width: 118px;
-			height: 135px;
-	    	background-image: url("../../Assets/data/Configurator/DZ2-160/DZ2_B.png");
+			width: 79px;
+			height: 90px;
+	    	background-image: url("../../Assets/configurator/Button/DZ2_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
+			 margin-right: 20px;
 	}
 
 	#dz4
 	{
-			width: 118px;
-			height: 135px;
-	    	background-image: url("../../Assets/data/Configurator/DZ4-250/DZ4_B.png");
+			width: 79px;
+			height: 90px;
+	    	background-image: url("../../Assets/configurator/Button/DZ4_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
+			margin-right: 20px;
 	}
 
 	#dz5
 	{
-			width: 118px;
-			height: 135px;
-	    	background-image: url("../../Assets/data/Configurator/DZ6-400/DZ6_B.png");
+			width: 79px;
+			height: 90px;
+	    	background-image: url("../../Assets/configurator/Button/DZ6_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
+		    margin-right: 20px;
 	}
 
 	#dz7
 	{
-			width: 118px;
-			height: 135px;
-	    	background-image: url("../../Assets/data/Configurator/DZ7-800/DZ7_B.png");
+			width: 79px;
+			height: 90px;
+	    	background-image: url("../../Assets/configurator/Button/DZ7_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
+			margin-right: 20px;
 	}
 
 
@@ -78,7 +87,7 @@ body{
 	{
 			width:170px;
 	    	height: 34px;
-	    	background-image: url("../../Assets/data/Configurator/Asset/Button/Aux-Tac_Y.png");
+	    	background-image: url("../../Assets/configurator/Button/Aux-Tac_Y.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
@@ -87,7 +96,7 @@ body{
 	{
 			width:170px;
 	    	height: 34px;
-	    	background-image: url("../../Assets/data/Configurator/Asset/Button/UV_B.png");
+	    	background-image: url("../../Assets/configurator/Button/UV_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
@@ -103,7 +112,7 @@ body{
 	{
 			width:170px;
 	    	height: 34px;
-	    	background-image: url("../../Assets/data/Configurator/Asset/Button/Spreaders_B.png");
+	    	background-image: url("../../Assets/configurator/Button/Spreaders_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
@@ -112,7 +121,7 @@ body{
 	{
 			width:170px;
 	    	height: 34px;
-	    	background-image: url("../../Assets/data/Configurator/Asset/Button/RearStud_B.png");
+	    	background-image: url("../../Assets/configurator/Button/RearStud_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
@@ -121,7 +130,7 @@ body{
 	{
 			width:170px;
 	    	height: 34px;
-	    	background-image: url("../../Assets/data/Configurator/Asset/Button/ROM_B.png");
+	    	background-image: url("../../Assets/configurator/Button/ROM_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
@@ -139,42 +148,39 @@ body{
 	    	height: 34px;
 	    	display: inline-block;
 	}
-
+	
 	#mil
 	{
 		width:170px;
     	height: 34px;
-    	background-image: url("../../Assets/data/Configurator/Asset/Button/MIL_B.png");
+    	background-image: url("../../Assets/configurator/Button/MIL_B.png");
     	background-repeat: no-repeat;
     	display: inline-block;
 	}
 	.acc_menu
 	{
 	    position: absolute;
-	    width: 1920px;
+	    width: 1280px;
 	    height: 50px;
 		top: 148px;
-		left: -308px;
 	}
 
 
 	.acc_main_menu
 	{
 		position: absolute;
-		top: 5px;
-    left: 11%;
-    transform: scale(0.85);
+		top: 4px;
+		left: 203px;
 	}
 
 	.trip_section
 	{
 		position: relative;
-		width: 1200px;
+		width: 1280px;
 		height: auto;
-		float: right;
+		float: left;
 		margin-top: 69px;
-		margin-right: 15%;
-		transform:scale(0.8);
+		margin-left: 10%;
 	}
 .product_img{
 	position: absolute;
@@ -185,8 +191,7 @@ body{
     margin-top: 10px;*/
 	top: 85px;
     left: 280px;
-	height: 500px;
-	width:840px;
+	width:580px;
 	transform: scale(0.9);
 }
 #prod_text{
@@ -207,8 +212,8 @@ body{
 	color:#c1272d;
 }
 .prod_content{
-	font-size: 32px;
-    font-weight: bolder;
+	font-size: 24px;
+    font-weight: bold;
 	font-family: SOURCE SANS PRO SEMIBOLD;
 }
 .product_display
@@ -226,8 +231,7 @@ body{
 		z-index: 0;
 		top: 85px;
 		left: 280px;
-		height: 500px;
-		width:840px;
+		width:580px;
 		/*margin-left: 165px;
 		margin-top: 15px;*/
 		transform: scale(0.9);
@@ -235,34 +239,26 @@ body{
 
 .product_video
 {
-    /*position: absolute;
-    width: 600px;
-    top: -56px;
-    left: 96px;
-    z-index: 1;
-    transform: scale(0.7); */
-	
 	position: absolute;
-    width: 840px;
+    width: 580px;
 	top: 85px;
     left: 280px;
     z-index: 1;
-	height: 500px;
 	/* display:none; */
 }
 .video_btn{
 	/*margin-top: -125px;
     margin-left: 875px;*/
-    z-index: 780;
-	position:absolute;
-	top:485px;
-	left:1024px;
+        z-index: 780;
+    position: absolute;
+    top: 325px;
+    left: 750px;
 }
 	.trip_menu
 	{
 	    position: absolute;
-	    top: -37px;
-	    left: 204px;
+		top: -30px;
+		left: 425px;
 	}
 
 	.trip_icon
@@ -281,20 +277,19 @@ body{
 	{
 		position: absolute;
 		top: 0px;
-		right: 53px;
+		left: 75px;
 	}
 
 	#conf_title
 	{
     position: absolute;
-    margin-top: -20px;
-    left: -60px;
+    left: -65px;
 	}
 	.graph
 	{
     position: relative;
     margin-top: 116px;
-    left: -182px;
+    left: -93px;
 	}
 	.dz_graph{
 		position: absolute;
@@ -303,23 +298,17 @@ body{
 	}
 	.cur_rating
 	{
-	    top: 450px;
+	    top: 340px;
 		position: absolute;
-		left: -183px;
+		left: -93px;
 	}
 	.footer
 	{
 		position: absolute;
-		width: 1500px;
+		width: 1280px;
 		float: left;
-		left: -187px;
-		top: 600px;
-	}
-		.main_header
-	{
-    margin-left: -26%;
-    transform: scale(0.8);
-    margin-top: -27px;
+		left: 33px;
+		top: 540px;
 	}
 	.prod_def
 	{
