@@ -122,16 +122,6 @@
 			}
 		}
 	function trp_main(dz_id,trp_id){
-			//alert(dz_id);
-			//alert(trp_id);
-			/*$("#product_img").attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/Frame.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/TMR.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP-M3.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP1.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP2.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP3.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP4.png');
-			$("#itrp_img"+itrp_id).attr('src', 'Assets/data/Configurator/'"+dz_id+"'/Images/iTRP5.png');*/
 			if(dz_id == 'DZ1-160')
 			{
 				//alert('if');	
@@ -174,6 +164,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+						
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
 					break;
 
@@ -214,6 +206,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -251,6 +245,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
+
 
 					break;
 					case 'iTRP-2':
@@ -290,6 +288,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ1T0160NXG1AOOOO";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
+
+
 					break;
 					case 'iTRP-3':
 
@@ -328,6 +332,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ1T0160NXH1AOOOO";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+
+
+
 					break;
 					case 'iTRP-4':
 
@@ -364,6 +374,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
+
 
 					break;
 					case 'iTRP-5':
@@ -402,6 +416,10 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
+
+
 
 					break;
 				}
@@ -448,6 +466,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+
 					break;
 
 					case 'iTRP-M3':
@@ -487,6 +507,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -524,6 +546,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -563,6 +588,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -601,6 +628,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 					break;
 					case 'iTRP-4':
 
@@ -638,6 +666,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
 
 					break;
 					case 'iTRP-5':
@@ -677,6 +707,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 					break;
 				}
 			
@@ -723,6 +754,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -760,6 +793,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
 
 					break;
 					case 'iTRP-2':
@@ -799,6 +834,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -835,6 +872,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="block";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
@@ -874,6 +913,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 					break;
 					case 'iTRP-5':
 
@@ -911,6 +952,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -957,6 +1000,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+
 					break;
 
 					case 'iTRP-M3':
@@ -996,6 +1041,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-1':
 
@@ -1033,6 +1081,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -1072,6 +1123,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-3':
 
@@ -1110,6 +1164,9 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+
+
 					break;
 					case 'iTRP-4':
 
@@ -1146,6 +1203,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-5':
@@ -1184,6 +1244,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -1231,6 +1293,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 					break;
 					case 'iTRP-1':
 
@@ -1268,6 +1332,9 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+
 
 					break;
 					case 'iTRP-2':
@@ -1307,6 +1374,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+
 					break;
 					case 'iTRP-3':
 
@@ -1344,6 +1413,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="block";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
@@ -1383,6 +1454,8 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+
 					break;
 					case 'iTRP-5':
 
@@ -1420,6 +1493,8 @@
 						document.getElementById('itrp_imgiTRP-3').style.display="none";
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
+
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>8</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
 
 					break;
 				}
@@ -1598,6 +1673,8 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
 				break;
 
@@ -2923,6 +3000,8 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 				
 				break;
 
@@ -4248,7 +4327,8 @@
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
 
-				
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 				break;
 
 				case '2':
@@ -5768,6 +5848,8 @@
 				document.getElementById('dz6_graph').style.display="block";
 				document.getElementById('dz7_graph').style.display="none";
 				
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+
 				break;
 
 				case '2':
@@ -7280,6 +7362,8 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="block";
+
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
 				break;
 
@@ -8810,6 +8894,10 @@
 	        <img src="Assets/data/Configurator/DZ4-250/DZ4.png" id="dz4_title" style="display: none;">
 	        <img src="Assets/data/Configurator/DZ6-400/DZ6.png" id="dz6_title" style="display: none;">
 	        <img src="Assets/data/Configurator/DZ7-800/DZ7.png" id="dz7_title" style="display: none;">
+    	</div>
+    	<div id="prod_text">
+    		<span class="prod_content" id="prod_code">Product Code:</span><br>
+    		<span class="prod_content" id="prod_id">DZ<span id="prod_dzid">1</span>T0<span id="prod_dzno">160</span><span id="prod_gid">N</span>X<span id="prod_iid">D</span>1AOOOO</span>
     	</div>
 		<div class="tmr_bkp"><img src="Assets/data/Configurator/Asset/line2.png"></div>
 		<div id="trip_menu_dz1" class="trip_menu">

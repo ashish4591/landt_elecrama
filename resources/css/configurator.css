@@ -1,6 +1,12 @@
+@font-face {
+	font-family: SOURCE SANS PRO SEMIBOLD;
+	src: url("../fonts/SOURCESANSPRO-SEMIBOLD.otf") format("opentype");
+}
 body{
-  background: url(../../Assets/BG_1920X1080.jpg) no-repeat center center; 
-overflow-x:hidden;
+	background: url(../../Assets/BG_1920X1080.jpg) no-repeat center center; 
+	overflow-x:hidden;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #main_container
@@ -182,6 +188,28 @@ overflow-x:hidden;
 	height: 500px;
 	width:840px;
 	transform: scale(0.9);
+}
+#prod_text{
+	position: absolute;
+    top: 60px;
+    left: -64px;
+}
+#prod_iid{
+	color:#ff00ff;
+}
+#prod_gid{
+	color:#fe5d05;
+}
+#prod_dzno{
+	color:#207f06;	
+}
+#prod_dzid{
+	color:#c1272d;
+}
+.prod_content{
+	font-size: 32px;
+    font-weight: bolder;
+	font-family: SOURCE SANS PRO SEMIBOLD;
 }
 .product_display
 {
