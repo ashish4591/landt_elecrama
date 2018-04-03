@@ -180,24 +180,11 @@ body{
 		height: auto;
 		float: left;
 		margin-top: 69px;
-		margin-left: 10%;
 	}
-.product_img{
-	position: absolute;
-    z-index: 199;
-	/*display:none;
-	transform: scale(0.9);
-    margin-left:165px;
-    margin-top: 10px;*/
-	top: 85px;
-    left: 280px;
-	width:580px;
-	transform: scale(0.9);
-}
 #prod_text{
 	position: absolute;
-    top: 60px;
-    left: -64px;
+    top: 72px;
+    left: 160px;
 }
 #prod_iid{
 	color:#ff00ff;
@@ -212,7 +199,7 @@ body{
 	color:#c1272d;
 }
 .prod_content{
-	font-size: 24px;
+	font-size: 20px;
     font-weight: bold;
 	font-family: SOURCE SANS PRO SEMIBOLD;
 }
@@ -223,15 +210,27 @@ body{
     top: 28px;
     left: 120px;
 }
+.product_img{
+	position: absolute;
+    z-index: 199;
+	/*display:none;
+	transform: scale(0.9);
+    margin-left:165px;
+    margin-top: 10px;*/
+	top: 0px;
+    left: 150px;
+	width:800px;
+	transform: scale(0.9);
+}
 .itrp_img{
 		position: absolute;
 		top: 0px;
 		/*display:none;
 		left: 0px;*/
 		z-index: 0;
-		top: 85px;
-		left: 280px;
-		width:580px;
+		top: 0px;
+		left: 150px;
+		width:700px;
 		/*margin-left: 165px;
 		margin-top: 15px;*/
 		transform: scale(0.9);
@@ -240,9 +239,9 @@ body{
 .product_video
 {
 	position: absolute;
-    width: 580px;
-	top: 85px;
-    left: 280px;
+    width: 700px;
+	top:0px;
+    left: 340px;
     z-index: 1;
 	/* display:none; */
 }
@@ -253,12 +252,13 @@ body{
     position: absolute;
     top: 325px;
     left: 750px;
+	transform: scale(0.8);
 }
 	.trip_menu
 	{
 	    position: absolute;
-		top: -30px;
-		left: 425px;
+		top: -64px;
+		left: 570px
 	}
 
 	.trip_icon
@@ -276,38 +276,134 @@ body{
 	.tmr_bkp
 	{
 		position: absolute;
-		top: 0px;
-		left: 75px;
+		top: -40px;
+		left: 202px;
 	}
 
 	#conf_title
 	{
     position: absolute;
-    left: -65px;
+    left: 160px;
+    top: 25px;
 	}
 	.graph
 	{
-    position: relative;
-    margin-top: 116px;
-    left: -93px;
+		position: absolute;
+		top: 120px;
+		left: 113px;
 	}
 	.dz_graph{
 		position: absolute;
 		left: 0px;
 		top: 0px;
 	}
+	.dz_graph_txt{
+		position:absolute;
+		top: 175px;
+		left: 90px;
+	}
+	.dz1_graph_ftxt{
+		position:absolute;
+		top: 118px;
+		left: 85px;
+	}
+	.dz1_graph_ctxt{
+		position:absolute;
+		top: 107px;
+		left: 122px;
+		
+	}
+	.dz1_graph_dtxt{
+		position:absolute;
+		top: 87px;
+		left: 155px;
+	}
+	.dz1_graph_ntxt{
+		position:absolute;
+		top: 69px;
+		left: 190px;
+	}
+	.dz2_graph_ntxt{
+		position:absolute;
+		top: 112px;
+		left: 80px;
+	}
+	.dz2_graph_htxt{
+		position:absolute;
+		top: 89px;
+		left: 118px;
+	}
+	.dz2_graph_ltxt{
+		position: absolute;
+		top: 73px;
+		left: 150px;
+	}
+	.dz_graph_ntxt{
+		position: absolute;
+		top: 129px;
+		left: 80px;
+	}
+	.dz_graph_htxt{
+		position: absolute;
+		top: 120px;
+		left: 115px;
+	}
+	.dz_graph_ltxt{
+		position: absolute;
+		top: 106px;
+		left: 150px;
+	}
+	.dz_graph_ytxt{
+		position: absolute;
+		top: 77px;
+		left: 183px;
+	}
+	#graph_rbtn{
+		position: absolute;
+		left: 235px;
+		top: 154px;
+	}
+	#graph_bbtn{
+		position: absolute;
+		left: 235px;
+		top: 92px;
+	}
+	#graph_ybtn{
+		position: absolute;
+		left: 235px;
+		top: 28px;
+		
+	}
+	.graph_btn{
+		height: 63px;
+	}
+	.graph_btn1{
+		height: 64px;
+	}
+	.graph_btn2{
+		height: 64px;
+	}
+	.dz_dimension{
+		position: absolute;
+		left: 110px;
+	}
+	.dz_trp_dimension
+	{
+		position: absolute;
+		left: 355px;
+		transform: scale(0.93);
+	}
 	.cur_rating
 	{
 	    top: 340px;
 		position: absolute;
-		left: -93px;
+		left: 112px;
 	}
 	.footer
 	{
 		position: absolute;
 		width: 1280px;
 		float: left;
-		left: 33px;
 		top: 540px;
 	}
 	.prod_def

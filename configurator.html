@@ -5,132 +5,311 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
-	function dravideo_play(vid_id,vid)
+$(document).ready(function(){
+	var prod_dzid,prod_dzno,prod_gid="N",prod_iid="D";
+});
+	function show_gcode(dz_id,gid){
+		if(dz_id == 'DZ1-160')
 		{
-			//console.log(vid_id);
-			var vi=document.getElementById(("product_video"));
-			//var vid=$("#"+vid_id).get(0);
-			//console.log(vi);
-			//$("#"+vid_id).get(0).play();
-			vi.play();
-			var pImg="product_img";
-			var iImg="itrp_img";
-			//alert(iImg);
-			//vid_id.play();
-			//vid_id.onended = function(e) {
-			//vi.on('ended',function(){
-			vi.addEventListener("ended", function() {
-  			//alert("the end");
-			$("#"+vid_id).css("display","none");
-			$("#"+pImg).css("display", "block");
-			//$("#"+iImg).css("display", "block");
-			//document.getElementById("'"+pImg+"'").style.display="block";
-			//document.getElementById("'"+iImg+"'").style.display="block";
-			});	
+			prod_dzid=1;
+			prod_dzno=160;
+			switch(gid)
+			{
+				case 1:
+				prod_gid="F";
+				document.getElementById("dz1_graph_ftxt").style.display="none";
+				document.getElementById("dz1_graph_ctxt").style.display="block";
+				document.getElementById("dz1_graph_dtxt").style.display="block";
+				document.getElementById("dz1_graph_ntxt").style.display="block";
+				document.getElementById("dz1_graph_ftxt_active").style.display="block";
+				document.getElementById("dz1_graph_ctxt_active").style.display="none";
+				document.getElementById("dz1_graph_dtxt_active").style.display="none";
+				document.getElementById("dz1_graph_ntxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 2:
+				prod_gid="C";
+				document.getElementById("dz1_graph_ftxt").style.display="block";
+				document.getElementById("dz1_graph_ctxt").style.display="none";
+				document.getElementById("dz1_graph_dtxt").style.display="block";
+				document.getElementById("dz1_graph_ntxt").style.display="block";
+				document.getElementById("dz1_graph_ftxt_active").style.display="none";
+				document.getElementById("dz1_graph_ctxt_active").style.display="block";
+				document.getElementById("dz1_graph_dtxt_active").style.display="none";
+				document.getElementById("dz1_graph_ntxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 3:
+				prod_gid="D";
+				document.getElementById("dz1_graph_ftxt").style.display="block";
+				document.getElementById("dz1_graph_ctxt").style.display="block";
+				document.getElementById("dz1_graph_dtxt").style.display="none";
+				document.getElementById("dz1_graph_ntxt").style.display="block";
+				document.getElementById("dz1_graph_ftxt_active").style.display="none";
+				document.getElementById("dz1_graph_ctxt_active").style.display="none";
+				document.getElementById("dz1_graph_dtxt_active").style.display="block";
+				document.getElementById("dz1_graph_ntxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 4:
+				prod_gid="N";
+				document.getElementById("dz1_graph_ftxt").style.display="block";
+				document.getElementById("dz1_graph_ctxt").style.display="block";
+				document.getElementById("dz1_graph_dtxt").style.display="block";
+				document.getElementById("dz1_graph_ntxt").style.display="none";
+				document.getElementById("dz1_graph_ftxt_active").style.display="none";
+				document.getElementById("dz1_graph_ctxt_active").style.display="none";
+				document.getElementById("dz1_graph_dtxt_active").style.display="none";
+				document.getElementById("dz1_graph_ntxt_active").style.display="block";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+			}
+		}
+		if(dz_id == 'DZ2-160')
+		{
+			prod_dzid=2;
+			prod_dzno=160;
+			switch(gid)
+			{
+				case 1:
+				prod_gid="N";
+				document.getElementById("dz2_graph_ntxt").style.display="none";
+				document.getElementById("dz2_graph_htxt").style.display="block";
+				document.getElementById("dz2_graph_ltxt").style.display="block";
+				document.getElementById("dz2_graph_ntxt_active").style.display="block";
+				document.getElementById("dz2_graph_htxt_active").style.display="none";
+				document.getElementById("dz2_graph_ltxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 2:
+				prod_gid="H";
+				document.getElementById("dz2_graph_ntxt").style.display="block";
+				document.getElementById("dz2_graph_htxt").style.display="none";
+				document.getElementById("dz2_graph_ltxt").style.display="block";
+				document.getElementById("dz2_graph_ntxt_active").style.display="none";
+				document.getElementById("dz2_graph_htxt_active").style.display="block";
+				document.getElementById("dz2_graph_ltxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 3:
+				prod_gid="L";
+				document.getElementById("dz2_graph_ntxt").style.display="block";
+				document.getElementById("dz2_graph_htxt").style.display="block";
+				document.getElementById("dz2_graph_ltxt").style.display="none";
+				document.getElementById("dz2_graph_ntxt_active").style.display="none";
+				document.getElementById("dz2_graph_htxt_active").style.display="none";
+				document.getElementById("dz2_graph_ltxt_active").style.display="block";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+			}
+		}
+		if(dz_id == 'DZ4-250')
+		{
+			prod_dzid=4;
+			prod_dzno=250;
+			switch(gid)
+			{
+				case 1:
+				prod_gid="N";
+				document.getElementById("dz4_graph_ntxt").style.display="none";
+				document.getElementById("dz4_graph_htxt").style.display="block";
+				document.getElementById("dz4_graph_ltxt").style.display="block";
+				document.getElementById("dz4_graph_ytxt").style.display="block";
+				document.getElementById("dz4_graph_ntxt_active").style.display="block";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 2:
+				prod_gid="H";
+				document.getElementById("dz4_graph_ntxt").style.display="block";
+				document.getElementById("dz4_graph_htxt").style.display="none";
+				document.getElementById("dz4_graph_ltxt").style.display="block";
+				document.getElementById("dz4_graph_ytxt").style.display="block";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="block";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 3:
+				prod_gid="L";
+				document.getElementById("dz4_graph_ntxt").style.display="block";
+				document.getElementById("dz4_graph_htxt").style.display="block";
+				document.getElementById("dz4_graph_ltxt").style.display="none";
+				document.getElementById("dz4_graph_ytxt").style.display="block";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="block";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 4:
+				prod_gid="Y";
+				document.getElementById("dz4_graph_ntxt").style.display="block";
+				document.getElementById("dz4_graph_htxt").style.display="block";
+				document.getElementById("dz4_graph_ltxt").style.display="block";
+				document.getElementById("dz4_graph_ytxt").style.display="none";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="block";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+			}
+		}
+		if(dz_id == 'DZ6-400')
+		{
 			
-		}
-		function showgraph(d_id,graph_id){
-		 console.log(d_id,graph_id);
-			if(d_id == 1)
+			prod_dzid=6;
+			prod_dzno=400;
+			switch(gid)
 			{
-
-			}
-			if(d_id == 2)
-			{
-				alert("dz2");
-				switch(graph_id)
-				{
-					case 0:
-					document.getElementById("dz2_graph_img").style.zIndex=2;
-					document.getElementById("dz2_graph_img1").style.zIndex=1;
-					break;
-
-					case 1:
-					document.getElementById("dz2_graph_img1").style.zIndex=2;
-					document.getElementById("dz2_graph_img").style.zIndex=1;
-					break;
-				}
-			}
-			if(d_id == 4)
-			{
-				switch(graph_id)
-				{
-					case 0:
-					document.getElementById("dz4_graph_img").style.zIndex=2;
-					document.getElementById("dz4_graph_img1").style.zIndex=1;
-					document.getElementById("dz4_graph_img2").style.zIndex=1;
-					break;
-
-					case 1:
-					document.getElementById("dz4_graph_img1").style.zIndex=2;
-					document.getElementById("dz4_graph_img0").style.zIndex=1;
-					document.getElementById("dz4_graph_img2").style.zIndex=1;
-					break;
-
-					case 2:
-					document.getElementById("dz4_graph_img2").style.zIndex=2;
-					document.getElementById("dz4_graph_img0").style.zIndex=1;
-					document.getElementById("dz4_graph_img1").style.zIndex=1;
-					break;
-				}
-			}
-			if(d_id == 6)
-			{
-				switch(graph_id)
-				{
-					case 0:
-					document.getElementById("dz6_graph_img").style.zIndex=2;
-					document.getElementById("dz6_graph_img1").style.zIndex=1;
-					document.getElementById("dz6_graph_img2").style.zIndex=1;
-					break;
-
-					case 1:
-					document.getElementById("dz6_graph_img1").style.zIndex=2;
-					document.getElementById("dz6_graph_img0").style.zIndex=1;
-					document.getElementById("dz6_graph_img2").style.zIndex=1;
-					break;
-
-					case 2:
-					document.getElementById("dz6_graph_img2").style.zIndex=2;
-					document.getElementById("dz6_graph_img0").style.zIndex=1;
-					document.getElementById("dz6_graph_img1").style.zIndex=1;
-					break;
-				}	
-			}
-			if(d_id == 7)
-			{
-				switch(graph_id)
-				{
-					case 0:
-					document.getElementById("dz7_graph_img").style.zIndex=2;
-					document.getElementById("dz7_graph_img1").style.zIndex=1;
-					document.getElementById("dz7_graph_img2").style.zIndex=1;
-					break;
-
-					case 1:
-					document.getElementById("dz7_graph_img1").style.zIndex=2;
-					document.getElementById("dz7_graph_img0").style.zIndex=1;
-					document.getElementById("dz7_graph_img2").style.zIndex=1;
-					break;
-
-					case 2:
-					document.getElementById("dz7_graph_img2").style.zIndex=2;
-					document.getElementById("dz7_graph_img0").style.zIndex=1;
-					document.getElementById("dz7_graph_img1").style.zIndex=1;
-					break;
-				}	
+				case 1:
+				prod_gid="N";
+				document.getElementById("dz6_graph_ntxt").style.display="none";
+				document.getElementById("dz6_graph_htxt").style.display="block";
+				document.getElementById("dz6_graph_ltxt").style.display="block";
+				document.getElementById("dz6_graph_ytxt").style.display="block";
+				document.getElementById("dz6_graph_ntxt_active").style.display="block";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 2:
+				prod_gid="H";
+				document.getElementById("dz6_graph_ntxt").style.display="block";
+				document.getElementById("dz6_graph_htxt").style.display="none";
+				document.getElementById("dz6_graph_ltxt").style.display="block";
+				document.getElementById("dz6_graph_ytxt").style.display="block";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="block";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 3:
+				prod_gid="L";
+				document.getElementById("dz6_graph_ntxt").style.display="block";
+				document.getElementById("dz6_graph_htxt").style.display="block";
+				document.getElementById("dz6_graph_ltxt").style.display="none";
+				document.getElementById("dz6_graph_ytxt").style.display="block";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="block";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 4:
+				prod_gid="Y";
+				document.getElementById("dz6_graph_ntxt").style.display="block";
+				document.getElementById("dz6_graph_htxt").style.display="block";
+				document.getElementById("dz6_graph_ltxt").style.display="block";
+				document.getElementById("dz6_graph_ytxt").style.display="none";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="block";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
 			}
 		}
+		if(dz_id == 'DZ7-800')
+		{
+			prod_dzid=7;
+			prod_dzno=800;
+			switch(gid)
+			{
+				case 1:
+				prod_gid="N";
+				document.getElementById("dz7_graph_ntxt").style.display="none";
+				document.getElementById("dz7_graph_htxt").style.display="block";
+				document.getElementById("dz7_graph_ltxt").style.display="block";
+				document.getElementById("dz7_graph_ytxt").style.display="block";
+				document.getElementById("dz7_graph_ntxt_active").style.display="block";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 2:
+				prod_gid="H";
+				document.getElementById("dz7_graph_ntxt").style.display="block";
+				document.getElementById("dz7_graph_htxt").style.display="none";
+				document.getElementById("dz7_graph_ltxt").style.display="block";
+				document.getElementById("dz7_graph_ytxt").style.display="block";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="block";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 3:
+				prod_gid="L";
+				document.getElementById("dz7_graph_ntxt").style.display="block";
+				document.getElementById("dz7_graph_htxt").style.display="block";
+				document.getElementById("dz7_graph_ltxt").style.display="none";
+				document.getElementById("dz7_graph_ytxt").style.display="block";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="block";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+				case 4:
+				prod_gid="Y";
+				document.getElementById("dz7_graph_ntxt").style.display="block";
+				document.getElementById("dz7_graph_htxt").style.display="block";
+				document.getElementById("dz7_graph_ltxt").style.display="block";
+				document.getElementById("dz7_graph_ytxt").style.display="none";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="block";
+				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>D</span>1AOOOO";
+				break;
+			}
+		}
+		
+	}
+	function dravideo_play(vid_id,vid)
+	{
+		//console.log(vid_id);
+		var vi=document.getElementById(("product_video"));
+		//var vid=$("#"+vid_id).get(0);
+		//console.log(vi);
+		//$("#"+vid_id).get(0).play();
+		vi.play();
+		var pImg="product_img";
+		var iImg="itrp_img";
+		//alert(iImg);
+		//vid_id.play();
+		//vid_id.onended = function(e) {
+		//vi.on('ended',function(){
+		vi.addEventListener("ended", function() {
+		//alert("the end");
+		$("#"+vid_id).css("display","none");
+		$("#"+pImg).css("display", "block");
+		//$("#"+iImg).css("display", "block");
+		//document.getElementById("'"+pImg+"'").style.display="block";
+		//document.getElementById("'"+iImg+"'").style.display="block";
+		});	
+		
+	}
 	function trp_main(dz_id,trp_id){
 			if(dz_id == 'DZ1-160')
 			{
 				//alert('if');	
-				
+				prod_dzid=1;
+				prod_dzno=160;
+
 				switch(trp_id)
 				{
 					case 'TMR':
 
-						
+						prod_iid="D";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="inline";
@@ -165,13 +344,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 						
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 
 					case 'iTRP-M3':
 
-
+						prod_iid="N";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -206,12 +385,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-1':
 
-
+						prod_iid="F";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -246,14 +425,14 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 
 					break;
 					case 'iTRP-2':
 
-
+						prod_iid="G";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -290,14 +469,14 @@
 
 						document.getElementById('prod_id').innerHTML = "DZ1T0160NXG1AOOOO";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 
 					break;
 					case 'iTRP-3':
 
-
+						prod_iid="H";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -334,13 +513,14 @@
 
 						document.getElementById('prod_id').innerHTML = "DZ1T0160NXH1AOOOO";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 
 					break;
 					case 'iTRP-4':
 
+						prod_iid="J";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -375,14 +555,14 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 
 					break;
 					case 'iTRP-5':
 
-
+						prod_iid="K";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -417,7 +597,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 
@@ -429,9 +609,13 @@
 			if(dz_id == 'DZ2-160')
 			{
 				//alert(dz_id);
+				prod_dzid=2;
+				prod_dzno=160;
+				
 				switch(trp_id)
 				{
 					case 'TMR':
+						prod_iid="D";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="inline";
@@ -466,12 +650,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 
 					case 'iTRP-M3':
 
+						prod_iid="N";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -507,11 +692,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-1':
 
+						prod_iid="F";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -547,12 +733,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 					break;
 					case 'iTRP-2':
 
+						prod_iid="G";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -588,11 +775,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-3':
 
+						prod_iid="H";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -628,10 +816,11 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 					break;
 					case 'iTRP-4':
 
+						prod_iid="J";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -667,11 +856,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-5':
 
+						prod_iid="K";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon2_TMR_active').style.display="none";
@@ -707,18 +897,22 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 					break;
 				}
 			
 			}
 			if(dz_id == 'DZ4-250')
 			{
+				prod_dzid=4;
+				prod_dzno=250;
+				
 				switch(trp_id)
 				{
 		
 					case 'iTRP-M3':
 
+						prod_iid="N";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -754,11 +948,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-1':
 
+						prod_iid="F";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -794,11 +989,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-2':
 
+						prod_iid="G";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -834,11 +1030,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-3':
 
+						prod_iid="H";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -873,11 +1070,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
 
+						prod_iid="J";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -913,11 +1111,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-5':
 
+						prod_iid="K";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -953,18 +1152,19 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
-
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 					break;
 				}
 			
 			}
 			if(dz_id == 'DZ6-400')
 			{
+				prod_dzid=6;
+				prod_dzno=400;
 				switch(trp_id)
 				{
 					case 'TMR':
-
+						prod_iid="D";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 					
 						document.getElementById('trip_icon6_TMR_active').style.display="inline";
@@ -1000,12 +1200,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
-
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 					break;
 
 					case 'iTRP-M3':
 
+						prod_iid="N";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1041,12 +1241,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 					break;
 					case 'iTRP-1':
 
+						prod_iid="F";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1082,12 +1283,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 					break;
 					case 'iTRP-2':
 
+						prod_iid="G";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1123,12 +1325,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 					break;
 					case 'iTRP-3':
 
+						prod_iid="H";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1164,12 +1367,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
-
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
 
+						prod_iid="J";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1204,12 +1407,13 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 
 					break;
 					case 'iTRP-5':
 
+						prod_iid="K";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						document.getElementById('trip_icon6_TMR_active').style.display="none";
@@ -1245,7 +1449,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
+					document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 				}
@@ -1253,11 +1457,15 @@
 			}
 			if(dz_id == 'DZ7-800')
 			{
+				prod_dzid=7;
+				prod_dzno=800;
+		
 				switch(trp_id)
 				{
 					
 					case 'iTRP-M3':
 
+						prod_iid="N";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1293,11 +1501,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-1':
 
+						prod_iid="F";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1333,12 +1542,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>F</span>1AOOOO";
-
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-2':
 
+						prod_iid="G";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//ocument.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1374,11 +1583,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>G</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-3':
 
+						prod_iid="H";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1414,11 +1624,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>H</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-4':
 
+						prod_iid="J";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1454,11 +1665,12 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="block";
 						document.getElementById('itrp_imgiTRP-5').style.display="none";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>J</span>1AOOOO";
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 
 					break;
 					case 'iTRP-5':
 
+						prod_iid="K";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
 						//document.getElementById('trip_icon_TMR_active').style.display="none";
@@ -1494,8 +1706,7 @@
 						document.getElementById('itrp_imgiTRP-4').style.display="none";
 						document.getElementById('itrp_imgiTRP-5').style.display="block";
 
-						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>K</span>1AOOOO";
-
+						document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>"+prod_dzid+"</span>T0<span id='prod_dzno'>"+prod_dzno+"</span><span id='prod_gid'>"+prod_gid+"</span>X<span id='prod_iid'>"+prod_iid+"</span>1AOOOO";
 					break;
 				}
 			
@@ -1510,7 +1721,7 @@
 			{
 				case '1':
 
-	
+				prod_gid="N";
 				common_code(dz_id);
 
 				//document.getElementById('drawout_Disable').style.display="none";
@@ -1662,7 +1873,7 @@
 				document.getElementById('itrp4').style.display="none";
 				document.getElementById('itrp5').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Aux Tac.mp4");
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/iTRP-1.png");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/Frame.png");
 				document.getElementById('product_img').style.display="none";
@@ -1673,6 +1884,24 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('graph1_btnr').style.display="block";
+				document.getElementById('graph2_btnr').style.display="none";
+				document.getElementById('graph3_btnr').style.display="none";
+				document.getElementById('graph4_btnr').style.display="none";
+				document.getElementById('graph5_btnr').style.display="none";
+
+				document.getElementById('graph1_btnb').style.display="block";
+				document.getElementById('graph2_btnb').style.display="none";
+				document.getElementById('graph3_btnb').style.display="none";
+				document.getElementById('graph4_btnb').style.display="none";
+				document.getElementById('graph5_btnb').style.display="none";
+
+				document.getElementById('graph1_btny').style.display="block";
+				document.getElementById('graph2_btny').style.display="none";
+				document.getElementById('graph3_btny').style.display="none";
+				document.getElementById('graph4_btny').style.display="none";
+				document.getElementById('graph5_btny').style.display="none";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
@@ -1813,7 +2042,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -1958,7 +2187,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/uv or shunt.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -2096,7 +2325,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Box Clamp.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -2237,7 +2466,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Spreaders.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -2378,7 +2607,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Rear stud.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -2519,7 +2748,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/ROM.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -2661,7 +2890,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/Plugin.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -2801,7 +3030,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ1-160/Videos/MIL.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -2817,6 +3046,8 @@
 			switch(id)
 			{
 				case '1':
+
+				prod_gid="N";
 
 				common_code(dz_id);
 
@@ -2973,7 +3204,7 @@
 				
 				$('#dz1').css("background-image", "url(Assets/Configurator/Button/DZ1_B.png)");  
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/Frame.png");
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
@@ -2984,6 +3215,24 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('graph1_btnr').style.display="none";
+				document.getElementById('graph2_btnr').style.display="block";
+				document.getElementById('graph3_btnr').style.display="none";
+				document.getElementById('graph4_btnr').style.display="none";
+				document.getElementById('graph5_btnr').style.display="none";
+
+				document.getElementById('graph1_btnb').style.display="none";
+				document.getElementById('graph2_btnb').style.display="block";
+				document.getElementById('graph3_btnb').style.display="none";
+				document.getElementById('graph4_btnb').style.display="none";
+				document.getElementById('graph5_btnb').style.display="none";
+
+				document.getElementById('graph1_btny').style.display="none";
+				document.getElementById('graph2_btny').style.display="block";
+				document.getElementById('graph3_btny').style.display="none";
+				document.getElementById('graph4_btny').style.display="none";
+				document.getElementById('graph5_btny').style.display="none";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 				
@@ -3127,7 +3376,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -3272,7 +3521,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/uv or shunt.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -3418,7 +3667,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";		
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Box Clamp.mp4");	
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Box Clamp.mp4");	
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";	
 				
@@ -3561,7 +3810,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Spreaders.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -3710,7 +3959,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Rear stud.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -3854,7 +4103,7 @@
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 							
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/ROM.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -3999,7 +4248,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/Plugin.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -4146,7 +4395,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ2-160/Videos/MIL.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -4164,6 +4413,8 @@
 			switch(id)
 			{
 				case '1':
+
+				prod_gid="N";
 
 				common_code(dz_id);
 
@@ -4256,6 +4507,15 @@
 				document.getElementById('plugin_in_unable_dz6').style.display="none";
 				document.getElementById('mil_unable_dz6').style.display="none";
 
+				document.getElementById('aux_tac_unable_dz7').style.display="none";
+				document.getElementById('uv_shunt_unable_dz7').style.display="none";
+				document.getElementById('box_champ_unable_dz7').style.display="none";
+				document.getElementById('spreaders_unable_dz7').style.display="none";
+				document.getElementById('rear_stud_unable_dz7').style.display="none";
+				document.getElementById('rom_unable_dz7').style.display="none";
+				document.getElementById('plugin_in_unable_dz7').style.display="none";
+				document.getElementById('mil_unable_dz7').style.display="none";
+
 				document.getElementById('box_champ_active_dz1').style.display="none";
 				document.getElementById('box_champ_Disable_dz1').style.display="none";
 
@@ -4267,6 +4527,10 @@
 
 				document.getElementById('box_champ_active_dz6').style.display="none";
 				document.getElementById('box_champ_Disable_dz6').style.display="none";
+
+
+				document.getElementById('box_champ_active_dz7').style.display="none";
+				document.getElementById('box_champ_Disable_dz7').style.display="none";
 
 				document.getElementById('drawout_unable_dz1').style.display="none";
 				document.getElementById('drawout_active_dz1').style.display="none";
@@ -4283,6 +4547,10 @@
 				document.getElementById('drawout_unable_dz6').style.display="none";
 				document.getElementById('drawout_active_dz6').style.display="none";
 				document.getElementById('drawout_Disable_dz6').style.display="none";
+
+				document.getElementById('drawout_unable_dz7').style.display="none";
+				document.getElementById('drawout_active_dz7').style.display="none";
+				document.getElementById('drawout_Disable_dz7').style.display="none";
 				
 				document.getElementById('plugin_in_active_dz1').style.display="none";
 				document.getElementById('plugin_in_Disable_dz1').style.display="none";
@@ -4297,9 +4565,12 @@
 				document.getElementById('plugin_in_Disable_dz6').style.display="none";
 				
 				
+				document.getElementById('plugin_in_active_dz7').style.display="none";
+				document.getElementById('plugin_in_Disable_dz7').style.display="none";
+
 				$('#dz1').css("background-image", "url(Assets/Configurator/Button/DZ1_B.png)");  
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Aux Tac.mp4");
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/iTRP-1.png");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/Frame.png");
 				document.getElementById('product_img').style.display="none";
@@ -4310,6 +4581,24 @@
 				document.getElementById('dz4_graph').style.display="block";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('graph1_btnr').style.display="none";
+				document.getElementById('graph2_btnr').style.display="none";
+				document.getElementById('graph3_btnr').style.display="block";
+				document.getElementById('graph4_btnr').style.display="none";
+				document.getElementById('graph5_btnr').style.display="none";
+
+				document.getElementById('graph1_btnb').style.display="none";
+				document.getElementById('graph2_btnb').style.display="none";
+				document.getElementById('graph3_btnb').style.display="block";
+				document.getElementById('graph4_btnb').style.display="none";
+				document.getElementById('graph5_btnb').style.display="none";
+
+				document.getElementById('graph1_btny').style.display="none";
+				document.getElementById('graph2_btny').style.display="none";
+				document.getElementById('graph3_btny').style.display="block";
+				document.getElementById('graph4_btny').style.display="none";
+				document.getElementById('graph5_btny').style.display="none";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
@@ -4456,7 +4745,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 								
@@ -4609,7 +4898,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/uv or shunt.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -4761,7 +5050,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Box Clamp.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -4914,7 +5203,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Spreaders.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -5062,7 +5351,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Rear stud.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -5208,7 +5497,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/ROM.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -5355,7 +5644,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";			
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Plugin.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -5502,7 +5791,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/Drawout.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -5649,7 +5938,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ4-250/Videos/MIL.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -5666,6 +5955,8 @@
 			switch(id)
 			{
 				case '1':
+
+				prod_gid="N";
 
 				common_code(dz_id);
 
@@ -5820,7 +6111,7 @@
 				
 				$('#dz1').css("background-image", "url(Assets/Configurator/Button/DZ1_B.png)");  
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/Frame.png");
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
@@ -5831,6 +6122,24 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="block";
 				document.getElementById('dz7_graph').style.display="none";
+
+				document.getElementById('graph1_btnr').style.display="none";
+				document.getElementById('graph2_btnr').style.display="none";
+				document.getElementById('graph3_btnr').style.display="none";
+				document.getElementById('graph4_btnr').style.display="block";
+				document.getElementById('graph5_btnr').style.display="none";
+
+				document.getElementById('graph1_btnb').style.display="none";
+				document.getElementById('graph2_btnb').style.display="none";
+				document.getElementById('graph3_btnb').style.display="none";
+				document.getElementById('graph4_btnb').style.display="block";
+				document.getElementById('graph5_btnb').style.display="none";
+
+				document.getElementById('graph1_btny').style.display="none";
+				document.getElementById('graph2_btny').style.display="none";
+				document.getElementById('graph3_btny').style.display="none";
+				document.getElementById('graph4_btny').style.display="block";
+				document.getElementById('graph5_btny').style.display="none";
 				
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
@@ -5974,7 +6283,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Aux Tac.mp4");	
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Aux Tac.mp4");	
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -6129,7 +6438,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 							
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/uv or shunt.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -6274,7 +6583,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Box Clamp.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -6422,7 +6731,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Spreaders.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -6570,7 +6879,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Rear stud.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -6714,7 +7023,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";	
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/ROM.mp4");		
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/ROM.mp4");		
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -6862,7 +7171,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Plugin.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -7014,7 +7323,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/Drawout.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -7162,7 +7471,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ6-400/Videos/MIL.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -7177,6 +7486,8 @@
 			switch(id)
 			{
 				case '1':
+
+				prod_gid="N";
 
 				common_code(dz_id);
 
@@ -7335,7 +7646,7 @@
 				document.getElementById('itrp4').style.display="none";
 				document.getElementById('itrp5').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Aux Tac.mp4");
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/Frame.png");
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
@@ -7346,6 +7657,25 @@
 				document.getElementById('dz4_graph').style.display="none";
 				document.getElementById('dz6_graph').style.display="none";
 				document.getElementById('dz7_graph').style.display="block";
+
+
+				document.getElementById('graph1_btnr').style.display="none";
+				document.getElementById('graph2_btnr').style.display="none";
+				document.getElementById('graph3_btnr').style.display="none";
+				document.getElementById('graph4_btnr').style.display="none";
+				document.getElementById('graph5_btnr').style.display="block";
+
+				document.getElementById('graph1_btnb').style.display="none";
+				document.getElementById('graph2_btnb').style.display="none";
+				document.getElementById('graph3_btnb').style.display="none";
+				document.getElementById('graph4_btnb').style.display="none";
+				document.getElementById('graph5_btnb').style.display="block";
+
+				document.getElementById('graph1_btny').style.display="none";
+				document.getElementById('graph2_btny').style.display="none";
+				document.getElementById('graph3_btny').style.display="none";
+				document.getElementById('graph4_btny').style.display="none";
+				document.getElementById('graph5_btny').style.display="block";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
@@ -7491,7 +7821,7 @@
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";
 			
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Aux Tac.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -7638,7 +7968,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/uv or shunt.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -7792,7 +8122,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Spreaders.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -7942,7 +8272,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Rear stud.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -8090,7 +8420,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/ROM.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 				
@@ -8236,7 +8566,7 @@
 
 				document.getElementById('plugin_in_active_dz7').style.display="none";
 				document.getElementById('plugin_in_Disable_dz7').style.display="inline";				
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/Drawout.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -8384,7 +8714,7 @@
 				document.getElementById('dz6_rating').style.display="none";
 				document.getElementById('dz7_rating').style.display="none";
 
-				document.getElementById("product_video").setAttribute("src","Assets/data/Configurator/DZ7-800/Videos/MIL.mp4");
+				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
 
@@ -9032,7 +9362,7 @@
 		<div id="product_display" class="product_display">
 			<img id="product_img" style="display:none;" class="product_img" src="Assets/data/Configurator/DZ1-160/Images/Frame.png">
 			<video id="product_video" class="product_video">
-                    <source src="Assets/data/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
+                    <source src="Assets/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
             </video>
             <a href="#" onclick="dravideo_play('product_video')"><img id="video_btn" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>       
 		        <img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
@@ -9045,27 +9375,90 @@
 		</div>
 		<div class="graph">
 		<div id="dz1_graph" class="dz1_graph">
-			<img id="dz1_graph_img" onclick="showgraph(1,0);" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
-			<img id="dz1_graph_img1" onclick="showgraph(1,1);" class="dz_graph" src="Assets/data/Configurator/DZ1-160/Graph/staticGraph.png">
+			<img id="dz1_graph_img" onclick="showgraph('DZ2-160',1)" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+			<img id="dz1_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/Text.png">
+			<img id="dz1_graph_ftxt" onclick="show_gcode('DZ1-160',1)" class="dz1_graph_ftxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/1F.png">
+			<img id="dz1_graph_ftxt_active" style="display: none;" class="dz1_graph_ftxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/1F_Selection.png">
+			<img id="dz1_graph_ctxt" onclick="show_gcode('DZ1-160',2)" class="dz1_graph_ctxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/2C.png">
+			<img id="dz1_graph_ctxt_active" style="display: none;" class="dz1_graph_ctxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/2C_Selection.png">
+			<img id="dz1_graph_dtxt" onclick="show_gcode('DZ1-160',3)" class="dz1_graph_dtxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/3D.png">
+			<img id="dz1_graph_dtxt_active" style="display: none;" class="dz1_graph_dtxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/3D_Selection.png">
+			<img id="dz1_graph_ntxt" onclick="show_gcode('DZ1-160',4)" class="dz1_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/4N.png">
+			<img id="dz1_graph_ntxt_active" style="display: none;" class="dz1_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/4N_Selection.png">
 		</div>
 		<div id="dz2_graph" class="dz2_graph" style="display:none;">
-			<img id="dz2_graph_img1" onclick="showgraph(2,1);" class="dz_graph" src="Assets/data/Configurator/DZ2-160/Graph/staticGraph.png">
-			<img id="dz2_graph_img" onclick="showgraph(2,0);" class="dz_graph" src="Assets/data/Configurator/DZ2-160/Graph/Graph.png">
+			<img id="dz2_graph_img1" onclick="showgraph('DZ2-160',2)" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ2.png">
+			<img id="dz2_graph_img" onclick="showgraph('DZ2-160',1)" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+			<img id="dz2_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/Text.png">
+			<img id="dz2_graph_ntxt"  onclick="show_gcode('DZ2-160',1)" class="dz2_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/1N.png">
+			<img id="dz2_graph_ntxt_active" style="display: none;" class="dz2_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/1N_Selection.png">
+			<img id="dz2_graph_htxt"   onclick="show_gcode('DZ2-160',2)" class="dz2_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/2H.png">
+			<img id="dz2_graph_htxt_active" style="display: none;" class="dz2_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/2H_Selection.png">
+			<img id="dz2_graph_ltxt"  onclick="show_gcode('DZ2-160',3)" class="dz2_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/3L.png">
+			<img id="dz2_graph_ltxt_active" style="display: none;" class="dz2_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/3L_Selection.png">
 		</div>
 		<div id="dz4_graph" class="dz4_graph" style="display:none;">	
-			<img id="dz6_graph_img2" onclick="showgraph(4,2);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph2.png">
-			<img id="dz6_graph_img1" onclick="showgraph(4,1);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/staticGraph.png">
-			<img id="dz6_graph_img" onclick="showgraph(4,0);" class="dz_graph" src="Assets/data/Configurator/DZ4-250/Graph/Graph.png">
+			<img id="dz4_graph_img2" class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ4.png">
+			<img id="dz4_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ4.png">
+			<img id="dz4_graph_img"  class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+			<img id="dz4_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/Text.png">
+			<img id="dz4_graph_ntxt"  onclick="show_gcode('DZ4-250',1)" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/1N.png">
+			<img id="dz4_graph_ntxt_active" style="display: none;" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/1N_Selection.png">
+			<img id="dz4_graph_htxt"  onclick="show_gcode('DZ4-250',2)" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/2H.png">
+			<img id="dz4_graph_htxt_active" style="display: none;" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/2H_Selection.png">
+			<img id="dz4_graph_ltxt"   onclick="show_gcode('DZ4-250',3)"class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/3L.png">
+			<img id="dz4_graph_ltxt_active" style="display: none;" class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/3L_Selection.png">
+			<img id="dz4_graph_ytxt" onclick="show_gcode('DZ4-250',4)"  class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/4Y.png">
+			<img id="dz4_graph_ytxt_active" style="display: none;" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/4Y_Selection.png">
 		</div>
 		<div id="dz6_graph" class="dz6_graph" style="display:none;">	
-			<img id="dz6_graph_img2" onclick="showgraph(6,2);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph2.png">
-			<img id="dz6_graph_img1" onclick="showgraph(6,1);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/staticGraph.png">
-			<img id="dz6_graph_img" onclick="showgraph(6,0);" class="dz_graph" src="Assets/data/Configurator/DZ6-400/Graph/Graph.png">
+			<img id="dz6_graph_img2"  class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ6.png">
+			<img id="dz6_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ6.png">
+			<img id="dz6_graph_img" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+			<img id="dz6_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/Text.png">
+			<img id="dz6_graph_ntxt"  onclick="show_gcode('DZ6-400',1)" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/1N.png">
+			<img id="dz6_graph_ntxt_active" style="display: none;" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/1N_Selection.png">
+			<img id="dz6_graph_htxt"  onclick="show_gcode('DZ6-400',2)"  class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/2H.png">
+			<img id="dz6_graph_htxt_active" style="display: none;" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/2H_Selection.png">
+			<img id="dz6_graph_ltxt"  onclick="show_gcode('DZ6-400',3)" class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/3L.png">
+			<img id="dz6_graph_ltxt_active" style="display: none;" class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/3L_Selection.png">
+			<img id="dz6_graph_ytxt"  onclick="show_gcode('DZ6-400',4)" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/4Y.png">
+			<img id="dz6_graph_ytxt_active" style="display: none;" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/4Y_Selection.png">
 		</div>
 		<div id="dz7_graph" class="dz7_graph" style="display:none;">	
-			<img id="dz7_graph_img2" onclick="showgraph(7,2);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph2.png">
-			<img id="dz7_graph_img1" onclick="showgraph(7,1);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/staticGraph.png">
-			<img id="dz7_graph_img" onclick="showgraph(7,0);" class="dz_graph" src="Assets/data/Configurator/DZ7-800/Graph/Graph.png">	
+			<img id="dz7_graph_img2" class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ7.png">
+			<img id="dz7_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ7.png">
+			<img id="dz7_graph_img" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">	
+			<img id="dz1_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/Text.png">
+			<img id="dz7_graph_ntxt"  onclick="show_gcode('DZ7-800',1)" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/1N.png">
+			<img id="dz7_graph_ntxt_active" style="display: none;" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/1N_Selection.png">
+			<img id="dz7_graph_htxt"  onclick="show_gcode('DZ7-800',2)" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/2H.png">
+			<img id="dz7_graph_htxt_active" style="display: none;" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/2H_Selection.png">
+			<img id="dz7_graph_ltxt"  onclick="show_gcode('DZ7-800',3)" class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/3L.png">
+			<img id="dz7_graph_ltxt_active" style="display: none;" class="dz_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/3L_Selection.png">
+			<img id="dz7_graph_ytxt"  onclick="show_gcode('DZ7-800',4)" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/4Y.png">
+			<img id="dz7_graph_ytxt_active" style="display: none;" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/4Y_Selection.png">
+		</div>
+		<div id="graph_rbtn">
+			<img id="graph1_btnr" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ1-160',1)">
+			<img id="graph2_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ2-160',1)">
+			<img id="graph3_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ4-250',1)">
+			<img id="graph4_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ6-500',1)">
+			<img id="graph5_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ7-800',1)">
+		</div>
+		<div id="graph_bbtn">
+			<img id="graph1_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ1-160',2)">
+			<img id="graph2_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ2-160',2)">
+			<img id="graph3_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ4-250',2)">
+			<img id="graph4_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ6-400',2)">
+			<img id="graph5_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ7-800',2)">
+		</div>
+		<div id="graph_ybtn">
+			<img id="graph1_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ1-160',3)">
+			<img id="graph2_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ2-160',3)"
+			><img id="graph3_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ4-250',3)">
+			<img id="graph4_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ6-400',3)">
+			<img id="graph5_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ7-800',3)">
 		</div>
 		</div>
 		
@@ -9079,16 +9472,16 @@
 		</div>
 		<div class="footer">
 		<img src="Assets/Configurator/Dimensions/DZ1.png"  class="dz_dimension" id="dz1_dimension">
-		<img src="Assets/Configurator/Dimensions/DZ2.png"  class="dz_dimension"style="display: none;" id="dz2_dimension" >
+		<img src="Assets/Configurator/Dimensions/DZ2.png"  class="dz_dimension" style="display: none;" id="dz2_dimension" >
 		<img src="Assets/Configurator/Dimensions/DZ4.png"   class="dz_dimension" style="display: none;" id="dz4_dimension" >
 		<img src="Assets/Configurator/Dimensions/DZ6.png"  class="dz_dimension" style="display: none;" id="dz6_dimension" > 
-		<img src="Assets/Configurator/Dimensions/DZ7.png"  class="dz_dimension"style="display: none;" id="dz7_dimension" >
+		<img src="Assets/Configurator/Dimensions/DZ7.png"  class="dz_dimension" style="display: none;" id="dz7_dimension" >
 		<img src="Assets/Configurator/Salient Trip Unit/TMR.png"  class="dz_trp_dimension" id="itrpTMR" >
 		<img src="Assets/Configurator/Salient Trip Unit/iTrp-M3.png" class="dz_trp_dimension" id="itrpM3" style="display: none;">
 		<img src="Assets/Configurator/Salient Trip Unit/iTrp1.png" class="dz_trp_dimension" id="itrp1" style="display: none;">
-		<img src="Assets/Configurator/Salient Trip Unit/iTrp2.png"  class="dz_trp_dimension"id="itrp2" style="display: none;">
+		<img src="Assets/Configurator/Salient Trip Unit/iTrp2.png"  class="dz_trp_dimension" id="itrp2" style="display: none;">
 		<img src="Assets/Configurator/Salient Trip Unit/iTrp3.png" class="dz_trp_dimension" id="itrp3" style="display: none;">
-		<img src="Assets/Configurator/Salient Trip Unit/iTrp4.png"  class="dz_trp_dimension"id="itrp4" style="display: none;">
+		<img src="Assets/Configurator/Salient Trip Unit/iTrp4.png"  class="dz_trp_dimension" id="itrp4" style="display: none;">
 		<img src="Assets/Configurator/Salient Trip Unit/iTrp5.png" class="dz_trp_dimension" id="itrp5" style="display: none;">
 		</div>
 	</div>
