@@ -19,11 +19,6 @@ body{
 	height: auto;
     top: 0;
 }
-.main_header
-{
-	
-}
-
 .dz_product
 {
 	float: right;
@@ -183,8 +178,8 @@ body{
 	}
 #prod_text{
 	position: absolute;
-    top: 72px;
-    left: 160px;
+    left: 60px;
+	top:2px;
 }
 #prod_iid{
 	color:#ff00ff;
@@ -199,7 +194,7 @@ body{
 	color:#c1272d;
 }
 .prod_content{
-	font-size: 20px;
+	font-size: 24px;
     font-weight: bold;
 	font-family: SOURCE SANS PRO SEMIBOLD;
 }
@@ -217,9 +212,9 @@ body{
 	transform: scale(0.9);
     margin-left:165px;
     margin-top: 10px;*/
-	top: 0px;
-    left: 150px;
-	width:800px;
+	top: -20px;
+    left: 340px;
+	width:750px;
 	transform: scale(0.9);
 }
 .itrp_img{
@@ -228,9 +223,9 @@ body{
 		/*display:none;
 		left: 0px;*/
 		z-index: 0;
-		top: 0px;
-		left: 150px;
-		width:700px;
+		top: -20px;
+		left: 340px;
+		width:750px;
 		/*margin-left: 165px;
 		margin-top: 15px;*/
 		transform: scale(0.9);
@@ -239,8 +234,8 @@ body{
 .product_video
 {
 	position: absolute;
-    width: 700px;
-	top:0px;
+    width: 750px;
+	top:-20px;
     left: 340px;
     z-index: 1;
 	/* display:none; */
@@ -248,16 +243,15 @@ body{
 .video_btn{
 	/*margin-top: -125px;
     margin-left: 875px;*/
-        z-index: 780;
+    z-index: 780;
     position: absolute;
-    top: 325px;
-    left: 750px;
-	transform: scale(0.8);
+    top: 350px;
+    right: -15px;
 }
 	.trip_menu
 	{
 	    position: absolute;
-		top: -64px;
+		top: -50px;
 		left: 570px
 	}
 
@@ -276,21 +270,26 @@ body{
 	.tmr_bkp
 	{
 		position: absolute;
-		top: -40px;
+		top: -22px;
 		left: 202px;
 	}
 
 	#conf_title
 	{
-    position: absolute;
-    left: 160px;
-    top: 25px;
+		position: absolute;
+		left: 60px;
+		top: -50px;
 	}
 	.graph
 	{
-		position: absolute;
-		top: 120px;
-		left: 113px;
+		position: relative;
+		top: 65px;
+		left: 30px;
+	}
+	.dz1_graph
+	{
+		position: relative;
+		z-index:100;
 	}
 	.dz_graph{
 		position: absolute;
@@ -302,6 +301,7 @@ body{
 		top: 175px;
 		left: 90px;
 	}
+	
 	.dz1_graph_ftxt{
 		position:absolute;
 		top: 118px;
@@ -348,6 +348,7 @@ body{
 		top: 120px;
 		left: 115px;
 	}
+	
 	.dz_graph_ltxt{
 		position: absolute;
 		top: 106px;
@@ -360,44 +361,43 @@ body{
 	}
 	#graph_rbtn{
 		position: absolute;
-		left: 235px;
-		top: 154px;
+		left: 238px;
+		top: 155px;
 	}
 	#graph_bbtn{
 		position: absolute;
-		left: 235px;
-		top: 92px;
+		left: 238px;
+		top: 93px;
 	}
 	#graph_ybtn{
 		position: absolute;
-		left: 235px;
-		top: 28px;
+		left: 238px;
+		top: 31px;
 		
 	}
 	.graph_btn{
-		height: 63px;
+	
 	}
 	.graph_btn1{
-		height: 64px;
+		
 	}
 	.graph_btn2{
-		height: 64px;
-	}
+		
+	} 
 	.dz_dimension{
 		position: absolute;
-		left: 110px;
+		left: 30px;
 	}
 	.dz_trp_dimension
 	{
 		position: absolute;
-		left: 355px;
-		transform: scale(0.93);
+		left: 315px;
 	}
 	.cur_rating
 	{
-	    top: 340px;
-		position: absolute;
-		left: 112px;
+	   top: 315px;
+	   position: absolute;
+       left: 30px;
 	}
 	.footer
 	{
@@ -408,5 +408,5 @@ body{
 	}
 	.prod_def
 	{
-		margin-left: -24px;
+		margin-left: -36px;
 	}

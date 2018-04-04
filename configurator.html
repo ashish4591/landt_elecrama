@@ -5,9 +5,195 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
 	var prod_dzid,prod_dzno,prod_gid="N",prod_iid="D";
-});
+	function showgraph(dz_id,gid){
+		if(dz_id == 'DZ1-160')
+		{
+			switch(gid)
+			{
+				case 1:
+				document.getElementById("dz1_graph").style.display="block";
+
+				break;
+				
+			}
+		}
+		if(dz_id == 'DZ2-160')
+		{
+			switch(gid)
+			{
+				case 1:
+				document.getElementById("dz2_graph_img1").style.display="none";
+				document.getElementById("dz2_graph_img").style.display="block";
+				document.getElementById("dz2_graph_txt").style.display="block";
+				document.getElementById("dz2_graph_ntxt").style.display="block";
+				document.getElementById("dz2_graph_htxt").style.display="block";
+				document.getElementById("dz2_graph_ltxt").style.display="block";
+				document.getElementById("dz2_graph_ntxt_active").style.display="none";
+				document.getElementById("dz2_graph_htxt_active").style.display="none";
+				document.getElementById("dz2_graph_ltxt_active").style.display="none";
+				break;
+
+				case 2:
+				document.getElementById("dz2_graph_img1").style.display="block";
+				document.getElementById("dz2_graph_img").style.display="none";
+				document.getElementById("dz2_graph_txt").style.display="none";
+				document.getElementById("dz2_graph_ntxt").style.display="none";
+				document.getElementById("dz2_graph_htxt").style.display="none";
+				document.getElementById("dz2_graph_ltxt").style.display="none";
+				document.getElementById("dz2_graph_ntxt_active").style.display="none";
+				document.getElementById("dz2_graph_htxt_active").style.display="none";
+				document.getElementById("dz2_graph_ltxt_active").style.display="none";
+				break;
+
+			}
+		}
+		if(dz_id == 'DZ4-250')
+		{
+			switch(gid)
+			{
+				case 1:
+				document.getElementById("dz4_graph_img2").style.display="none";
+				document.getElementById("dz4_graph_img1").style.display="none";
+				document.getElementById("dz4_graph_img").style.display="block";
+				document.getElementById("dz4_graph_txt").style.display="block";
+				document.getElementById("dz4_graph_ntxt").style.display="block";
+				document.getElementById("dz4_graph_htxt").style.display="block";
+				document.getElementById("dz4_graph_ltxt").style.display="block";
+				document.getElementById("dz4_graph_ytxt").style.display="block";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				break;
+				case 2:
+				document.getElementById("dz4_graph_img2").style.display="none";
+				document.getElementById("dz4_graph_img1").style.display="block";
+				document.getElementById("dz4_graph_img").style.display="none";
+				document.getElementById("dz4_graph_txt").style.display="none";
+				document.getElementById("dz4_graph_ntxt").style.display="none";
+				document.getElementById("dz4_graph_htxt").style.display="none";
+				document.getElementById("dz4_graph_ltxt").style.display="none";
+				document.getElementById("dz4_graph_ytxt").style.display="none";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				break;
+				case 3:
+				document.getElementById("dz4_graph_img2").style.display="block";
+				document.getElementById("dz4_graph_img1").style.display="none";
+				document.getElementById("dz4_graph_img").style.display="none";
+				document.getElementById("dz4_graph_txt").style.display="none";
+				document.getElementById("dz4_graph_ntxt").style.display="none";
+				document.getElementById("dz4_graph_htxt").style.display="none";
+				document.getElementById("dz4_graph_ltxt").style.display="none";
+				document.getElementById("dz4_graph_ytxt").style.display="none";
+				document.getElementById("dz4_graph_ntxt_active").style.display="none";
+				document.getElementById("dz4_graph_htxt_active").style.display="none";
+				document.getElementById("dz4_graph_ltxt_active").style.display="none";
+				document.getElementById("dz4_graph_ytxt_active").style.display="none";
+				break;
+			}
+		}
+		if(dz_id == 'DZ6-400')
+		{
+			switch(gid)
+			{
+				case 1:
+				document.getElementById("dz6_graph_img2").style.display="none";
+				document.getElementById("dz6_graph_img1").style.display="none";
+				document.getElementById("dz6_graph_img").style.display="block";
+				document.getElementById("dz6_graph_txt").style.display="block";
+				document.getElementById("dz6_graph_ntxt").style.display="block";
+				document.getElementById("dz6_graph_htxt").style.display="block";
+				document.getElementById("dz6_graph_ltxt").style.display="block";
+				document.getElementById("dz6_graph_ytxt").style.display="block";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				break;
+				case 2:
+				document.getElementById("dz6_graph_img2").style.display="none";
+				document.getElementById("dz6_graph_img1").style.display="block";
+				document.getElementById("dz6_graph_img").style.display="none";
+				document.getElementById("dz6_graph_txt").style.display="none";
+				document.getElementById("dz6_graph_ntxt").style.display="none";
+				document.getElementById("dz6_graph_htxt").style.display="none";
+				document.getElementById("dz6_graph_ltxt").style.display="none";
+				document.getElementById("dz6_graph_ytxt").style.display="none";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				break;
+				case 3:
+				document.getElementById("dz6_graph_img2").style.display="block";
+				document.getElementById("dz6_graph_img1").style.display="none";
+				document.getElementById("dz6_graph_img").style.display="none";
+				document.getElementById("dz6_graph_txt").style.display="none";
+				document.getElementById("dz6_graph_ntxt").style.display="none";
+				document.getElementById("dz6_graph_htxt").style.display="none";
+				document.getElementById("dz6_graph_ltxt").style.display="none";
+				document.getElementById("dz6_graph_ytxt").style.display="none";
+				document.getElementById("dz6_graph_ntxt_active").style.display="none";
+				document.getElementById("dz6_graph_htxt_active").style.display="none";
+				document.getElementById("dz6_graph_ltxt_active").style.display="none";
+				document.getElementById("dz6_graph_ytxt_active").style.display="none";
+				break;
+			}
+		}
+		if(dz_id == 'DZ7-800')
+		{
+			switch(gid)
+			{
+				case 1:
+				document.getElementById("dz7_graph_img2").style.display="none";
+				document.getElementById("dz7_graph_img1").style.display="none";
+				document.getElementById("dz7_graph_img").style.display="block";
+				document.getElementById("dz7_graph_txt").style.display="block";
+				document.getElementById("dz7_graph_ntxt").style.display="block";
+				document.getElementById("dz7_graph_htxt").style.display="block";
+				document.getElementById("dz7_graph_ltxt").style.display="block";
+				document.getElementById("dz7_graph_ytxt").style.display="block";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				break;
+				case 2:
+				document.getElementById("dz7_graph_img2").style.display="none";
+				document.getElementById("dz7_graph_img1").style.display="block";
+				document.getElementById("dz7_graph_img").style.display="none";
+				document.getElementById("dz7_graph_txt").style.display="none";
+				document.getElementById("dz7_graph_ntxt").style.display="none";
+				document.getElementById("dz7_graph_htxt").style.display="none";
+				document.getElementById("dz7_graph_ltxt").style.display="none";
+				document.getElementById("dz7_graph_ytxt").style.display="none";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				break;
+				case 3:
+				document.getElementById("dz7_graph_img2").style.display="block";
+				document.getElementById("dz7_graph_img1").style.display="none";
+				document.getElementById("dz7_graph_img").style.display="none";
+				document.getElementById("dz7_graph_txt").style.display="none";
+				document.getElementById("dz7_graph_ntxt").style.display="none";
+				document.getElementById("dz7_graph_htxt").style.display="none";
+				document.getElementById("dz7_graph_ltxt").style.display="none";
+				document.getElementById("dz7_graph_ytxt").style.display="none";
+				document.getElementById("dz7_graph_ntxt_active").style.display="none";
+				document.getElementById("dz7_graph_htxt_active").style.display="none";
+				document.getElementById("dz7_graph_ltxt_active").style.display="none";
+				document.getElementById("dz7_graph_ytxt_active").style.display="none";
+				break;
+			}
+		}
+
+	}
 	function show_gcode(dz_id,gid){
 		if(dz_id == 'DZ1-160')
 		{
@@ -274,12 +460,12 @@ $(document).ready(function(){
 		}
 		
 	}
-	function dravideo_play(vid_id,vid)
+	function dravideo_play(vid_id)
 	{
-		//console.log(vid_id);
-		var vi=document.getElementById(("product_video"));
+		console.log(vid_id);
+		var vi=document.getElementById("product_video");
 		//var vid=$("#"+vid_id).get(0);
-		//console.log(vi);
+		console.log(vi);
 		//$("#"+vid_id).get(0).play();
 		vi.play();
 		var pImg="product_img";
@@ -292,6 +478,7 @@ $(document).ready(function(){
 		//alert("the end");
 		$("#"+vid_id).css("display","none");
 		$("#"+pImg).css("display", "block");
+		$("#video_btn").css("display", "none");
 		//$("#"+iImg).css("display", "block");
 		//document.getElementById("'"+pImg+"'").style.display="block";
 		//document.getElementById("'"+iImg+"'").style.display="block";
@@ -304,11 +491,10 @@ $(document).ready(function(){
 				//alert('if');	
 				prod_dzid=1;
 				prod_dzno=160;
-
+				//prod_gid="N";
 				switch(trp_id)
 				{
 					case 'TMR':
-
 						prod_iid="D";
 						document.getElementById('itrp_img'+trp_id).setAttribute("src","Assets/data/Configurator/"+dz_id+"/Images/"+trp_id+".png");
 
@@ -611,7 +797,7 @@ $(document).ready(function(){
 				//alert(dz_id);
 				prod_dzid=2;
 				prod_dzno=160;
-				
+				//prod_gid="N";
 				switch(trp_id)
 				{
 					case 'TMR':
@@ -906,7 +1092,7 @@ $(document).ready(function(){
 			{
 				prod_dzid=4;
 				prod_dzno=250;
-				
+				//prod_gid="N";
 				switch(trp_id)
 				{
 		
@@ -1161,6 +1347,7 @@ $(document).ready(function(){
 			{
 				prod_dzid=6;
 				prod_dzno=400;
+				//prod_gid="N";
 				switch(trp_id)
 				{
 					case 'TMR':
@@ -1459,7 +1646,7 @@ $(document).ready(function(){
 			{
 				prod_dzid=7;
 				prod_dzno=800;
-		
+				//prod_gid="N";
 				switch(trp_id)
 				{
 					
@@ -1878,6 +2065,7 @@ $(document).ready(function(){
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ1-160/Images/Frame.png");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				document.getElementById('dz1_graph').style.display="block";
 				document.getElementById('dz2_graph').style.display="none";
@@ -1891,17 +2079,9 @@ $(document).ready(function(){
 				document.getElementById('graph4_btnr').style.display="none";
 				document.getElementById('graph5_btnr').style.display="none";
 
-				document.getElementById('graph1_btnb').style.display="block";
-				document.getElementById('graph2_btnb').style.display="none";
-				document.getElementById('graph3_btnb').style.display="none";
-				document.getElementById('graph4_btnb').style.display="none";
-				document.getElementById('graph5_btnb').style.display="none";
-
-				document.getElementById('graph1_btny').style.display="block";
-				document.getElementById('graph2_btny').style.display="none";
-				document.getElementById('graph3_btny').style.display="none";
-				document.getElementById('graph4_btny').style.display="none";
-				document.getElementById('graph5_btny').style.display="none";
+				document.getElementById('graph_rbtn').style.display="block";
+				document.getElementById('graph_bbtn').style.display="none";
+				document.getElementById('graph_ybtn').style.display="none";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>1</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
@@ -2045,6 +2225,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				
 				break;
@@ -2190,6 +2371,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -2328,6 +2510,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -2469,6 +2652,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -2610,6 +2794,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -2751,6 +2936,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -2893,6 +3079,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -3033,6 +3220,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ1-160/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -3209,6 +3397,7 @@ $(document).ready(function(){
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ2-160/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				document.getElementById('dz1_graph').style.display="none";
 				document.getElementById('dz2_graph').style.display="block";
@@ -3222,17 +3411,14 @@ $(document).ready(function(){
 				document.getElementById('graph4_btnr').style.display="none";
 				document.getElementById('graph5_btnr').style.display="none";
 
-				document.getElementById('graph1_btnb').style.display="none";
 				document.getElementById('graph2_btnb').style.display="block";
 				document.getElementById('graph3_btnb').style.display="none";
 				document.getElementById('graph4_btnb').style.display="none";
 				document.getElementById('graph5_btnb').style.display="none";
 
-				document.getElementById('graph1_btny').style.display="none";
-				document.getElementById('graph2_btny').style.display="block";
-				document.getElementById('graph3_btny').style.display="none";
-				document.getElementById('graph4_btny').style.display="none";
-				document.getElementById('graph5_btny').style.display="none";
+				document.getElementById('graph_rbtn').style.display="block";
+				document.getElementById('graph_bbtn').style.display="block";
+				document.getElementById('graph_ybtn').style.display="none";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>2</span>T0<span id='prod_dzno'>160</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 				
@@ -3379,7 +3565,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
-				
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -3524,7 +3710,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
-
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -3670,7 +3856,8 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Box Clamp.mp4");	
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";	
-				
+				document.getElementById("video_btn").style.display="block";
+
 				break;
 
 				case '5':
@@ -3813,6 +4000,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -3962,6 +4150,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -4106,6 +4295,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -4251,6 +4441,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				
 				break;
@@ -4398,7 +4589,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ2-160/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
-
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -4575,6 +4766,7 @@ $(document).ready(function(){
 				document.getElementById("product_img").setAttribute("src","Assets/data/Configurator/DZ4-250/Images/Frame.png");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				document.getElementById('dz1_graph').style.display="none";
 				document.getElementById('dz2_graph').style.display="none";
@@ -4588,17 +4780,18 @@ $(document).ready(function(){
 				document.getElementById('graph4_btnr').style.display="none";
 				document.getElementById('graph5_btnr').style.display="none";
 
-				document.getElementById('graph1_btnb').style.display="none";
 				document.getElementById('graph2_btnb').style.display="none";
 				document.getElementById('graph3_btnb').style.display="block";
 				document.getElementById('graph4_btnb').style.display="none";
 				document.getElementById('graph5_btnb').style.display="none";
 
-				document.getElementById('graph1_btny').style.display="none";
-				document.getElementById('graph2_btny').style.display="none";
 				document.getElementById('graph3_btny').style.display="block";
 				document.getElementById('graph4_btny').style.display="none";
 				document.getElementById('graph5_btny').style.display="none";
+
+				document.getElementById('graph_rbtn').style.display="block";
+				document.getElementById('graph_bbtn').style.display="block";
+				document.getElementById('graph_ybtn').style.display="block";
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>4</span>T0<span id='prod_dzno'>250</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
@@ -4748,6 +4941,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 								
 				break;
 
@@ -4901,6 +5095,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -5053,6 +5248,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -5206,7 +5402,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
-
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -5354,7 +5550,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
-
+				document.getElementById("video_btn").style.display="block";
 								
 				break;
 
@@ -5500,6 +5696,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -5647,6 +5844,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -5794,6 +5992,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -5941,6 +6140,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ4-250/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -6116,6 +6316,8 @@ $(document).ready(function(){
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ6-400/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
+				
 
 				document.getElementById('dz1_graph').style.display="none";
 				document.getElementById('dz2_graph').style.display="none";
@@ -6129,17 +6331,19 @@ $(document).ready(function(){
 				document.getElementById('graph4_btnr').style.display="block";
 				document.getElementById('graph5_btnr').style.display="none";
 
-				document.getElementById('graph1_btnb').style.display="none";
 				document.getElementById('graph2_btnb').style.display="none";
 				document.getElementById('graph3_btnb').style.display="none";
 				document.getElementById('graph4_btnb').style.display="block";
 				document.getElementById('graph5_btnb').style.display="none";
 
-				document.getElementById('graph1_btny').style.display="none";
-				document.getElementById('graph2_btny').style.display="none";
 				document.getElementById('graph3_btny').style.display="none";
 				document.getElementById('graph4_btny').style.display="block";
 				document.getElementById('graph5_btny').style.display="none";
+
+				document.getElementById('graph_rbtn').style.display="block";
+				document.getElementById('graph_bbtn').style.display="block";
+				document.getElementById('graph_ybtn').style.display="block";
+
 				
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>6</span>T0<span id='prod_dzno'>400</span><span id='prod_gid'>N</span>X<span id='prod_iid'>D</span>1AOOOO";
 
@@ -6286,6 +6490,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Aux Tac.mp4");	
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -6441,6 +6646,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -6586,6 +6792,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Box Clamp.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -6734,6 +6941,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -6882,6 +7090,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -7026,6 +7235,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/ROM.mp4");		
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -7174,6 +7384,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Plugin.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -7326,6 +7537,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -7474,6 +7686,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ6-400/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -7651,6 +7864,7 @@ $(document).ready(function(){
 				document.getElementById("itrp_imgiTRP-1").setAttribute("src","Assets/data/Configurator/DZ7-800/Images/iTRP-1.png");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				document.getElementById('dz1_graph').style.display="none";
 				document.getElementById('dz2_graph').style.display="none";
@@ -7665,17 +7879,19 @@ $(document).ready(function(){
 				document.getElementById('graph4_btnr').style.display="none";
 				document.getElementById('graph5_btnr').style.display="block";
 
-				document.getElementById('graph1_btnb').style.display="none";
 				document.getElementById('graph2_btnb').style.display="none";
 				document.getElementById('graph3_btnb').style.display="none";
 				document.getElementById('graph4_btnb').style.display="none";
 				document.getElementById('graph5_btnb').style.display="block";
 
-				document.getElementById('graph1_btny').style.display="none";
-				document.getElementById('graph2_btny').style.display="none";
 				document.getElementById('graph3_btny').style.display="none";
 				document.getElementById('graph4_btny').style.display="none";
 				document.getElementById('graph5_btny').style.display="block";
+
+				document.getElementById('graph_rbtn').style.display="block";
+				document.getElementById('graph_bbtn').style.display="block";
+				document.getElementById('graph_ybtn').style.display="block";
+
 
 				document.getElementById('prod_id').innerHTML = "DZ<span id='prod_dzid'>7</span>T0<span id='prod_dzno'>800</span><span id='prod_gid'>N</span>X<span id='prod_iid'>N</span>1AOOOO";
 
@@ -7824,6 +8040,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Aux Tac.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -7971,6 +8188,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/uv or shunt.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -8125,6 +8343,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Spreaders.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 
 				break;
@@ -8275,6 +8494,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Rear stud.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -8423,6 +8643,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/ROM.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 				
 				break;
 
@@ -8569,6 +8790,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/Drawout.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 				break;
 
@@ -8717,6 +8939,7 @@ $(document).ready(function(){
 				document.getElementById("product_video").setAttribute("src","Assets/Configurator/DZ7-800/Videos/MIL.mp4");
 				document.getElementById('product_img').style.display="none";
 				document.getElementById("product_video").style.display="block";
+				document.getElementById("video_btn").style.display="block";
 
 
 				break;
@@ -9364,7 +9587,7 @@ $(document).ready(function(){
 			<video id="product_video" class="product_video">
                     <source src="Assets/Configurator/DZ1-160/Videos/Aux Tac.mp4" type="video/mp4">
             </video>
-            <a href="#" onclick="dravideo_play('product_video')"><img id="video_btn" class="video_btn" src="Assets/data/Configurator/Asset/VideoIcon.png" /></a>       
+            <a href="#" onclick="dravideo_play('product_video')"><img id="video_btn" class="video_btn" src="Assets/Configurator/Video.png" /></a>       
 		        <img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
 				<img id="itrp_imgiTRP-M3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
 				<img id="itrp_imgiTRP-1" style="display:block;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-1.png" width="100%">
@@ -9375,7 +9598,7 @@ $(document).ready(function(){
 		</div>
 		<div class="graph">
 		<div id="dz1_graph" class="dz1_graph">
-			<img id="dz1_graph_img" onclick="showgraph('DZ2-160',1)" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+			<img id="dz1_graph_img" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
 			<img id="dz1_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/Text.png">
 			<img id="dz1_graph_ftxt" onclick="show_gcode('DZ1-160',1)" class="dz1_graph_ftxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/1F.png">
 			<img id="dz1_graph_ftxt_active" style="display: none;" class="dz1_graph_ftxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/1F_Selection.png">
@@ -9386,9 +9609,9 @@ $(document).ready(function(){
 			<img id="dz1_graph_ntxt" onclick="show_gcode('DZ1-160',4)" class="dz1_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/4N.png">
 			<img id="dz1_graph_ntxt_active" style="display: none;" class="dz1_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ1 - 160/4N_Selection.png">
 		</div>
-		<div id="dz2_graph" class="dz2_graph" style="display:none;">
-			<img id="dz2_graph_img1" onclick="showgraph('DZ2-160',2)" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ2.png">
-			<img id="dz2_graph_img" onclick="showgraph('DZ2-160',1)" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
+		<div id="dz2_graph" class="dz1_graph" style="display:none;">
+			<img id="dz2_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ2.png">
+			<img id="dz2_graph_img"  class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
 			<img id="dz2_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/Text.png">
 			<img id="dz2_graph_ntxt"  onclick="show_gcode('DZ2-160',1)" class="dz2_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/1N.png">
 			<img id="dz2_graph_ntxt_active" style="display: none;" class="dz2_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/1N_Selection.png">
@@ -9397,7 +9620,7 @@ $(document).ready(function(){
 			<img id="dz2_graph_ltxt"  onclick="show_gcode('DZ2-160',3)" class="dz2_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/3L.png">
 			<img id="dz2_graph_ltxt_active" style="display: none;" class="dz2_graph_ltxt" src="Assets/configurator/Breaking Capacity 1/DZ2 - 160/3L_Selection.png">
 		</div>
-		<div id="dz4_graph" class="dz4_graph" style="display:none;">	
+		<div id="dz4_graph" class="dz1_graph" style="display:none;">	
 			<img id="dz4_graph_img2" class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ4.png">
 			<img id="dz4_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ4.png">
 			<img id="dz4_graph_img"  class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
@@ -9411,7 +9634,7 @@ $(document).ready(function(){
 			<img id="dz4_graph_ytxt" onclick="show_gcode('DZ4-250',4)"  class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/4Y.png">
 			<img id="dz4_graph_ytxt_active" style="display: none;" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ4 - 250/4Y_Selection.png">
 		</div>
-		<div id="dz6_graph" class="dz6_graph" style="display:none;">	
+		<div id="dz6_graph" class="dz1_graph" style="display:none;">	
 			<img id="dz6_graph_img2"  class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ6.png">
 			<img id="dz6_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ6.png">
 			<img id="dz6_graph_img" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">
@@ -9425,11 +9648,11 @@ $(document).ready(function(){
 			<img id="dz6_graph_ytxt"  onclick="show_gcode('DZ6-400',4)" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/4Y.png">
 			<img id="dz6_graph_ytxt_active" style="display: none;" class="dz_graph_ytxt" src="Assets/configurator/Breaking Capacity 1/DZ6 - 400/4Y_Selection.png">
 		</div>
-		<div id="dz7_graph" class="dz7_graph" style="display:none;">	
+		<div id="dz7_graph" class="dz1_graph" style="display:none;">	
 			<img id="dz7_graph_img2" class="dz_graph" src="Assets/configurator/Breaking Capacity 3/DZ7.png">
 			<img id="dz7_graph_img1" class="dz_graph" src="Assets/configurator/Breaking Capacity 2/DZ7.png">
 			<img id="dz7_graph_img" class="dz_graph" src="Assets/configurator/Breaking Capacity 1/GraphBG.png">	
-			<img id="dz1_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/Text.png">
+			<img id="dz7_graph_txt" class="dz_graph_txt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/Text.png">
 			<img id="dz7_graph_ntxt"  onclick="show_gcode('DZ7-800',1)" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/1N.png">
 			<img id="dz7_graph_ntxt_active" style="display: none;" class="dz_graph_ntxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/1N_Selection.png">
 			<img id="dz7_graph_htxt"  onclick="show_gcode('DZ7-800',2)" class="dz_graph_htxt" src="Assets/configurator/Breaking Capacity 1/DZ7 - 800/2H.png">
@@ -9443,20 +9666,17 @@ $(document).ready(function(){
 			<img id="graph1_btnr" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ1-160',1)">
 			<img id="graph2_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ2-160',1)">
 			<img id="graph3_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ4-250',1)">
-			<img id="graph4_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ6-500',1)">
+			<img id="graph4_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ6-400',1)">
 			<img id="graph5_btnr" style="display:none;" class="graph_btn" src="Assets/configurator/Breaking Capacity 1/RedButton.png"  onclick="showgraph('DZ7-800',1)">
 		</div>
 		<div id="graph_bbtn">
-			<img id="graph1_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ1-160',2)">
 			<img id="graph2_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ2-160',2)">
 			<img id="graph3_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ4-250',2)">
 			<img id="graph4_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ6-400',2)">
 			<img id="graph5_btnb" style="display:none;" class="graph_btn1" src="Assets/configurator/Breaking Capacity 1/BlueButton.png" onclick="showgraph('DZ7-800',2)">
 		</div>
 		<div id="graph_ybtn">
-			<img id="graph1_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ1-160',3)">
-			<img id="graph2_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ2-160',3)"
-			><img id="graph3_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ4-250',3)">
+			<img id="graph3_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ4-250',3)">
 			<img id="graph4_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ6-400',3)">
 			<img id="graph5_btny" style="display:none;" class="graph_btn2" src="Assets/configurator/Breaking Capacity 1/yellowButton.png"  onclick="showgraph('DZ7-800',3)">
 		</div>
