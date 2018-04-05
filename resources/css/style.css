@@ -491,7 +491,7 @@ body{
 		/*top: -50px; */
 		top:0;
 		/*right: 30px;*/
-		right: -230px;
+		right: -209px;
 	}
 	#f2{
 		position: relative;	
@@ -502,23 +502,23 @@ body{
 		z-index:10;
 	}
 	#fimg1{
-		margin-top: -86px;
-		margin-left: 79px;
+	    margin-top: -86px;
+	    margin-left: 79px;
 	}
 	#fimg2{
-		margin-top: 4px;
-		margin-left: -47px;
+		margin-top: 47px;
+		margin-left: -33px;
     }
 	#fimg3{
-	    margin-left: -54px;
-	    margin-top: -85px;
+		margin-left: -48px;
+		margin-top: -85px;
 	}
 	#fimg4{
-	    margin-bottom: 177px;
-	    margin-left: -51px;
+		margin-bottom: 209px;
+		margin-left: -51px;
 	}
 	#fimg5{
-	    margin-left: -50px;
+	    margin-left: -36px;
 	    margin-top: -81px;
 	}
 	#r1{
@@ -1351,24 +1351,24 @@ position: relative;
 		right: -150px;
 	}
 	#fimg1{
-		margin-top: 35px;
-		margin-left: 100px;
+	    margin-top: -86px;
+	    margin-left: 79px;
 	}
 	#fimg2{
-		margin-top: 175px;
-		margin-left: -110px;
+		margin-top: 47px;
+		margin-left: -33px;
     }
 	#fimg3{
-		margin-left: -112px;
-		margin-top: 40px;
+		margin-left: -48px;
+		margin-top: -85px;
 	}
 	#fimg4{
-	   margin-bottom: 92px;
-	   margin-left: -110px;
+		margin-bottom: 209px;
+		margin-left: -51px;
 	}
 	#fimg5{
-		margin-left: -109px;
-		margin-top: 40px;
+	    margin-left: -36px;
+	    margin-top: -81px;
 	}
 	#r1{
 		margin-top: 115px;
