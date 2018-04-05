@@ -23,10 +23,10 @@ body{
 -ms-transition: all 1s ease-in-out; 
 }
 .parent {
-  position: relative;
-  top: 0;
-  left: 0;
-  padding:0;
+    position: relative;
+    top: 46px;
+    left: 0px;
+    padding: 0;
 }
 .image1 {
   position: relative;
@@ -110,84 +110,78 @@ body{
 		margin-left: auto;
 		margin-right: auto;
 	}
-    	    	.lt_main
-    	{
-    		width:600px;
-    		margin-right: 45px;
+    	.lt_main
+    	 	{
+		position: relative;
+		width: 600px;
+		margin-top: -205px;
+    		
     	}
 
 	.image1{
-		transform:scale(0.7);
 		margin-left: -22%;
 		top:9vh;
 	}
 	.image2 {
-    position: absolute;
-    transform: scale(0.8);
-    top: 83px;
-    /*margin-left: -113px;*/
-    margin-left: -105px;
+		position: absolute;
+		top: 85px;
+		/* margin-left: -113px; */
+		/* margin-left: -105px; */
+		margin-left: 8px;
 	}
 	.image4{
-    position: relative;
-    transform: scale(0.8);
-    margin-left: 106px;
-    top: 197px;
+		position: relative;
+		margin-left: 112px;
+		top: 102px;
 	}
 	.image6{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 45px;
-		right: 255px;
+		right: 136px;
+		top: 241px;
 	}
 	.image7{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 415px;
-		right: 296px;
-	}.image8{
+		right: 170px;
+		top: -35px;
+	}
+	.image8{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 220px;
-		right: 515px;
+		right: 346px;
+		top: 116px;
 	}
 	.image9{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 100px;
-		right: 500px;
+		right: 320px;
+		top: 210px;
+
 	}
 	.image10{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 355px;
-		right: 545px;
+		right: 361px;
+		top: 10px;
 	}
 	.image11{
 		position: relative;
-		transform: scale(0.8);
-		bottom: 355px;
-		left: 325px;
+		left: -163px;
+		top: 181px;
 	}
 	.image12{
-		position: relative;
-		transform: scale(0.8);
-		bottom: 615px;
-		left: 283px;
+	    position: relative;
+	    left: -194px;
+	    top: 18px;
 	}
 	.image5{
 		position: relative;
-		transform: scale(0.8);
-		margin-left: -30px;
-		top: -230px;
+		margin-left: -260px;
+		top: 103px;
 	}
 	.image3 {
-		transform: scale(0.7);
 		position: absolute;
-		left: 300px;
-		/*bottom: 555px; */
-		bottom:448px;
+		left: 244px;
+		/* bottom: 555px; */
+		/* bottom: 448px; */
 		z-index: 1000;
+		top: 212px;
 	}
 	.top-left {
 		position: absolute;
@@ -241,7 +235,7 @@ body{
 		transform: scale(0.6);
 	}
 	.scaler7{
-		transform: scale(0.7);
+		/*transform: scale(0.7);*/
 	}
 	.scaler8{
 		transform: scale(0.8);
@@ -289,12 +283,12 @@ body{
 		position: absolute;
 		/* margin-top: 5px; */
 		width: 45px;
-		top: 0px;
+		top: 51px;
 	}
 	.v1{
 		position: absolute;
 		z-index: 990;
-		top: 0px;
+		top: 52px;
 		width: 500px;
 	}
 	/*#fimg1{
@@ -350,7 +344,6 @@ body{
     position: relative;
     width: 212px;
     height: auto;
-    transform: scale(0.7);
     /* margin-left: -25%; */
     left: -15%;
     margin-top: 58%;
@@ -359,54 +352,52 @@ body{
 	    #termination1
 	    {
 	    	position: relative;
-    display: inline-block;
+    		display: inline-block;
 	    	width:296px;
 	    	height: 60px;
 	    	background-image: url("../../Assets/data/Termination_Offerings/Button1.png");
 	    	background-repeat: no-repeat;
-	    	margin-top: -29px;
-    		margin-left: 30px;
+			margin-top: -21px;
+			margin-left: 19px;
 	    }
 
 		#termination2
 	    {
-    position: absolute;
-    display: inline-block;
-    width: 296px;
-    height: 60px;
-    background-image: url(../../Assets/data/Termination_Offerings/Button2.png);
-    background-repeat: no-repeat;
-    margin-top: -29px;
-    margin-left: 31px;
+			position: absolute;
+			display: inline-block;
+			width: 296px;
+			height: 60px;
+			background-image: url(../../Assets/data/Termination_Offerings/Button2.png);
+			background-repeat: no-repeat;
+			margin-top: -22px;
+			margin-left: -82px;
 	    }
 
 	    #termination3
 	    {
 	    	position: absolute;
-    display: inline-block;	
+    		display: inline-block;	
 	    	width:296px;
 	    	height: 60px;
 	    	background-image: url("../../Assets/data/Termination_Offerings/Button3.png");
 	    	background-repeat: no-repeat;
-	    	margin-top: -30px;
-    		margin-left: 345px;
+			margin-top: -21px;
+			margin-left: 127px;
 	    }
 
 	    #term_video
 	    {
-	    	width: :300px;
-    position: absolute;
-    transform: scale(0.7);
-    margin-left: -36%;
-    margin-top:-9%;
+			width: :300px;
+			position: absolute;
+			margin-left: -36%;
+			margin-top:-9%;
 	    }
 
 	  #term_img
 	    {
 	    	position: absolute;
 	    	margin-top: 8%;
-           margin-left: -20%;
-         transform: scale(0.7);
+           	margin-left: -8%;
 
 	    }
 	    .video_play
@@ -430,10 +421,31 @@ body{
 			float: right;
 			margin-left: 92%;
 	    }
-
-	    .parent {
-	    	top:-12px;
+	    .vid_play
+	    {
+		width: 47px;
+		height: 47px;
+		position: absolute;
+		/* top: -96px; */
+		float: right;
+		margin-left: 466px;
+		margin-top: -99px;
 	    }
+	    #vid
+	    {
+	    	width: 1000px;
+			position: absolute;
+			top: 0px;
+			left: -67px;
+	    }
+
+	    .term_prod_img
+	    {
+			position: absolute;
+		    top: 197px;
+		    left: 222px;
+	    }
+
 		    .back_line
 	    {
 	    	position: relative;
@@ -444,7 +456,7 @@ body{
 	    }
 
 	    	    .scaler7{
-		transform: scale(0.7);
+		/*transform: scale(0.7);*/
 	}
 	.scaler8{
 		transform: scale(0.8);
@@ -479,7 +491,7 @@ body{
 		/*top: -50px; */
 		top:0;
 		/*right: 30px;*/
-		right: -230px;
+		right: -209px;
 	}
 	#f2{
 		position: relative;	
@@ -490,31 +502,24 @@ body{
 		z-index:10;
 	}
 	#fimg1{
-		margin-top: 35px;
-		margin-left: 100px;
+	    margin-top: -86px;
+	    margin-left: 79px;
 	}
 	#fimg2{
-		margin-top: 175px;
-		/*margin-left: -110px;*/
-		margin-left:-80px;
+		margin-top: 47px;
+		margin-left: -33px;
     }
 	#fimg3{
-		/*margin-left: -112px;
-		margin-top: 40px;*/
-		margin-left:-79px;
-		margin-top:42px;
+		margin-left: -48px;
+		margin-top: -85px;
 	}
 	#fimg4{
-	   /*margin-bottom: 92px;
-	   margin-left: -110px;*/
-	   margin-bottom:86px;
-	   margin-left:-77px;
+		margin-bottom: 209px;
+		margin-left: -51px;
 	}
 	#fimg5{
-		/*margin-left: -109px;
-		margin-top: 40px;*/
-		margin-left:-84px;
-		margin-top:49px;
+	    margin-left: -36px;
+	    margin-top: -81px;
 	}
 	#r1{
 		margin-top: 115px;
@@ -589,8 +594,9 @@ body{
 	}
 	#right_menu
 	{
-		float: right;
-		margin-top: -46px;
+	    float: right;
+	    margin-top: -36px;
+	    margin-right: 247px;
 	}
 	#left_menu
 	{
@@ -605,8 +611,8 @@ body{
 	}
 	.img_sps
 	{
-		margin-right: 25px;
-		margin-top: 35px;
+    margin-right: 5px;
+    margin-top: -20px;
 	}
 	#SalientFeature
 	{
@@ -615,7 +621,7 @@ body{
 	    	background-image: url("../../Assets/data/Withdrawable_Offerings/SalientFeature_B.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
-	    	margin-right: -15px;
+	    	margin-right: -89px;
 	}
 	#plugin
 	{
@@ -647,6 +653,7 @@ body{
 			display: inline-block;
 			top: -16px;
 			position: relative;
+			margin-left: -77px;
 	}
 
 	.right_menu_img
@@ -657,7 +664,7 @@ body{
 	{
 		position: absolute;
 		width: 794px;
-		height: 471px;
+		height: 310px;
 		background-image: url(../../Assets/data/Withdrawable_Offerings/Plugin_Selection.png);
 		background-repeat: no-repeat;
 		z-index: 1;
@@ -676,12 +683,12 @@ body{
 	{
 		position: absolute;
 		width: 591px;
-		height: 471px;
+		height: 311px;
 		background-image: url(../../Assets/data/Withdrawable_Offerings/Drawout_Selection.png);
 		background-repeat: no-repeat;
 		z-index: 1;
 		margin-top: 7px;
-		right: 23px;
+		right: 154px;
 
     }
     #salientFeature_popup2
@@ -706,21 +713,19 @@ body{
     {
 		position: absolute;
 		z-index: 4;
-    top: 75px;
-    left: 257px;
-    width: 500px;
-
+		top: 30px;
+		/* left: 257px; */
+		left: 232px;
+		width: 353px;
     }
 
      #silent_video
     {
-		position: absolute;
-		z-index: 4;
-    /*top: 75px;
-    left: 257px;*/
-	top: 115px;
-    left: 450px;
-    width: 500px;
+	    position: absolute;
+	    z-index: 4;
+	    top: 10px;
+	    left: 263px;
+	    width: 350px;
 
     }
 
@@ -760,26 +765,24 @@ body{
 	  #access_bkp
   	{
   		position: absolute;
-		width:845px;
-		height: 625px;
+		width: 569px;
+		height: 420px;
 		background-image: url("../../Assets/data/Accessories/Internal_img.png");
 		background-repeat: no-repeat;
 		z-index: 1;
-		margin-left: 23px;
+		margin-left: 17px;
 
   	}
 
   	 #video_bkp
   	{
-  		position: absolute;
-		width:822px;
-		height: 556px;
-		background-image: url("../../Assets/data/Accessories/Trans_BG.png");
-		background-repeat: no-repeat;
-		z-index: 1;
-		margin-left: 23px;
-		margin-left: -101px;
-		margin-top: 44px;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    z-index: 1;
+    margin-left: 23px;
+    margin-left: -101px;
+    margin-top: -17px;
 
   	}
    	#internal
@@ -789,8 +792,8 @@ body{
 		height: 44px;
 		background-image: url(../../Assets/data/Accessories/Internal_B.png);
 		background-repeat: no-repeat;
-		top: 39%;
-		left: -161px;
+		top: 26%;
+		left: -106px;
 	}
 
    	#sailent_acc
@@ -801,8 +804,8 @@ body{
 		background-image: url(../../Assets/data/Accessories/SalientFeature_B.png);
 		background-repeat: no-repeat;
 		/* display: inline-block; */
-		top: 49%;
-		left: -191px;
+		top: 33%;
+		left: -127px;
 	}
 
 	#salient_acc_popup
@@ -820,13 +823,22 @@ body{
 	    background-image: url(../../Assets/data/Accessories/External_B.png);
 	    background-repeat: no-repeat;
 	    display: inline-block;
-	    top: 39%;
-	    right: 68px;
+	    top: 26%;
+	    right: 116px;
+	}
+	.new_video
+	{
+		position: absolute;
+		/* float: right; */
+		width: 80px;
+		height: auto;
+		right: 123px;
+		margin-top: 103px;
 	}
 	#dz1
 	{
-			width:151px;
-	    	height: 277px;
+			width:101px;
+	    	height: 185px;
 	    	background-image: url("../../Assets/data/Accessories/DZ1.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
@@ -834,8 +846,8 @@ body{
 
 	#dz2
 	{
-			width:151px;
-	    	height: 277px;
+			width:101px;
+	    	height: 185px;
 	    	background-image: url("../../Assets/data/Accessories/DZ2.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
@@ -843,8 +855,8 @@ body{
 
 	#dz4
 	{
-			width:151px;
-	    	height: 277px;
+			width:101px;
+	    	height: 185px;
 	    	background-image: url("../../Assets/data/Accessories/DZ4.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
@@ -852,8 +864,8 @@ body{
 
 	#dz5
 	{
-			width:151px;
-	    	height: 277px;
+			width:101px;
+	    	height: 185px;
 	    	background-image: url("../../Assets/data/Accessories/DZ6.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
@@ -861,8 +873,8 @@ body{
 
 	#dz7
 	{
-			width:151px;
-	    	height: 277px;
+			width:101px;
+	    	height: 185px;
 	    	background-image: url("../../Assets/data/Accessories/DZ7.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
@@ -870,8 +882,8 @@ body{
 
 	#rotary_handel
 	{
-			width:159px;
-	    	height: 172px;
+			width:106px;
+	    	height: 113px;
 	    	background-image: url("../../Assets/data/Accessories/RotaryHandle_Y_A.png");
 	    	background-repeat: no-repeat;
 	    	margin-bottom: 10px;
@@ -879,22 +891,22 @@ body{
 
 	#plug_in
 	{
-			width:159px;
-	    	height: 64px;
+			width:106px;
+	    	height: 43px;
 	    	margin-bottom: 10px;
 	}
 
 	#drawout_acc
 	{
-			width:159px;
-	    	height: 64px;
+			width:106px;
+	    	height: 43px;
 	    	margin-bottom: 10px;
 	}
 
 	#motor_operator
 	{
-			width:159px;
-	    	height: 64px;
+			width:106px;
+	    	height: 43px;
 	    	background-image: url("../../Assets/data/Accessories/MotorOperator_B.png");
 	    	background-repeat: no-repeat;
 	    	margin-bottom: 10px;
@@ -902,26 +914,29 @@ body{
 
 	#mechanical
 	{
-			width:159px;
-	    	height: 64px;
+			width:106px;
+	    	height: 43px;
 	    	background-image: url("../../Assets/data/Accessories/MachanicalInterlock_B.png");
 	    	background-repeat: no-repeat;
 	}
 	.right_acc_menu
 	{
 		position: absolute;
-		right: 67px;
-		top: 236px;
+		right: 167px;
+		top: 162px;
+	}
+	.new_video_play
+	{
+		width: 441px;
+		margin-top: 28px;
+
 	}
 	.accessories_vid
 	{
-		/*		width:500px;
-		margin-top:13%;
-		margin-left:21%;*/
-		width: 833px;
-		margin-top: -5%;
-		margin-left: -1%;
-		height: 641px;
+	width: 500px;
+	    margin-top: 12%;
+	    margin-left: 14%;
+	    /* height: 641px; */
 	}
 
 	/*.image12{
@@ -933,11 +948,10 @@ body{
 	.accessories_main
 	{
 		position: absolute;
-		width: 1000px;
+		width: 796px;
 		height: 487px;	
-		left: -20%;
+		left: -3%;
 		top: 5px;
-		transform: scale(0.6);
 	}
 	#p1{
 		/*position: fixed;
@@ -946,7 +960,7 @@ body{
 		z-index: 892;*/
 		position: relative;
 		margin-left: 110px;
-		top:100px;
+		top: 33px;
 		z-index: 892;
 		
 	}
@@ -978,32 +992,25 @@ body{
 	}
 	#p4{
 		position: absolute;
-		/*margin-top: 106px;*/
-		/*margin-top:665px;
-		margin-left:610px;*/
+		position: absolute;
 		bottom: 160px;
-		right: 400px;
-		display:none;
+		right: 278px;
+		display: none;
 		z-index: 952;
 	}
 	#p5{
-		position: absolute;
-		/*margin-top: 106px;
-		margin-top:665px;
-		margin-left: 835px;*/
-		bottom: 160px;
-		right: 178px;
-		z-index: 952;
+	position: absolute;
+	    bottom: 160px;
+	    right: 124px;
+	    z-index: 952;
 		
 	}
 	#p6{
-		position: absolute;
-		/*margin-top: 106px;*/
-		/*margin-top:665px;
-		margin-left: 1060px;*/
-		bottom: 160px;
-		right: 0px;
-		z-index: 952;
+	    position: absolute;
+	    /* margin-top: 106px; */
+	    bottom: 160px;
+	    right: 0px;
+	    z-index: 952;
 	}
 	#p7{
 		/*position: fixed;
@@ -1011,10 +1018,10 @@ body{
 		margin-top: -65px;
 		z-index: 898;
 		display: none;*/
-		position: absolute;
-		margin-left: -524px;
-		margin-top: -506px;
-		z-index: 898;
+	    position: absolute;
+	    margin-left: -418px;
+	    margin-top: -366px;
+	    z-index: 898;
 		display: none;
 	}
 	#p8
@@ -1045,16 +1052,9 @@ body{
 			z-index:98;
 	}
 	.pdesc{
-		/*margin-left: 512px;
-		position: fixed;
-		margin-top: -390px;
-		position: fixed;
-		right: 20px;
-		top: 162px;
-		display: none;*/
 		position: absolute;
-		left: 525px;
-		top: 45px;
+		left: 577px;
+		top: 153px;
 	}
 	#pmodvid{
 		    position: fixed;
@@ -1102,11 +1102,11 @@ body{
 		z-index: 950;
 		width: 35px;
 		display:none;*/
-		position: absolute;
-		top: 130px;
-		right: 155px;
-		z-index: 950;
-		width: 35px;
+	    position: absolute;
+	    top: 9px;
+	    right: 5px;
+	    z-index: 950;
+	    width: 35px;
 	}
 	.pdclose{
 	    /*margin-left: 840px;
@@ -1330,7 +1330,7 @@ position: relative;
 
 
 	    .scaler7{
-		transform: scale(0.7);
+		/*//transform: scale(0.7);*/
 	}
 	.scaler8{
 		transform: scale(0.8);
@@ -1351,24 +1351,24 @@ position: relative;
 		right: -150px;
 	}
 	#fimg1{
-		margin-top: 35px;
-		margin-left: 100px;
+	    margin-top: -86px;
+	    margin-left: 79px;
 	}
 	#fimg2{
-		margin-top: 175px;
-		margin-left: -110px;
+		margin-top: 47px;
+		margin-left: -33px;
     }
 	#fimg3{
-		margin-left: -112px;
-		margin-top: 40px;
+		margin-left: -48px;
+		margin-top: -85px;
 	}
 	#fimg4{
-	   margin-bottom: 92px;
-	   margin-left: -110px;
+		margin-bottom: 209px;
+		margin-left: -51px;
 	}
 	#fimg5{
-		margin-left: -109px;
-		margin-top: 40px;
+	    margin-left: -36px;
+	    margin-top: -81px;
 	}
 	#r1{
 		margin-top: 115px;
@@ -1607,10 +1607,7 @@ position: relative;
   	 #video_bkp
   	{
   		position: absolute;
-		width:822px;
-		height: 556px;
-		background-image: url("../../Assets/data/Accessories/Trans_BG.png");
-		background-repeat: no-repeat;
+		width:500px;
 		z-index: 1;
 		margin-left: 23px;
 		margin-left: -101px;
@@ -1624,8 +1621,8 @@ position: relative;
 		height: 44px;
 		background-image: url(../../Assets/data/Accessories/Internal_B.png);
 		background-repeat: no-repeat;
-		top: 39%;
-		left: -161px;
+		top: 22%;
+		left: -106px;
 	}
 
    	#sailent_acc
@@ -1655,8 +1652,8 @@ position: relative;
 	    background-image: url(../../Assets/data/Accessories/External_B.png);
 	    background-repeat: no-repeat;
 	    display: inline-block;
-	    top: 39%;
-	    right: 68px;
+	    top: 24%;
+	    right: 116px;
 	}
 	#dz1
 	{

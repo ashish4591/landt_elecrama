@@ -37,8 +37,15 @@
 			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button1_1.png');
 		//	img.setAttribute('id','1');
 			container.appendChild(img);
-			active_video('Assets/data/Termination_Offerings/vid1.webm');
-			 active_image('Assets/data/Termination_Offerings/SPREADER-Links.png');
+
+
+			document.getElementById('vid_play').style.display="block";
+			document.getElementById('vid_play2').style.display="none";
+			document.getElementById('vid_play3').style.display="none";
+			//active_video('Assets/data/Termination_Offerings/vid1.webm');
+			product_img('Assets/data/Termination_Offerings/product_img.png');
+			active_image('Assets/data/Termination_Offerings/SPREADER-Links.png');
+
 			break;
 
 			case 2:
@@ -54,7 +61,12 @@
 			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button2_2.png');
 			//img.setAttribute('id','2');
 			container.appendChild(img);
-			active_video('Assets/data/Termination_Offerings/vid2.webm');
+
+			document.getElementById('vid_play2').style.display="block";
+			document.getElementById('vid_play').style.display="none";
+			document.getElementById('vid_play3').style.display="none";
+			product_img('Assets/data/Termination_Offerings/product_img.png');
+			//active_video('Assets/data/Termination_Offerings/vid2.webm');
 			active_image('Assets/data/Termination_Offerings/BOX-CLAMP.png');
 			break;
 
@@ -71,13 +83,19 @@
 			img.setAttribute('src', 'Assets/data/Termination_Offerings/Button3_3.png');
 			//img.setAttribute('id','3');
 			container.appendChild(img);
-			active_video('Assets/data/Termination_Offerings/vid3.webm');
+
+			document.getElementById('vid_play3').style.display="block";
+			document.getElementById('vid_play2').style.display="none";
+			document.getElementById('vid_play').style.display="none";
+			product_img('Assets/data/Termination_Offerings/product_img.png');
+			//active_video('Assets/data/Termination_Offerings/vid3.webm');
 			active_image('Assets/data/Termination_Offerings/REAR-TERMINATION.png');
 			 break;
 		}
 		}
 		function active_video(src)
-		{
+		{ 
+			document.getElementById('term_img1').style.display="none";
 			var vid = document.getElementById('term_video'); 
 			var video = document.createElement('video');
 			video.setAttribute('id','vid');
@@ -102,8 +120,27 @@
 
 		function term_video()
 		{
+			clear_img('term_img');
 			var vid = document.getElementById('vid'); 
 			vid.play();
+
+		}
+
+		function clear_img(id)
+		{
+			document.getElementById(id).innerHTML="";
+		}
+
+		function product_img(url)
+		{
+			var term_img = document.getElementById('term_video'); 
+			var img1 = document.createElement('img');
+			img1.setAttribute('id', 'term_img1');
+			img1.setAttribute('class', 'term_prod_img');
+			img1.setAttribute('width', '500px');
+			img1.setAttribute('src', url);
+
+			term_img.appendChild(img1);
 		}
 	
 </script>
@@ -120,7 +157,10 @@
 				<div id="termination2" onclick="main(2)"></div>
 				<div id="termination3" onclick="main(3)"></div>
 			</div>
-		</div>
+		</div>		
+		<img id="vid_play" class="vid_play" style="display: none;" src="Assets/data/Termination_Offerings/video.png" onclick="active_video('Assets/data/Termination_Offerings/vid1.webm');">
+		<img id="vid_play2" class="vid_play" style="display: none;" src="Assets/data/Termination_Offerings/video.png" onclick="active_video('Assets/data/Termination_Offerings/vid2.webm');">
+		<img id="vid_play3" class="vid_play" style="display: none;" src="Assets/data/Termination_Offerings/video.png" onclick="active_video('Assets/data/Termination_Offerings/vid3.webm');">
 	 		<div id="term_img"></div>
 	</div>
 

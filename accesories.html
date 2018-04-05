@@ -37,17 +37,14 @@ function main(id)
 		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
-		document.getElementById('video_bkp').style.display="none";
-		document.getElementById('rotary_handel').style.display="none";
-		document.getElementById('plug_in').style.display="none";
-		document.getElementById('drawout_acc').style.display="none";
-		document.getElementById('motor_operator').style.display="none";
-		document.getElementById('mechanical').style.display="none";
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
+
+	    document.getElementById('new_video').style.display="block";
 
 		var menu = document.getElementById('internal');
 		
@@ -57,6 +54,7 @@ function main(id)
 		internal.setAttribute('src', 'Assets/data/Accessories/Internal_Y.png');
 		internal.setAttribute('class', 'right_menu_img');
 		menu.appendChild(internal);
+
 		document.getElementById('sailent_acc').style.display="block";
 		document.getElementById('access_bkp').style.display="block";
 		break;
@@ -80,19 +78,17 @@ function main(id)
 		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
-		document.getElementById('access_bkp').style.display="block";
-		document.getElementById('rotary_handel').style.display="none";
-		document.getElementById('plug_in').style.display="none";
-		document.getElementById('drawout_acc').style.display="none";
-		document.getElementById('motor_operator').style.display="none";
-		document.getElementById('mechanical').style.display="none";
+		
 		document.getElementById('video_bkp').style.display="none";
 
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
+
+
+	    document.getElementById('new_video').style.display="none";
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		break;
@@ -107,23 +103,27 @@ function main(id)
 		silent.setAttribute('src', 'Assets/data/Accessories/External_Y.png');
 		silent.setAttribute('class', 'right_menu_img');
 		menu.appendChild(silent);
+
+				document.getElementById('dz1').innerHTML="";
+		document.getElementById('dz2').innerHTML="";
+		document.getElementById('dz4').innerHTML="";
+		document.getElementById('dz5').innerHTML="";
+		document.getElementById('dz7').innerHTML="";
+
 		document.getElementById('internal').innerHTML="";
 		document.getElementById('sailent_acc').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('salient_acc_popup').style.display="none";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
+		
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="block";
+
 		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="none";
-		document.getElementById('Drawout_Disable').style.display="none";
-	    document.getElementById('acc_video1').style.display="block";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('new_video').style.display="none";
+
+
 
 	    var dz1 = document.getElementById('dz1');
 		var dz1_bkp = document.createElement('img');
@@ -150,53 +150,34 @@ function main(id)
 		document.getElementById('internal').innerHTML="";
 		document.getElementById('sailent_acc').innerHTML="";
 		document.getElementById('dz1').innerHTML="";
+		document.getElementById('dz2').innerHTML="";
 		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('dz2_active').style.display="none";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
-		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('Drawout_Disable').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="none";
-		document.getElementById('plug_in_active').style.display="block";
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
-	    
-	 //    var drawout_disable = document.getElementById('drawout_acc');
-		// var drawout_disable_img = document.createElement('img');
 		
-		// drawout_disable_img.setAttribute('id', 'Drawout_Disable');
-		// drawout_disable_img.setAttribute('src', 'Assets/data/Accessories/Drawout_Disable.png');
+		document.getElementById('video_bkp').style.display="block";
+		document.getElementById('new_video').style.display="none";
 
-		// drawout_disable.appendChild(drawout_disable_img);
+		document.getElementById('dz2_ext_menu').style.display="block";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
 
-
-
-
+	
 	    var dz1 = document.getElementById('dz2');
 		var dz1_bkp = document.createElement('img');
 		
 		//SalientFeature.setAttribute('id', 'SalientFeature');
-		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ1_Y.png');
+		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ2_Y.png');
 		dz1_bkp.setAttribute('class', 'right_menu_img');
 		dz1.appendChild(dz1_bkp);
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		
-		$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ2_1.mp4');
-		$("#acc_video2 > source").attr('src', 'Assets/data/Accessories/Videos/DZ2_2.mp4');
-		$("#acc_video4 > source").attr('src', 'Assets/data/Accessories/Videos/DZ2_4.mp4');
-		$("#acc_video5 > source").attr('src', 'Assets/data/Accessories/Videos/DZ2_5.mp4');
-		dravideo_play('acc_video1');
-		
+		dravideo_play('dz2','rotary','Assets/data/Accessories/videos/DZ2_1.mp4');
+
 		break;
 
 
@@ -212,44 +193,33 @@ function main(id)
 		menu.appendChild(silent);
 		document.getElementById('internal').innerHTML="";
 		document.getElementById('sailent_acc').innerHTML="";
-		document.getElementById('dz2').innerHTML="";
 		document.getElementById('dz1').innerHTML="";
+		document.getElementById('dz2').innerHTML="";
+		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('Drawout_Disable').style.display="none";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('dz2_active').style.display="block";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
+		
 		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="none";
-		document.getElementById('Drawout_Disable').style.display="none";
-		document.getElementById('plug_in_active').style.display="block";
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('new_video').style.display="none";
+
+		document.getElementById('dz4_ext_menu').style.display="block";
+
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
 	    
 	    var dz1 = document.getElementById('dz4');
 		var dz1_bkp = document.createElement('img');
 		
 		//SalientFeature.setAttribute('id', 'SalientFeature');
-		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ1_Y.png');
+		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ4_Y.png');
 		dz1_bkp.setAttribute('class', 'right_menu_img');
 		dz1.appendChild(dz1_bkp);
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
-		
-		$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ4_1.mp4');
-		$("#acc_video2 > source").attr('src', 'Assets/data/Accessories/Videos/DZ4_2.mp4');
-		$("#acc_video3 > source").attr('src', 'Assets/data/Accessories/Videos/DZ4_3.mp4');
-		$("#acc_video4 > source").attr('src', 'Assets/data/Accessories/Videos/DZ4_4.mp4');
-		$("#acc_video5 > source").attr('src', 'Assets/data/Accessories/Videos/DZ4_5.mp4');
-		dravideo_play('acc_video1');
+		dravideo_play('dz4','rotary','Assets/data/Accessories/videos/DZ4_1.mp4');
 		
 		break;
 
@@ -265,44 +235,34 @@ function main(id)
 		menu.appendChild(silent);
 		document.getElementById('internal').innerHTML="";
 		document.getElementById('sailent_acc').innerHTML="";
-		document.getElementById('dz2').innerHTML="";
 		document.getElementById('dz1').innerHTML="";
+		document.getElementById('dz2').innerHTML="";
 		document.getElementById('dz4').innerHTML="";
+		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('plug_in_active').style.display="block";
-		document.getElementById('dz2_active').style.display="block";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('dz2_active').style.display="block";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
+		
 		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="none";
-		document.getElementById('Drawout_Disable').style.display="none";
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('new_video').style.display="none";
+
+		document.getElementById('dz6_ext_menu').style.display="block";
+
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
 	    
 	    var dz1 = document.getElementById('dz5');
 		var dz1_bkp = document.createElement('img');
 		
 		//SalientFeature.setAttribute('id', 'SalientFeature');
-		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ1_Y.png');
+		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ6_Y.png');
 		dz1_bkp.setAttribute('class', 'right_menu_img');
 		dz1.appendChild(dz1_bkp);
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
-		
-		$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ6_1.mp4');
-		$("#acc_video2 > source").attr('src', 'Assets/data/Accessories/Videos/DZ6_2.mp4');
-		$("#acc_video3 > source").attr('src', 'Assets/data/Accessories/Videos/DZ6_3.mp4');
-		$("#acc_video4 > source").attr('src', 'Assets/data/Accessories/Videos/DZ6_4.mp4');
-		$("#acc_video5 > source").attr('src', 'Assets/data/Accessories/Videos/DZ6_5.mp4');
-		dravideo_play('acc_video1');
+		dravideo_play('dz6','rotary','Assets/data/Accessories/videos/DZ6_1.mp4');
+
 		
 		break;
 
@@ -322,23 +282,17 @@ function main(id)
 		document.getElementById('dz2').innerHTML="";
 		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
+		document.getElementById('dz7').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('plug_in_active').style.display="none";
-		document.getElementById('dz2_active').style.display="block";
-		document.getElementById('dz2_active').style.display="block";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
+		
+		document.getElementById('dz7_ext_menu').style.display="block";
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="none";
+
 		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="block";
-		document.getElementById('Drawout_Disable').style.display="none";
-		document.getElementById('acc_video1').style.display="none";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('new_video').style.display="none";
 
 
 
@@ -346,17 +300,12 @@ function main(id)
 		var dz1_bkp = document.createElement('img');
 		
 		//SalientFeature.setAttribute('id', 'SalientFeature');
-		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ1_Y.png');
+		dz1_bkp.setAttribute('src', 'Assets/data/Accessories/DZ7_Y.png');
 		dz1_bkp.setAttribute('class', 'right_menu_img');
 		dz1.appendChild(dz1_bkp);
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
-		
-		$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ7_1.mp4');
-		$("#acc_video3 > source").attr('src', 'Assets/data/Accessories/Videos/DZ7_3.mp4');
-		$("#acc_video4 > source").attr('src', 'Assets/data/Accessories/Videos/DZ7_4.mp4');
-		$("#acc_video5 > source").attr('src', 'Assets/data/Accessories/Videos/DZ7_5.mp4');
-		dravideo_play('acc_video1');
+		dravideo_play('dz7','rotary','Assets/data/Accessories/videos/DZ7_1.mp4');
 		break;
 
 		case 8:
@@ -371,26 +320,23 @@ function main(id)
 		menu.appendChild(silent);
 		document.getElementById('internal').innerHTML="";
 		document.getElementById('sailent_acc').innerHTML="";
+		document.getElementById('dz1').innerHTML="";
 		document.getElementById('dz2').innerHTML="";
-		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz4').innerHTML="";
+		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
 		document.getElementById('access_bkp').style.display="none";
-		document.getElementById('rotary_handel').style.display="block";
-		document.getElementById('plug_in').style.display="block";
-		document.getElementById('drawout_acc').style.display="block";
-		document.getElementById('dz2_active').style.display="none";
-		document.getElementById('motor_operator').style.display="block";
-		document.getElementById('mechanical').style.display="block";
-		document.getElementById('video_bkp').style.display="block";
-		document.getElementById('PlugIn_Disable').style.display="none";
-		document.getElementById('Drawout_Disable').style.display="block";
 
-		document.getElementById('acc_video1').style.display="block";
-	    document.getElementById('acc_video2').style.display="none";
-	    document.getElementById('acc_video3').style.display="none";
-	    document.getElementById('acc_video4').style.display="none";
-	    document.getElementById('acc_video5').style.display="none";
+		document.getElementById('dz1_ext_menu').style.display="block";
+		document.getElementById('dz2_ext_menu').style.display="none";
+		document.getElementById('dz4_ext_menu').style.display="none";
+		document.getElementById('dz6_ext_menu').style.display="none";
+		document.getElementById('dz7_ext_menu').style.display="none";
+
+		document.getElementById('video_bkp').style.display="block";
+		document.getElementById('new_video').style.display="none";
+
+
 	    
 	    var dz1 = document.getElementById('dz1');
 		var dz1_bkp = document.createElement('img');
@@ -402,11 +348,9 @@ function main(id)
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		
-		$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ1_1.mp4');
-		$("#acc_video2 > source").attr('src', 'Assets/data/Accessories/Videos/DZ1_2.mp4');
-		$("#acc_video4 > source").attr('src', 'Assets/data/Accessories/Videos/DZ1_4.mp4');
-		$("#acc_video5 > source").attr('src', 'Assets/data/Accessories/Videos/DZ1_5.mp4');
-		dravideo_play('acc_video1');
+		dravideo_play('dz1','rotary','Assets/data/Accessories/videos/DZ1_1.mp4');
+
+
 		
 		break;
 
@@ -452,7 +396,7 @@ function main(id)
 			document.getElementById('video_btn5').style.display="none";
 			
 			//$("#acc_video1 > source").attr('src', 'Assets/data/Accessories/Videos/DZ1_1.mp4');
-			dravideo_play('acc_video1');
+			//dravideo_play('acc_video1');
 
 			break;
 
@@ -474,7 +418,7 @@ function main(id)
 			document.getElementById('video_btn4').style.display="none";
 			document.getElementById('video_btn5').style.display="none";
 
-			dravideo_play('acc_video2');
+			//dravideo_play('acc_video2');
 			break;
 
 			case 3:
@@ -495,7 +439,7 @@ function main(id)
 			document.getElementById('video_btn4').style.display="none";
 			document.getElementById('video_btn5').style.display="none";
 			
-			dravideo_play('acc_video3');
+			//dravideo_play('acc_video3');
 
 			break;
 
@@ -519,7 +463,7 @@ function main(id)
 			document.getElementById('video_btn4').style.display="block";
 			document.getElementById('video_btn5').style.display="none";
 			
-			dravideo_play('acc_video4')
+			//dravideo_play('acc_video4')
 
 			break;
 
@@ -541,7 +485,7 @@ function main(id)
 			document.getElementById('video_btn4').style.display="none";
 			document.getElementById('video_btn5').style.display="block";
 			
-			dravideo_play('acc_video5')
+			//dravideo_play('acc_video5')
 
 			break;
 
@@ -550,12 +494,455 @@ function main(id)
 		
 	}
 
-	function dravideo_play(vid_id)
+	function dravideo_play(id,menu,src)
 	{
-		//alert(vid_id);
-		var video = document.getElementById(vid_id);
-		video.load();
-		video.style.display="block";
+		document.getElementById('video_bkp').innerHTML="";
+		var vid = document.getElementById('video_bkp');
+		var video = document.createElement('video');
+		video.setAttribute('class','accessories_vid');
+		//video.setAttribute('width','1000px');
+		vid.appendChild(video);
+
+		var source = document.createElement('source');
+		source.setAttribute('src',src);
+		video.appendChild(source);
+		video.play();
+		if(id=='dz1' && menu=='rotary')
+		{
+			document.getElementById('dz1_rotary_active').style.display="block";
+			document.getElementById('dz1_rotary_unable').style.display="none";
+			document.getElementById('dz1_plugin_active').style.display="none";
+			document.getElementById('dz1_plugin_unable').style.display="block";
+			document.getElementById('dz1_motor_active').style.display="none";
+			document.getElementById('dz1_motor_unable').style.display="block";
+			document.getElementById('dz1_mechanical_active').style.display="none";
+			document.getElementById('dz1_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="block";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+			
+
+		}
+		if(id=='dz1' && menu=='plugin')
+		{
+			document.getElementById('dz1_rotary_active').style.display="none";
+			document.getElementById('dz1_rotary_unable').style.display="block";
+			document.getElementById('dz1_plugin_active').style.display="block";
+			document.getElementById('dz1_plugin_unable').style.display="none";
+			document.getElementById('dz1_motor_active').style.display="none";
+			document.getElementById('dz1_motor_unable').style.display="block";
+			document.getElementById('dz1_mechanical_active').style.display="none";
+			document.getElementById('dz1_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="block";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz1' && menu=='motor')
+		{
+			document.getElementById('dz1_rotary_active').style.display="none";
+			document.getElementById('dz1_rotary_unable').style.display="block";
+			document.getElementById('dz1_plugin_active').style.display="none";
+			document.getElementById('dz1_plugin_unable').style.display="block";
+			document.getElementById('dz1_motor_active').style.display="block";
+			document.getElementById('dz1_motor_unable').style.display="none";
+			document.getElementById('dz1_mechanical_active').style.display="none";
+			document.getElementById('dz1_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="block";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+
+		}
+
+		if(id=='dz1' && menu=='mechanical')
+		{
+			document.getElementById('dz2_rotary_active').style.display="none";
+			document.getElementById('dz2_rotary_unable').style.display="block";
+			document.getElementById('dz2_plugin_active').style.display="none";
+			document.getElementById('dz2_plugin_unable').style.display="block";
+			document.getElementById('dz2_motor_active').style.display="none";
+			document.getElementById('dz2_motor_unable').style.display="block";
+			document.getElementById('dz2_mechanical_active').style.display="block";
+			document.getElementById('dz2_mechanical_unable').style.display="none";
+
+			document.getElementById('dz1_ext_menu').style.display="block";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+
+		}
+
+		if(id=='dz2' && menu=='rotary')
+		{
+			document.getElementById('dz2_rotary_active').style.display="block";
+			document.getElementById('dz2_rotary_unable').style.display="none";
+			document.getElementById('dz2_plugin_active').style.display="none";
+			document.getElementById('dz2_plugin_unable').style.display="block";
+			document.getElementById('dz2_motor_active').style.display="none";
+			document.getElementById('dz2_motor_unable').style.display="block";
+			document.getElementById('dz2_mechanical_active').style.display="none";
+			document.getElementById('dz2_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="block";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+
+
+		}
+		if(id=='dz2' && menu=='plugin')
+		{
+			document.getElementById('dz2_rotary_active').style.display="none";
+			document.getElementById('dz2_rotary_unable').style.display="block";
+			document.getElementById('dz2_plugin_active').style.display="block";
+			document.getElementById('dz2_plugin_unable').style.display="none";
+			document.getElementById('dz2_motor_active').style.display="none";
+			document.getElementById('dz2_motor_unable').style.display="block";
+			document.getElementById('dz2_mechanical_active').style.display="none";
+			document.getElementById('dz2_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="block";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz2' && menu=='motor')
+		{
+			document.getElementById('dz2_rotary_active').style.display="none";
+			document.getElementById('dz2_rotary_unable').style.display="block";
+			document.getElementById('dz2_plugin_active').style.display="none";
+			document.getElementById('dz2_plugin_unable').style.display="block";
+			document.getElementById('dz2_motor_active').style.display="block";
+			document.getElementById('dz2_motor_unable').style.display="none";
+			document.getElementById('dz2_mechanical_active').style.display="none";
+			document.getElementById('dz2_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="block";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz2' && menu=='mechanical')
+		{
+			document.getElementById('dz2_rotary_active').style.display="none";
+			document.getElementById('dz2_rotary_unable').style.display="block";
+			document.getElementById('dz2_plugin_active').style.display="none";
+			document.getElementById('dz2_plugin_unable').style.display="block";
+			document.getElementById('dz2_motor_active').style.display="none";
+			document.getElementById('dz2_motor_unable').style.display="block";
+			document.getElementById('dz2_mechanical_active').style.display="block";
+			document.getElementById('dz2_mechanical_unable').style.display="none";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="block";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz4' && menu=='rotary')
+		{
+			document.getElementById('dz4_rotary_active').style.display="block";
+			document.getElementById('dz4_rotary_unable').style.display="none";
+			document.getElementById('dz4_plugin_active').style.display="none";
+			document.getElementById('dz4_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz4_motor_active').style.display="none";
+			document.getElementById('dz4_motor_unable').style.display="block";
+			document.getElementById('dz4_mechanical_active').style.display="none";
+			document.getElementById('dz4_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="block";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+
+		}
+		if(id=='dz4' && menu=='plugin')
+		{
+			document.getElementById('dz4_rotary_active').style.display="none";
+			document.getElementById('dz4_rotary_unable').style.display="block";
+			document.getElementById('dz4_plugin_active').style.display="block";
+			document.getElementById('dz4_plugin_unable').style.display="none";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz4_motor_active').style.display="none";
+			document.getElementById('dz4_motor_unable').style.display="block";
+			document.getElementById('dz4_mechanical_active').style.display="none";
+			document.getElementById('dz4_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="block";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz4' && menu=='drawout')
+		{
+			document.getElementById('dz4_rotary_active').style.display="none";
+			document.getElementById('dz4_rotary_unable').style.display="block";
+			document.getElementById('dz4_plugin_active').style.display="block";
+			document.getElementById('dz4_plugin_unable').style.display="none";
+			document.getElementById('dz4_drawout_active').style.display="block";
+			document.getElementById('dz4_drawout_unable').style.display="none";
+			document.getElementById('dz4_motor_active').style.display="none";
+			document.getElementById('dz4_motor_unable').style.display="block";
+			document.getElementById('dz4_mechanical_active').style.display="none";
+			document.getElementById('dz4_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="block";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz4' && menu=='motor')
+		{
+			document.getElementById('dz4_rotary_active').style.display="none";
+			document.getElementById('dz4_rotary_unable').style.display="block";
+			document.getElementById('dz4_plugin_active').style.display="none";
+			document.getElementById('dz4_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz4_motor_active').style.display="block";
+			document.getElementById('dz4_motor_unable').style.display="none";
+			document.getElementById('dz4_mechanical_active').style.display="none";
+			document.getElementById('dz4_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="block";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz4' && menu=='mechanical')
+		{
+			document.getElementById('dz4_rotary_active').style.display="none";
+			document.getElementById('dz4_rotary_unable').style.display="block";
+			document.getElementById('dz4_plugin_active').style.display="none";
+			document.getElementById('dz4_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz4_motor_active').style.display="none";
+			document.getElementById('dz4_motor_unable').style.display="block";
+			document.getElementById('dz4_mechanical_active').style.display="block";
+			document.getElementById('dz4_mechanical_unable').style.display="none";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="block";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz6' && menu=='rotary')
+		{
+			document.getElementById('dz6_rotary_active').style.display="block";
+			document.getElementById('dz6_rotary_unable').style.display="none";
+			document.getElementById('dz6_plugin_active').style.display="none";
+			document.getElementById('dz6_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz6_motor_active').style.display="none";
+			document.getElementById('dz6_motor_unable').style.display="block";
+			document.getElementById('dz6_mechanical_active').style.display="none";
+			document.getElementById('dz6_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="block";
+			document.getElementById('dz7_ext_menu').style.display="none";
+
+		}
+		if(id=='dz6' && menu=='plugin')
+		{
+			document.getElementById('dz6_rotary_active').style.display="none";
+			document.getElementById('dz6_rotary_unable').style.display="block";
+			document.getElementById('dz6_plugin_active').style.display="block";
+			document.getElementById('dz6_plugin_unable').style.display="none";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz6_motor_active').style.display="none";
+			document.getElementById('dz6_motor_unable').style.display="block";
+			document.getElementById('dz6_mechanical_active').style.display="none";
+			document.getElementById('dz6_mechanical_unable').style.display="block";
+
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="block";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz6' && menu=='drawout')
+		{
+			document.getElementById('dz6_rotary_active').style.display="none";
+			document.getElementById('dz6_rotary_unable').style.display="block";
+			document.getElementById('dz6_plugin_active').style.display="block";
+			document.getElementById('dz6_plugin_unable').style.display="none";
+			document.getElementById('dz6_drawout_active').style.display="block";
+			document.getElementById('dz6_drawout_unable').style.display="none";
+			document.getElementById('dz6_motor_active').style.display="none";
+			document.getElementById('dz6_motor_unable').style.display="block";
+			document.getElementById('dz6_mechanical_active').style.display="none";
+			document.getElementById('dz6_mechanical_unable').style.display="block";
+
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="block";
+			document.getElementById('dz7_ext_menu').style.display="none";			
+		}
+
+		if(id=='dz6' && menu=='motor')
+		{
+			document.getElementById('dz6_rotary_active').style.display="none";
+			document.getElementById('dz6_rotary_unable').style.display="block";
+			document.getElementById('dz6_plugin_active').style.display="none";
+			document.getElementById('dz6_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz6_motor_active').style.display="block";
+			document.getElementById('dz6_motor_unable').style.display="none";
+			document.getElementById('dz6_mechanical_active').style.display="none";
+			document.getElementById('dz6_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="block";
+			document.getElementById('dz7_ext_menu').style.display="none";			
+		}
+
+		if(id=='dz6' && menu=='mechanical')
+		{
+			document.getElementById('dz6_rotary_active').style.display="none";
+			document.getElementById('dz6_rotary_unable').style.display="block";
+			document.getElementById('dz6_plugin_active').style.display="none";
+			document.getElementById('dz6_plugin_unable').style.display="block";
+			document.getElementById('dz6_drawout_active').style.display="none";
+			document.getElementById('dz6_drawout_unable').style.display="block";
+			document.getElementById('dz6_motor_active').style.display="none";
+			document.getElementById('dz6_motor_unable').style.display="block";
+			document.getElementById('dz6_mechanical_active').style.display="block";
+			document.getElementById('dz6_mechanical_unable').style.display="none";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="block";
+			document.getElementById('dz7_ext_menu').style.display="none";
+		}
+
+		if(id=='dz7' && menu=='rotary')
+		{
+			document.getElementById('dz7_rotary_active').style.display="block";
+			document.getElementById('dz7_rotary_unable').style.display="none";
+			document.getElementById('dz7_drawout_active').style.display="none";
+			document.getElementById('dz7_drawout_unable').style.display="block";
+			document.getElementById('dz7_motor_active').style.display="none";
+			document.getElementById('dz7_motor_unable').style.display="block";
+			document.getElementById('dz7_mechanical_active').style.display="none";
+			document.getElementById('dz7_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="block";			
+
+		}
+		if(id=='dz7' && menu=='drawout')
+		{
+			document.getElementById('dz7_rotary_active').style.display="none";
+			document.getElementById('dz7_rotary_unable').style.display="block";
+			document.getElementById('dz7_drawout_active').style.display="block";
+			document.getElementById('dz7_drawout_unable').style.display="none";
+			document.getElementById('dz7_motor_active').style.display="none";
+			document.getElementById('dz7_motor_unable').style.display="block";
+			document.getElementById('dz7_mechanical_active').style.display="none";
+			document.getElementById('dz7_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="block";				
+		}
+
+		if(id=='dz7' && menu=='motor')
+		{
+			document.getElementById('dz7_rotary_active').style.display="none";
+			document.getElementById('dz7_rotary_unable').style.display="block";
+			document.getElementById('dz7_drawout_active').style.display="none";
+			document.getElementById('dz7_drawout_unable').style.display="block";
+			document.getElementById('dz7_motor_active').style.display="block";
+			document.getElementById('dz7_motor_unable').style.display="none";
+			document.getElementById('dz7_mechanical_active').style.display="none";
+			document.getElementById('dz7_mechanical_unable').style.display="block";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="block";				
+		}
+
+		if(id=='dz7' && menu=='mechanical')
+		{
+			document.getElementById('dz7_rotary_active').style.display="none";
+			document.getElementById('dz7_rotary_unable').style.display="block";
+			document.getElementById('dz7_drawout_active').style.display="none";
+			document.getElementById('dz7_drawout_unable').style.display="block";
+			document.getElementById('dz7_motor_active').style.display="none";
+			document.getElementById('dz7_motor_unable').style.display="block";
+			document.getElementById('dz7_mechanical_active').style.display="block";
+			document.getElementById('dz7_mechanical_unable').style.display="none";
+
+			document.getElementById('dz1_ext_menu').style.display="none";
+			document.getElementById('dz2_ext_menu').style.display="none";
+			document.getElementById('dz4_ext_menu').style.display="none";
+			document.getElementById('dz6_ext_menu').style.display="none";
+			document.getElementById('dz7_ext_menu').style.display="block";				
+		}				
+	}
+
+
+
+	function new_video_play(src)
+	{
+		document.getElementById('access_bkp').innerHTML="";
+		var vid = document.getElementById('access_bkp')
+		var video = document.createElement('video');
+		video.setAttribute('class','new_video_play');
+		//video.setAttribute('width','1000px');
+		vid.appendChild(video);
+		var source = document.createElement('source');
+		source.setAttribute('src',src);
+		video.appendChild(source);
 		video.play();
 	}
 	
@@ -579,35 +966,76 @@ function main(id)
             <div id="salient_acc_popup" style="display: none;"><img src="Assets/data/Accessories/Salientfeature_Internal.png">
                 <a href="#" onclick="close_div()"><img class="cloase_btn" src="Assets/data/Withdrawable_Offerings/close.png"></a>
             </div>
+            <div id="new_video" class="new_video" style="display: none;"><img onclick="new_video_play('Assets/data/Accessories/videos/internalAux.mp4');" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /><br><br><br><br><br><br>
+            	<img onclick="new_video_play('Assets/data/Accessories/videos/internalUv.mp4');" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" />
+            </div>
             <div id="access_bkp" style="display: none;"></div>
             <div id="video_bkp" style="display: none;">
-                <video style="display: none;" id="acc_video1" class="accessories_vid" poster="Assets/data/Accessories/poster.png" autoplay>
-                    <source src="" type="video/mp4">
-                </video>
-                <a href="#" onclick="dravideo_play('acc_video1')"><img id="video_btn1" class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a>
-                <video id="acc_video2" style="display: none;" class="accessories_vid" poster="Assets/data/Accessories/poster.png" autoplay>
-                    <source src="" type="video/mp4">
-                </video>
-                <a href="#" onclick="dravideo_play('acc_video2')"><img id="video_btn2" class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a>
-                <video style="display: none;" id="acc_video3" class="accessories_vid" poster="Assets/data/Accessories/poster.png" autoplay>
-                    <source src="" type="video/mp4">
-                </video>
-                <a href="#" onclick="dravideo_play('acc_video3')"><img id="video_btn3" class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a>
-                <video style="display: none;" id="acc_video4" class="accessories_vid" poster="Assets/data/Accessories/poster.png" autoplay>
-                    <source src="" type="video/mp4" >
-                </video>
-                <a href="#" onclick="dravideo_play('acc_video4')"><img id="video_btn4" class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a>
-                <video style="display: none;" id="acc_video5" class="accessories_vid" poster="Assets/data/Accessories/poster.png" autoplay>
-                    <source src="" type="video/mp4">
-                </video>
-                <a href="#" onclick="dravideo_play('acc_video5')"><img id="video_btn5" class="video_btn" src="Assets/data/Withdrawable_Offerings/VideoIcon.png" /></a>
+                
             </div>
             <div id="right_acc_menu" class="right_acc_menu">
-                <div id="rotary_handel" onclick="unable_video_play(1)" style="display: none;"></div>
-                <div id="plug_in" style="display: none;"><img onclick="unable_video_play(2)" src="Assets/data/Accessories/PlugIn_B.png" id="plug_in_active"><img src="Assets/data/Accessories/PlugIn_Disable.png" id="PlugIn_Disable"></div>
-                <div id="drawout_acc" style="display: none;"><img onclick="unable_video_play(3)" src="Assets/data/Accessories/Drawout_B.png" id="dz2_active"><img src="Assets/data/Accessories/Drawout_Disable.png" id="Drawout_Disable"></div>
-                <div id="motor_operator" style="display: none;" onclick="unable_video_play(4)"></div>
-                <div id="mechanical" style="display: none;" onclick="unable_video_play(5)"></div>
+            	<div id="dz1_ext_menu" style="display:none;">
+            		<div><img onclick="dravideo_play('dz1','rotary','Assets/data/Accessories/videos/DZ1_1.mp4')" id="dz1_rotary_unable" src="Assets/data/Accessories/RotaryHandle_B_A.png">
+            		<img style="display:none;" id="dz1_rotary_active" src="Assets/data/Accessories/RotaryHandle_Y_A.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz1','plugin','Assets/data/Accessories/videos/DZ1_2.mp4')" id="dz1_plugin_unable" src="Assets/data/Accessories/PlugIn_B.png">
+            		<img style="display:none;" id="dz1_plugin_active" src="Assets/data/Accessories/PlugIn_Y.png"></div>
+               		<div style="margin-top: 5px;"><img id="dz1_drawout_unable" src="Assets/data/Accessories/Drawout_B_D.png"></div>
+            		<div style="margin-top: 5px;"> <img onclick="dravideo_play('dz1','motor','Assets/data/Accessories/videos/DZ1_4.mp4')" id="dz1_motor_unable" src="Assets/data/Accessories/MotorOperator_B.png">
+               		<img style="display:none;" id="dz1_motor_active" src="Assets/data/Accessories/MotorOperator_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz1','mechanical','Assets/data/Accessories/videos/DZ1_5.mp4')" id="dz1_mechanical_unable" src="Assets/data/Accessories/MachanicalInterlock_B.png">
+            		<img style="display:none;" id="dz1_mechanical_active" src="Assets/data/Accessories/MachanicalInterlock_Y.png"></div>
+            	</div>
+
+               	<div id="dz2_ext_menu" style="display:none;">
+            		<div><img onclick="dravideo_play('dz2','rotary','Assets/data/Accessories/videos/DZ2_1.mp4')" id="dz2_rotary_unable" src="Assets/data/Accessories/RotaryHandle_B_A.png">
+            		<img style="display:none;" id="dz2_rotary_active" src="Assets/data/Accessories/RotaryHandle_Y_A.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz2','plugin','Assets/data/Accessories/videos/DZ2_2.mp4')" id="dz2_plugin_unable" src="Assets/data/Accessories/PlugIn_B.png">
+            		<img style="display:none;" id="dz2_plugin_active" src="Assets/data/Accessories/PlugIn_Y.png"></div>
+               		<div style="margin-top: 5px;"><img id="dz2_drawout_unable" src="Assets/data/Accessories/Drawout_B_D.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz2','motor','Assets/data/Accessories/videos/DZ2_4.mp4')" id="dz2_motor_unable" src="Assets/data/Accessories/MotorOperator_B.png">
+               		<img style="display:none;" id="dz2_motor_active" src="Assets/data/Accessories/MotorOperator_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz2','mechanical','Assets/data/Accessories/videos/DZ2_5.mp4')" id="dz2_mechanical_unable" src="Assets/data/Accessories/MachanicalInterlock_B.png">
+            		<img style="display:none;" id="dz2_mechanical_active" src="Assets/data/Accessories/MachanicalInterlock_Y.png"></div>
+            	</div>
+
+               	<div id="dz4_ext_menu" style="display:none;">
+            		<div><img onclick="dravideo_play('dz4','rotary','Assets/data/Accessories/videos/DZ4_1.mp4')"  id="dz4_rotary_unable" src="Assets/data/Accessories/RotaryHandle_B_A.png">
+            		<img style="display:none;" id="dz4_rotary_active" src="Assets/data/Accessories/RotaryHandle_Y_A.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz4','plugin','Assets/data/Accessories/videos/DZ4_2.mp4')" id="dz4_plugin_unable" src="Assets/data/Accessories/PlugIn_B.png">
+            		<img style="display:none;" id="dz4_plugin_active" src="Assets/data/Accessories/PlugIn_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz4','drawout','Assets/data/Accessories/videos/DZ4_3.mp4')" id="dz4_drawout_unable" src="Assets/data/Accessories/Drawout_B.png">
+            		<img style="display:none;" id="dz4_drawout_active" src="Assets/data/Accessories/Drawout_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz4','motor','Assets/data/Accessories/videos/DZ4_4.mp4')" id="dz4_motor_unable" src="Assets/data/Accessories/MotorOperator_B.png">
+               		<img style="display:none;" id="dz4_motor_active" src="Assets/data/Accessories/MotorOperator_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz4','mechanical','Assets/data/Accessories/videos/DZ4_5.mp4')" id="dz4_mechanical_unable" src="Assets/data/Accessories/MachanicalInterlock_B.png">
+            		<img style="display:none;" id="dz4_mechanical_active" src="Assets/data/Accessories/MachanicalInterlock_Y.png"></div>
+            	</div>
+
+               	<div id="dz6_ext_menu" style="display:none;">
+            		<div><img onclick="dravideo_play('dz6','rotary','Assets/data/Accessories/videos/DZ6_1.mp4')" id="dz6_rotary_unable" src="Assets/data/Accessories/RotaryHandle_B_A.png">
+            		<img style="display:none;" id="dz6_rotary_active" src="Assets/data/Accessories/RotaryHandle_Y_A.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz6','plugin','Assets/data/Accessories/videos/DZ6_2.mp4')" id="dz6_plugin_unable" src="Assets/data/Accessories/PlugIn_B.png">
+            		<img style="display:none;" id="dz6_plugin_active" src="Assets/data/Accessories/PlugIn_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz6','drawout','Assets/data/Accessories/videos/DZ6_3.mp4')" id="dz6_drawout_unable" src="Assets/data/Accessories/Drawout_B.png">
+            		<img style="display:none;" id="dz6_drawout_active" src="Assets/data/Accessories/Drawout_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz6','motor','Assets/data/Accessories/videos/DZ6_4.mp4')" id="dz6_motor_unable" src="Assets/data/Accessories/MotorOperator_B.png">
+               		<img style="display:none;" id="dz6_motor_active" src="Assets/data/Accessories/MotorOperator_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz6','mechanical','Assets/data/Accessories/videos/DZ6_5.mp4')" id="dz6_mechanical_unable" src="Assets/data/Accessories/MachanicalInterlock_B.png">
+            		<img  style="display:none;" id="dz6_mechanical_active" src="Assets/data/Accessories/MachanicalInterlock_Y.png"></div>
+            	</div>
+
+               	<div id="dz7_ext_menu" style="display:none;">
+            		<div><img onclick="dravideo_play('dz7','rotary','Assets/data/Accessories/videos/DZ7_1.mp4')" id="dz7_rotary_unable" src="Assets/data/Accessories/RotaryHandle_B_A.png">
+            		<img style="display:none;" id="dz7_rotary_active" src="Assets/data/Accessories/RotaryHandle_Y_A.png"></div>
+            		<div style="margin-top: 5px;"><img id="dz7_plugin_disable" src="Assets/data/Accessories/PlugIn_B_D.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz7','drawout','Assets/data/Accessories/videos/DZ7_3.mp4')" id="dz7_drawout_unable" src="Assets/data/Accessories/Drawout_B.png">
+            		<img style="display:none;" id="dz7_drawout_active" src="Assets/data/Accessories/Drawout_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz7','motor','Assets/data/Accessories/videos/DZ7_4.mp4')" id="dz7_motor_unable" src="Assets/data/Accessories/MotorOperator_B.png">
+               		<img style="display:none;" id="dz7_motor_active" src="Assets/data/Accessories/MotorOperator_Y.png"></div>
+            		<div style="margin-top: 5px;"><img onclick="dravideo_play('dz7','mechanical','Assets/data/Accessories/videos/DZ7_5.mp4')" id="dz7_mechanical_unable" src="Assets/data/Accessories/MachanicalInterlock_B.png">
+            		<img style="display:none;" id="dz7_mechanical_active" src="Assets/data/Accessories/MachanicalInterlock_Y.png"></div>
+            	</div>
+
             </div>
         </div>
 

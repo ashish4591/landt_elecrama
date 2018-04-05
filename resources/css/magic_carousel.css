@@ -2,6 +2,7 @@
 .magic_carousel {
 	position:relative;
 	overflow:hidden;
+	    top: -12px;
 }
 .magic_carousel img {
 	max-width:none;
