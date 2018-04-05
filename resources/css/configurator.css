@@ -8,32 +8,50 @@ body{
 	overflow-y:hidden;
     margin: 0 auto;
     padding: 0;
-	background-size:cover;
-	background-attachment:fixed;
+	/*background-size:cover;
+	background-attachment:fixed;*/
+	width: 100%;
+	height: 100%;
 }
 
+#header{
+	position: absolute;	
+	width:100%;;
+}
+.main_header{
+	margin-top: 15px;
+}
+#bottom{
+	bottom: 0;
+    position: absolute;
+    width: 1280px;
+}
 #main_container
 {
 	position: absolute;
-	width: 1280px;
-	height: auto;
+	width: 100%;;
+	height: 100%;;
     top: 0;
+}
+.logo{
+	position: absolute;
+    left: 85px;
+    top: 70px;
 }
 .dz_product
 {
 	float: right;
-	display: inline-block;
     margin-right:25px;
-    margin-top: 0px;
+    margin-top: -25px;
 }
 
 	#dz1
 	{
 		width: 79px;
 		height: 90px;
-		background-image: url("../../Assets/configurator/Button/DZ1_Y.png");
-		background-repeat: no-repeat;
-		display: inline-block;
+		/*background-image: url("../../Assets/configurator/Button/DZ1_Y.png");
+		background-repeat: no-repeat;*/
+		display: inline;
 		margin-right: 20px;
 	}
 
@@ -41,9 +59,9 @@ body{
 	{
 			width: 79px;
 			height: 90px;
-	    	background-image: url("../../Assets/configurator/Button/DZ2_B.png");
-	    	background-repeat: no-repeat;
-	    	display: inline-block;
+	    	/*background-image: url("../../Assets/configurator/Button/DZ2_B.png");
+	    	background-repeat: no-repeat;*/
+	    	display: inline;
 			 margin-right: 20px;
 	}
 
@@ -51,19 +69,19 @@ body{
 	{
 			width: 79px;
 			height: 90px;
-	    	background-image: url("../../Assets/configurator/Button/DZ4_B.png");
-	    	background-repeat: no-repeat;
-	    	display: inline-block;
+	    	/*background-image: url("../../Assets/configurator/Button/DZ4_B.png");
+	    	background-repeat: no-repeat;*/
+	    	display: inline;
 			margin-right: 20px;
 	}
 
-	#dz5
+	#dz6
 	{
 			width: 79px;
 			height: 90px;
-	    	background-image: url("../../Assets/configurator/Button/DZ6_B.png");
-	    	background-repeat: no-repeat;
-	    	display: inline-block;
+	    	/*background-image: url("../../Assets/configurator/Button/DZ6_B.png");
+	    	background-repeat: no-repeat;*/
+	    	display: inline;
 		    margin-right: 20px;
 	}
 
@@ -71,9 +89,9 @@ body{
 	{
 			width: 79px;
 			height: 90px;
-	    	background-image: url("../../Assets/configurator/Button/DZ7_B.png");
-	    	background-repeat: no-repeat;
-	    	display: inline-block;
+	    	/*background-image: url("../../Assets/configurator/Button/DZ7_B.png");
+	    	background-repeat: no-repeat;*/
+	    	display: inline;
 			margin-right: 20px;
 	}
 
@@ -178,8 +196,8 @@ body{
 	}
 #prod_text{
 	position: absolute;
-    left: 60px;
-	top:2px;
+    left: 50px;
+    top: 265px;
 }
 #prod_iid{
 	color:#ff00ff;
@@ -194,7 +212,7 @@ body{
 	color:#c1272d;
 }
 .prod_content{
-	font-size: 24px;
+	font-size: 26px;
     font-weight: bold;
 	font-family: SOURCE SANS PRO SEMIBOLD;
 }
@@ -212,9 +230,9 @@ body{
 	transform: scale(0.9);
     margin-left:165px;
     margin-top: 10px;*/
-	top: -20px;
-    left: 340px;
-	width:750px;
+	top: 230px;
+    left: 285px;
+	width:780px;
 	transform: scale(0.9);
 }
 .itrp_img{
@@ -223,9 +241,9 @@ body{
 		/*display:none;
 		left: 0px;*/
 		z-index: 0;
-		top: -20px;
-		left: 340px;
-		width:750px;
+		top: 230px;
+		left: 285px;
+		width:780px;
 		/*margin-left: 165px;
 		margin-top: 15px;*/
 		transform: scale(0.9);
@@ -234,24 +252,24 @@ body{
 .product_video
 {
 	position: absolute;
-    width: 750px;
-	top:-20px;
-    left: 340px;
+    width: 780px;
+    top: 230px;
+    left: 285px;
     z-index: 1;
-	/* display:none; */
+    /* display: none; */
 }
 .video_btn{
 	/*margin-top: -125px;
     margin-left: 875px;*/
     z-index: 780;
     position: absolute;
-    top: 350px;
-    right: -15px;
+    top: 595px;
+    right: 40px;
 }
 	.trip_menu
 	{
 	    position: absolute;
-		top: -50px;
+		top: 200px;
 		left: 570px
 	}
 
@@ -264,26 +282,26 @@ body{
 	{
 		position: relative;
 		width: 100px;
-		top: -50px;
+		top: 20px;
 	}
 
 	.tmr_bkp
 	{
 		position: absolute;
-		top: -22px;
-		left: 202px;
+		top: 225px;
+		left: 205px;
 	}
 
 	#conf_title
 	{
 		position: absolute;
 		left: 60px;
-		top: -50px;
+		top: 0px;
 	}
 	.graph
 	{
 		position: relative;
-		top: 65px;
+		top: 275px;
 		left: 30px;
 	}
 	.dz1_graph
@@ -375,15 +393,6 @@ body{
 		top: 31px;
 		
 	}
-	.graph_btn{
-	
-	}
-	.graph_btn1{
-		
-	}
-	.graph_btn2{
-		
-	} 
 	.dz_dimension{
 		position: absolute;
 		left: 30px;
@@ -395,7 +404,7 @@ body{
 	}
 	.cur_rating
 	{
-	   top: 315px;
+	   top: 590px;
 	   position: absolute;
        left: 30px;
 	}
@@ -404,7 +413,7 @@ body{
 		position: absolute;
 		width: 1280px;
 		float: left;
-		top: 540px;
+		top: 700px;
 	}
 	.prod_def
 	{
