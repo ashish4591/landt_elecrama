@@ -15,10 +15,10 @@
 </style>
 
 <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" type="text/javascript"></script-->
-<script src="resources/js/jquery-ui.min.js"></script>
+<!--script src="resources/js/jquery-ui.min.js"></script>
 <script src="resources/js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
 <script src="resources/js/magic_carousel.js" type="text/javascript"></script>
-<script src="resources/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="resources/js/jquery.prettyPhoto.js" type="text/javascript"></script-->
 
 
 <script type="text/javascript">
@@ -103,9 +103,11 @@ jQuery(function() {
 			}
 			function showtable(){
 				$("#pi6").attr('src', 'assets/data/Protection_Unit/Table_Y.png');
+				$("#pi4").attr('src', 'assets/data/Protection_Unit/Modules_B.png');
 				document.getElementById('p1').style.display="none";
 				document.getElementById('p2').style.display="none";
 				document.getElementById('p7').style.display="block";
+				document.getElementById('p8').style.display="none";
 				document.getElementById('pclose').style.display="block";
 				var buttonClk=document.getElementById('pclose');
 				buttonClk.addEventListener("click", function() {
@@ -122,9 +124,11 @@ jQuery(function() {
 			}
 			function showmodule(){
 				$("#pi4").attr('src', 'assets/data/Protection_Unit/Modules_Y.png');
+				$("#pi6").attr('src', 'assets/data/Protection_Unit/Table_B.png');
 				document.getElementById('p1').style.display="none";
 				document.getElementById('p2').style.display="none";
 				document.getElementById('p8').style.display="block";
+				document.getElementById('p7').style.display="none";
 				document.getElementById('pdclose').style.display="block";
 				document.getElementById('pdesc').style.display="block";
 				document.getElementById('backbtn').style.display="block";
@@ -158,159 +162,29 @@ jQuery(function() {
 					case 1:
 						//$('video')[0].pause();	
 						$("#pdesc").attr('src', 'assets/data/Protection_Unit/M3U.png');
-						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#ppvid1").attr('src', 'assets/data/Protection_Unit/1.mp4');
 						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
-						//showvideo(id,'Assets/data/Protection_Unit/256.mp4','Assets/data/Protection_Unit/video.png');
-						/*var div = document.getElementById('p8'); 
-						/*var video = document.createElement('video');
-						video.setAttribute('id','vid1');
-						video.setAttribute('class','pvsrc');
-						var image=document.createElement('img');
-						image.setAttribute('id','pvimg1');
-						image.setAttribute('src',pisrc);
-						image.setAttribute('class','pvimg1');
-						div.appendChild(image);
-						div.appendChild(video);
-						var source = document.createElement('source');
-						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
-						video.appendChild(source);
-						var buttonClk1=document.getElementById('pvimg1');
-						//console.log(buttonRef);
-						buttonClk1.addEventListener("click", function() {
-							alert('play');
-							var vidplay=document.getElementById('vid1');
-							vidplay.play;
-						});*/
-						
 					break;
 					case 2:
 						$('video')[0].pause();	
 						$("#pdesc").attr('src', 'assets/data/Protection_Unit/PRM.png');
-						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/2.mp4');
 						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
-						//showvideo(id);
-						/*var div = document.getElementById('p8'); 
-						var video = document.createElement('video');
-						video.setAttribute('id','vid2');
-						video.setAttribute('class','pvsrc');
-						var image=document.createElement('img');
-						image.setAttribute('id','pvimg1');
-						image.setAttribute('src',pisrc);
-						image.setAttribute('class','pvimg1');
-						div.appendChild(image);
-						div.appendChild(video);
-						var source = document.createElement('source');
-						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
-						video.appendChild(source);
-						buttonClk=document.getElementById('pvimg1');
-						//console.log(buttonRef);
-						buttonClk.addEventListener("click", function() {
-							$('#p8').children().filter("video").each(function(){
-								this.pause(); 
-								delete this; 
-								$(this).remove(); 
-							});
-							$('#p8').children().filter("img").each(function(){
-								delete this; 
-								$(this).remove();
-							});
-						});*/
 					break;
 					case 3:
 						$("#pdesc").attr('src', 'assets/data/Protection_Unit/TM.png');
-						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/3.mp4');
 						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
-						//showvideo(id);
-						/*var div = document.getElementById('p8'); 
-						var video = document.createElement('video');
-						video.setAttribute('id','vid3');
-						video.setAttribute('class','pvsrc');
-						var image=document.createElement('img');
-						image.setAttribute('id','pvimg1');
-						image.setAttribute('src',pisrc);
-						image.setAttribute('class','pvimg1');
-						div.appendChild(image);
-						div.appendChild(video);
-						var source = document.createElement('source');
-						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
-						video.appendChild(source);
-						buttonClk=document.getElementById('pvimg1');
-						//console.log(buttonRef);
-						buttonClk.addEventListener("click", function() {
-							$('#p8').children().filter("video").each(function(){
-								this.pause(); 
-								delete this; 
-								$(this).remove(); 
-							});
-							$('#p8').children().filter("img").each(function(){
-								delete this; 
-								$(this).remove();
-							});
-						});*/
 					break;
 					case 4:
 						$("#pdesc").attr('src', 'assets/data/Protection_Unit/ZSI.png');
-						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/4.mp4');
 						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
-						//showvideo(id);
-						/*var div = document.getElementById('p8'); 
-						var video = document.createElement('video');
-						video.setAttribute('id','vid4');
-						video.setAttribute('class','pvsrc');
-						var image=document.createElement('img');
-						image.setAttribute('id','pvimg1');
-						image.setAttribute('src',pisrc);
-						image.setAttribute('class','pvimg1');
-						div.appendChild(image);
-						div.appendChild(video);
-						var source = document.createElement('source');
-						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
-						video.appendChild(source);
-						buttonClk=document.getElementById('pvimg1');
-						//console.log(buttonRef);
-						buttonClk.addEventListener("click", function() {
-							$('#p8').children().filter("video").each(function(){
-								this.pause(); 
-								delete this; 
-								$(this).remove(); 
-							});
-							$('#p8').children().filter("img").each(function(){
-								delete this; 
-								$(this).remove();
-							});
-						});*/
 					break;
 					case 5:
 						$("#pdesc").attr('src', 'assets/data/Protection_Unit/panorama.png');
-						$("#vid1").attr('src', 'assets/data/Protection_Unit/256.mp4');
+						$("#vid1").attr('src', 'assets/data/Protection_Unit/5.mp4');
 						$("#pvimg1").attr('src', 'assets/data/Protection_Unit/video.png');
-						//showvideo(id);
-						/*var div = document.getElementById('p8'); 
-						var video = document.createElement('video');
-						video.setAttribute('id','vid5');
-						video.setAttribute('class','pvsrc');
-						var image=document.createElement('img');
-						image.setAttribute('id','pvimg1');
-						image.setAttribute('src',pisrc);
-						image.setAttribute('class','pvimg1');
-						div.appendChild(image);
-						div.appendChild(video);
-						var source = document.createElement('source');
-						source.setAttribute('src','assets/data/Protection_Unit/256.mp4');
-						video.appendChild(source);
-						buttonClk=document.getElementById('pvimg1');
-						//console.log(buttonRef);
-						buttonClk.addEventListener("click", function() {
-							$('#p8').children().filter("video").each(function(){
-								this.pause(); 
-								delete this; 
-								$(this).remove(); 
-							});
-							$('#p8').children().filter("img").each(function(){
-								delete this; 
-								$(this).remove();
-							});
-						});*/
 					break;
 					default:
 					
@@ -393,7 +267,7 @@ jQuery(function() {
 					<img id="pdclose" class="pdclose" src="Assets/data/Protection_Unit/close.png" alt="">
 					<img id="mbg" class="mbg" src="Assets/data/Protection_Unit/MOdule_BG.png" alt="">
 					<div id="pmodvid">
-						<video id="ppvid1" class="pvsrc"><source src="assets/data/Protection_Unit/256.mp4"></video>
+						<video id="ppvid1" class="pvsrc"><source src="assets/data/Protection_Unit/1.mp4"></video>
 						<img onclick="pplayvideo()" id="pvimg1" src="assets/data/Protection_Unit/video.png" class="pvimg1">
 					</div>
 					<img id="pdesc" class="scaler7 pdesc" src="Assets/data/Protection_Unit/M3U.png" alt="">

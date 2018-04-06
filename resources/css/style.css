@@ -22,6 +22,11 @@ body{
 -o-transition: all 1s ease-in-out; 
 -ms-transition: all 1s ease-in-out; 
 }
+#bottom{
+	position: absolute;
+    bottom: 55px;
+    left: 0;
+}
 .parent {
     position: relative;
     top: 46px;
@@ -100,9 +105,18 @@ body{
 	{
 			    margin-left: -16%;
 			transform: scale(0.8);
-		margin-top: -6px;
+		margin-top: 10px;
 	}
-
+	#header{
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+	.logo{
+		position: absolute;
+		left: 85px;
+		top: 70px;
+	}
 	#myContainer{
 		position:absolute;
 		width:1280px;
@@ -110,13 +124,13 @@ body{
 		margin-left: auto;
 		margin-right: auto;
 	}
-    	.lt_main
-    	 	{
+	.lt_main
+	{
 		position: relative;
 		width: 600px;
 		margin-top: -205px;
-    		
-    	}
+		margin-left: -100px;
+	}
 
 	.image1{
 		margin-left: -22%;
@@ -131,7 +145,7 @@ body{
 	}
 	.image4{
 		position: relative;
-		margin-left: 112px;
+		margin-left: 18px;
 		top: 102px;
 	}
 	.image6{
@@ -278,12 +292,12 @@ body{
 		margin-left: -140px; 
 	}*/
 	.vimg1{
-		margin-left: 454px;
+		margin-left: 499px;
 		z-index: 999;
 		position: absolute;
-		/* margin-top: 5px; */
-		width: 45px;
-		top: 51px;
+		margin-top: 83px;
+		width: 35px;
+		top: 10px;
 	}
 	.v1{
 		position: absolute;
@@ -430,13 +444,14 @@ body{
 		float: right;
 		margin-left: 466px;
 		margin-top: -99px;
+		z-index:999;
 	    }
 	    #vid
 	    {
-	    	width: 1000px;
+	        width: 500px;
 			position: absolute;
-			top: 0px;
-			left: -67px;
+			top: 92px;
+			left: 40px;
 	    }
 
 	    .term_prod_img
@@ -446,8 +461,8 @@ body{
 		    left: 222px;
 	    }
 
-		    .back_line
-	    {
+		.back_line
+		{
 	    	position: relative;
 	       	width:700px;
 	    	height: 3px;
@@ -463,7 +478,6 @@ body{
 	}
 	#Features_or_Highlights{
 		position:absolute;
-		width:100%;
 		margin-left:15px;
 		top:0px;
 	}
@@ -488,18 +502,18 @@ body{
 	}
 	#f3{
 		position: relative;
-		/*top: -50px; */
-		top:0;
-		/*right: 30px;*/
-		right: -209px;
+		width: 101px;
+		/* top: -50px; */
+		top: 0;
+		/* right: 30px; */
+		left: 216px;
 	}
 	#f2{
-		position: relative;	
-		/*top: 50px;
-		right: -150px;*/
-		top:73px;
-		right:-205px;
-		z-index:10;
+		width: 338px;
+		position: relative;
+		top: 73px;
+		left: 185px;
+		z-index: 10;
 	}
 	#fimg1{
 	    margin-top: -86px;
@@ -527,51 +541,48 @@ body{
 	}
 	#r2{
 		margin-left: -130px;
-		    margin-top: -30px;
+		margin-top: 15px;
 	}
 	#r3{
 	    margin-top: -15px;
-		margin-left: 100px;
+		margin-left: 30px;
 		width: 100%;
 	}
 	#Rimage_1
 	{
-	margin-top: -35px;
-    margin-left: -216px;
-	height: 462px;
+	/*margin-top: -35px;*/
+    margin-left: -140px;
+	/*height: 462px; */
 	}
 	#Rimage_2
 	{
-	margin-top: -35px;
-    margin-left: -50px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	#Rimage_3
 	{
-	margin-top: -35px;
-    margin-left: -50px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	#Rimage_4
 	{
-	margin-top: -35px;
-    margin-left: -50px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	#Rimage_5
 	{
-		margin-top: -35px;
-		margin-left: -56px;
-		height: 462px;
-		width:180px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	#Rimage_6
 	{
-		margin-top: -35px;
-		margin-left: -55px;
-	    height: 462px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	#Rimage_7
 	{
-	margin-top: -35px;
-    margin-left: -50px;
+		margin-top: 0px;
+		margin-left: -5px;
 	}
 	.Ractive{
 		background-color:#FEBB12 !important;
@@ -583,20 +594,19 @@ body{
 		.menu_with
 	{
 		position: absolute;
-		width: 1000px;
+		width: 734px;
 		height: 487px;
 		background-image: url('../../Assets/data/Withdrawable_Offerings/Line.png');
 		background-repeat: no-repeat;
-		left: -32%;
-		transform: scale(0.7);
-		top:8%;
+		left: -15%;
+		top:20%;
 		
 	}
 	#right_menu
 	{
 	    float: right;
 	    margin-top: -36px;
-	    margin-right: 247px;
+	    margin-right: 0;
 	}
 	#left_menu
 	{
@@ -702,6 +712,7 @@ body{
 		position: absolute;
 		right: 30px;
 		top: 30px;
+		z-index:999;
     }
     .video_btn
     {
@@ -734,9 +745,10 @@ body{
 
 	position: absolute;
 	z-index: 4;
-	top: 75px;
-	/*left: 257px;*/
-	 left:435px;
+	top: 0px;
+	/*left: 257px;
+	 left:435px;*/
+	 left:185px;
 	width: 500px;
 
     }
@@ -818,13 +830,13 @@ body{
 	#external
 	{
 	    position: absolute;
-	    width: 159px;
+	    width: 133px;
 	    height: 44px;
 	    background-image: url(../../Assets/data/Accessories/External_B.png);
 	    background-repeat: no-repeat;
 	    display: inline-block;
 	    top: 26%;
-	    right: 116px;
+	    right: 5px;
 	}
 	.new_video
 	{
@@ -832,7 +844,7 @@ body{
 		/* float: right; */
 		width: 80px;
 		height: auto;
-		right: 123px;
+		right: 2px;
 		margin-top: 103px;
 	}
 	#dz1
@@ -948,7 +960,7 @@ body{
 	.accessories_main
 	{
 		position: absolute;
-		width: 796px;
+		width: 659px;
 		height: 487px;	
 		left: -3%;
 		top: 5px;
@@ -959,10 +971,10 @@ body{
 		margin-left: 753px;
 		z-index: 892;*/
 		position: relative;
-		margin-left: 110px;
-		top: 33px;
+		margin-left: 115px;
+		top: 85px;
 		z-index: 892;
-		
+		width: 100px;
 	}
 	.p1{
 		width:252px;
@@ -972,7 +984,7 @@ body{
 		margin-left: 550px;
 		margin-top: 160px;
 		z-index:892;*/
-		position: relative;
+		position: inherit;
 		margin-left: -84px;
 		margin-top: -240px;
 		z-index:892;
@@ -987,20 +999,20 @@ body{
 			bottom: 0;
 			right: 0;*/
 		position: absolute;
-		bottom: 67px;
-		right: 0;
+		bottom: 55px;
+		right: -15px;;
 	}
 	#p4{
 		position: absolute;
 		position: absolute;
-		bottom: 160px;
+		bottom: 147px;
 		right: 278px;
 		display: none;
 		z-index: 952;
 	}
 	#p5{
 	position: absolute;
-	    bottom: 160px;
+	    bottom: 147px;
 	    right: 124px;
 	    z-index: 952;
 		
@@ -1008,7 +1020,7 @@ body{
 	#p6{
 	    position: absolute;
 	    /* margin-top: 106px; */
-	    bottom: 160px;
+	    bottom: 147px;
 	    right: 0px;
 	    z-index: 952;
 	}
@@ -1742,7 +1754,7 @@ position: relative;
 	.right_acc_menu
 	{
 		position: absolute;
-		right: 67px;
+		right: 34px;
 		top: 236px;
 	}
 	.accessories_vid

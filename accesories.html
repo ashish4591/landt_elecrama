@@ -37,7 +37,8 @@ function main(id)
 		document.getElementById('dz4').innerHTML="";
 		document.getElementById('dz5').innerHTML="";
 		document.getElementById('dz7').innerHTML="";
-		
+		document.getElementById('video_bkp').innerHTML="";
+
 		document.getElementById('dz2_ext_menu').style.display="none";
 		document.getElementById('dz7_ext_menu').style.display="none";
 		document.getElementById('dz4_ext_menu').style.display="none";
@@ -54,7 +55,7 @@ function main(id)
 		internal.setAttribute('src', 'Assets/data/Accessories/Internal_Y.png');
 		internal.setAttribute('class', 'right_menu_img');
 		menu.appendChild(internal);
-
+		
 		document.getElementById('sailent_acc').style.display="block";
 		document.getElementById('access_bkp').style.display="block";
 		break;
@@ -123,6 +124,8 @@ function main(id)
 		document.getElementById('video_bkp').style.display="block";
 		document.getElementById('new_video').style.display="none";
 
+		document.getElementById('sailent_acc').style.display="none";
+
 
 
 	    var dz1 = document.getElementById('dz1');
@@ -178,6 +181,8 @@ function main(id)
 		
 		dravideo_play('dz2','rotary','Assets/data/Accessories/videos/DZ2_1.mp4');
 
+		document.getElementById('sailent_acc').style.display="none";
+
 		break;
 
 
@@ -220,6 +225,8 @@ function main(id)
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		dravideo_play('dz4','rotary','Assets/data/Accessories/videos/DZ4_1.mp4');
+
+		document.getElementById('sailent_acc').style.display="none";
 		
 		break;
 
@@ -263,7 +270,8 @@ function main(id)
 		// popup.style.display='block';
 		dravideo_play('dz6','rotary','Assets/data/Accessories/videos/DZ6_1.mp4');
 
-		
+		document.getElementById('sailent_acc').style.display="none";
+
 		break;
 
 		case 7:
@@ -306,6 +314,8 @@ function main(id)
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		dravideo_play('dz7','rotary','Assets/data/Accessories/videos/DZ7_1.mp4');
+
+		document.getElementById('sailent_acc').style.display="none";
 		break;
 
 		case 8:
@@ -350,7 +360,7 @@ function main(id)
 		
 		dravideo_play('dz1','rotary','Assets/data/Accessories/videos/DZ1_1.mp4');
 
-
+		document.getElementById('sailent_acc').style.display="none";
 		
 		break;
 
