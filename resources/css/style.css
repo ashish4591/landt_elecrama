@@ -7,12 +7,12 @@ body{
   overflow:hidden;
   padding:0;
   margin:0 auto;
-  height:auto;
+  height:100%;
 }
 #myContainer{
 	position:absolute;
 	width:1366px;
-	height: auto;
+	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -23,9 +23,9 @@ body{
 -ms-transition: all 1s ease-in-out; 
 }
 #bottom{
-	position: absolute;
-    bottom: 55px;
-    left: 0;
+	position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
 .parent {
     position: relative;
@@ -99,9 +99,11 @@ body{
 	  overflow:hidden;
 	  padding:0;
 	  margin:0 auto;
-	  height:auto;
-	  width:1280px;
+	  height:800px;
+	  width:100%;
 	  zoom:0 !important;
+	  overflow-x:hidden;
+	  overflow-y:hidden;
 	}
 	.main_header
 	{
@@ -121,8 +123,8 @@ body{
 	}
 	#myContainer{
 		position:absolute;
-		width:1280px;
-		height: auto;
+		width:100%;
+		height: 800px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -348,8 +350,8 @@ body{
 	    
 	 .main_term_container
 	 {
-	 	position: absolute;
-	 	width:700px;
+	 	/*position: absolute;*/
+	 	width:655px;
 	 	height: auto;
 	 	float: left;
 	 	top:0px;
@@ -362,7 +364,10 @@ body{
     height: auto;
     /* margin-left: -25%; */
     left: -15%;
-    margin-top: 58%;
+    margin-top: 12%;
+	 }
+	 #Protection_Unit{
+		 margin-top:-100px;
 	 }
 
 	    #termination1
@@ -406,7 +411,7 @@ body{
 			width: :300px;
 			position: absolute;
 			margin-left: -36%;
-			margin-top:-9%;
+			margin-top:-45%;
 	    }
 
 	  #term_img
@@ -459,14 +464,14 @@ body{
 		{
 	        width: 500px;
 			position: absolute;
-			top: 230px;
+			top: 80px;
 			left: 225px;
 	    }
 
 	    .term_prod_img
 	    {
 			position: absolute;
-		    top: 197px;
+		    top: 80px;
 		    left: 222px;
 	    }
 
@@ -488,7 +493,7 @@ body{
 	#Features_or_Highlights{
 		position:absolute;
 		margin-left:15px;
-		top:0px;
+		top:-30px;
 	}
 	.f1i{
 		margin-left: -50px;
@@ -507,7 +512,7 @@ body{
 		position: absolute;
 		/*right: 325px;*/
 		left: 15px;
-		top: 190px;
+		top: 120px;
 	}
 	#f3{
 		position: relative;
