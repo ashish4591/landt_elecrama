@@ -3,7 +3,7 @@
 	src: url("../fonts/SOURCESANSPRO-SEMIBOLD.otf") format("opentype");
 }
 body{
-	background: url(../../Assets/configurator/BG.png) no-repeat center center; 
+	background: url(../../Assets/configurator/BG2.png) no-repeat center center; 
 	overflow-x:hidden;
 	overflow-y:hidden;
     margin: 0 auto;
@@ -14,7 +14,8 @@ body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	width: 100%;
+	width:1280px;
+	height:800px;
 	zoom:0 !important;
 	background-color:#9bb6ff;
 }
@@ -27,7 +28,7 @@ body{
 	margin-top: 15px;
 }
 #bottom{
-	bottom: 0;
+	bottom: 0px;
     position: fixed;
 }
 #main_container
@@ -263,6 +264,7 @@ body{
     top: 230px;
     left: 285px;
     z-index: 1;
+	height: 395px;
     /* display: none; */
 }
 .video_btn{
@@ -270,8 +272,8 @@ body{
     margin-left: 875px;*/
     z-index: 780;
     position: absolute;
-    top: 595px;
-    right: 40px;
+    top: 575px;
+    right: 85px;
 }
 	.trip_menu
 	{

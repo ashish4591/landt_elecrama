@@ -44,7 +44,12 @@ function main(id)
 		menu.appendChild(SalientFeature);
 		var popup = document.getElementById('salientFeature_popup');
 		popup.style.display='block';
-
+		document.getElementById('drawout_video').style.display="none";
+		document.getElementById('silent_video').style.display="block";
+		var video1=document.getElementById('silent_video');
+		video1.pause();
+		video1.currentTime = 0;
+		video1.load();
 
 		break;
 
@@ -95,11 +100,17 @@ function main(id)
 		SalientFeature.setAttribute('src', 'Assets/data/Withdrawable_Offerings/SalientFeature_Y.png');
 		SalientFeature.setAttribute('class', 'right_menu_img');	
 		menu.appendChild(SalientFeature);
-			document.getElementById('salientFeature_popup').style.display="none";
+	    document.getElementById('salientFeature_popup').style.display="none";
 		document.getElementById('drawout_bkp').style.display="none";
 		document.getElementById('product_img_bkp').style.display="none";
 		var popup = document.getElementById('salientFeature_popup2');
 		popup.style.display='block';
+		document.getElementById('drawout_video').style.display="block";
+		document.getElementById('silent_video').style.display="none";
+		var video=document.getElementById('drawout_video');
+		video.pause();
+		video.currentTime = 0;
+		video.load();
 
 		break;	
 
@@ -112,12 +123,23 @@ function main(id)
 		document.getElementById('salientFeature_popup').style.display="none";
 		document.getElementById('salientFeature_popup2').style.display="none";
 		document.getElementById('salientFeature2').innerHTML="";
-		document.getElementById('salientFeature').innerHTML="";
+		document.getElementById('SalientFeature').innerHTML="";
+		var video=document.getElementById('drawout_video');
+		video.pause();
+		video.currentTime = 0;
+		video.load();
+		var video1=document.getElementById('silent_video');
+		video1.pause();
+		video1.currentTime = 0;
+		video1.load();
 	}
 		function dravideo_play(vid_id)
 		{
 			var video = document.getElementById(vid_id);
 			video.style.display="block";
+			video.pause();
+			video.currentTime = 0;
+			video.load();
 			video.play();
 		}
 	

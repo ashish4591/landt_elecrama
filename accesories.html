@@ -58,6 +58,7 @@ function main(id)
 		
 		document.getElementById('sailent_acc').style.display="block";
 		document.getElementById('access_bkp').style.display="block";
+		document.getElementById('salient_acc_popup').style.display="none";
 		break;
 
 		
@@ -91,6 +92,7 @@ function main(id)
 
 
 	    document.getElementById('new_video').style.display="none";
+	    document.getElementById('new_video_play').style.display="none";
 		// var popup = document.getElementById('salientFeature_popup');
 		// popup.style.display='block';
 		break;
@@ -373,8 +375,12 @@ function main(id)
 	{
 		document.getElementById('salient_acc_popup').style.display="none";
 		document.getElementById('sailent_acc').innerHTML="";
+		document.getElementById('access_bkp').style.display="block";
+		document.getElementById('new_video').style.display="block";
+		document.getElementById('new_video_play').pause();
+		document.getElementById('new_video_play').currentTime = 0;
+		document.getElementById('new_video_play').load();
 		var menu = document.getElementById('internal');
-		
 		var internal = document.createElement('img');
 		
 		//SalientFeature.setAttribute('id', 'SalientFeature');
@@ -949,6 +955,7 @@ function main(id)
 		var vid = document.getElementById('access_bkp')
 		var video = document.createElement('video');
 		video.setAttribute('class','new_video_play');
+		video.setAttribute('id','new_video_play');
 		//video.setAttribute('width','1000px');
 		vid.appendChild(video);
 		var source = document.createElement('source');

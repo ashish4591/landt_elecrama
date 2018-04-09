@@ -5,6 +5,9 @@
 <link rel="stylesheet" href="resources/css/configurator.css">
 <script src="resources/js/jquery.min.js"></script>
 <script type="text/javascript">
+	$(document).ready(function() {
+	  $('#product_video').load();
+	});
 	var prod_dzid,prod_dzno,prod_gid="N",prod_iid="D";
 	function showgraph(dz_id,gid){
 		if(dz_id == 'DZ1-160')
@@ -464,7 +467,9 @@
 	{
 		console.log(vid_id);
 		var vi=document.getElementById("product_video");
+		document.getElementById('product_img').style.display='none';
 		//var vid=$("#"+vid_id).get(0);
+		vi.style.display="block";
 		console.log(vi);
 		//$("#"+vid_id).get(0).play();
 		vi.play();
@@ -478,6 +483,7 @@
 		//alert("the end");
 		$("#"+vid_id).css("display","none");
 		$("#"+pImg).css("display", "block");
+		$("#itrp_imgiTRP-1").css("display", "block");
 		$("#video_btn").css("display", "none");
 		//$("#"+iImg).css("display", "block");
 		//document.getElementById("'"+pImg+"'").style.display="block";
@@ -492,6 +498,8 @@
 				prod_dzid=1;
 				prod_dzno=160;
 				//prod_gid="N";
+				document.getElementById('product_video').style.display='none';
+				document.getElementById('product_img').style.display='block';
 				switch(trp_id)
 				{
 					case 'TMR':
@@ -798,6 +806,9 @@
 				prod_dzid=2;
 				prod_dzno=160;
 				//prod_gid="N";
+				document.getElementById('product_video').style.display='none';
+				document.getElementById('product_img').style.display='block';
+				
 				switch(trp_id)
 				{
 					case 'TMR':
@@ -1093,6 +1104,9 @@
 				prod_dzid=4;
 				prod_dzno=250;
 				//prod_gid="N";
+				document.getElementById('product_video').style.display='none';
+				document.getElementById('product_img').style.display='block';
+				
 				switch(trp_id)
 				{
 		
@@ -1348,6 +1362,9 @@
 				prod_dzid=6;
 				prod_dzno=400;
 				//prod_gid="N";
+				document.getElementById('product_video').style.display='none';
+				document.getElementById('product_img').style.display='block';
+				
 				switch(trp_id)
 				{
 					case 'TMR':
@@ -1647,6 +1664,9 @@
 				prod_dzid=7;
 				prod_dzno=800;
 				//prod_gid="N";
+				document.getElementById('product_video').style.display='none';
+				document.getElementById('product_img').style.display='block';
+				
 				switch(trp_id)
 				{
 					
@@ -9669,7 +9689,7 @@
             <a href="#" onclick="dravideo_play('product_video')"><img id="video_btn" class="video_btn" src="Assets/Configurator/Video.png" /></a>       
 		        <img id="itrp_imgTMR" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/TMR.png" width="100%">
 				<img id="itrp_imgiTRP-M3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-M3.png" width="100%">
-				<img id="itrp_imgiTRP-1" style="display:block;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-1.png" width="100%">
+				<img id="itrp_imgiTRP-1" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-1.png" width="100%">
 				<img id="itrp_imgiTRP-2" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-2.png" width="100%">
 				<img id="itrp_imgiTRP-3" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-3.png" width="100%">
 				<img id="itrp_imgiTRP-4" style="display:none;" class="itrp_img" src="Assets/data/Configurator/DZ1-160/Images/iTRP-4.png" width="100%">

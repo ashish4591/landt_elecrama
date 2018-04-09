@@ -97,32 +97,20 @@ function playvideo(vsrc,isrc,auto)
 {
 			var div = document.getElementById('f1'); 
 			var img = document.getElementById('f3').style.display="none"; 
-			var video = document.createElement('video');
-			video.setAttribute('id','vid');
-			//video.setAttribute('width','120%');
-			video.setAttribute('autoplay','');
+			var video = document.getElementById('vid');
+			video.style.display="block";
+			video.play();
 			video.setAttribute('class','v1');
-			var image=document.createElement('img');
-			image.setAttribute('id','vimg1');
-			image.setAttribute('src',isrc);
+			var image = document.getElementById('imgclose');
 			image.setAttribute('class','vimg1');
-			div.appendChild(image);
-			div.appendChild(video);
-			var source = document.createElement('source');
-			source.setAttribute('src',vsrc);
-			video.appendChild(source);
-			buttonClk=document.getElementById('vimg1');
-			//console.log(buttonRef);
-			buttonClk.addEventListener("click", function() {
-				$('#f1').children().filter("video").each(function(){
-					this.pause(); 
-					delete this; 
-					$(this).remove(); 
-				});
-				var img1 = document.getElementById('imgclose').innerHTML=""; 
-				var img2 = document.getElementById('vimg1')
-				img2.remove(); 
-				var img = document.getElementById('f3').style.display="block"; 
+			image.style.display="block";
+			image.addEventListener("click", function() {
+				document.getElementById('f3').style.display="block"; 
+				video.pause();
+				video.currentTime = 0;
+				video.load();
+				video.style.display="none";
+				image.style.display="none";
 			}, false);
 }
 
@@ -131,21 +119,13 @@ function playvideo(vsrc,isrc,auto)
 <body>
 <div class="container">
 	 <div class="row">
-		<!--div class="col-md-12 col-lg-12 col-xs-12 parent"-->
-		<!--div class="col-md-6 col-lg-6 col-xs-6">
-			<img class="feature" src="assets/data/Features_or_Highlights/Features-or-Highlights.png"/>
-		</div>
-			<div class="icon">
-				<img class="img1" src="Assets/data/Features_or_Highlights/DZ1 - 160_Button.png">
-				<img class="img2" src="Assets/data/Features_or_Highlights/DZ4 - 250_Button.png">
-				<img class="img3" src="Assets/data/Features_or_Highlights/DZ7 - 800_Button.png">
- 				<img class="img4" src="Assets/data/Features_or_Highlights/DZ6 - 400_Button.png">
- 				<img class="img5" src="Assets/data/Features_or_Highlights/DZ2 - 160_Button.png">
-
-			</div-->
 			<div id="f1">
 				<img class="f1i" src="assets/data/Features_or_Highlights/Data_Text.png"/>
-				<img id="imgclose" onclick="playvideo('assets/data/Features_or_Highlights/CFD VIDEO_highlights.mp4','Assets/data/Features_or_Highlights/close.png');" class="f1i2" src="assets/data/Features_or_Highlights/Click-here_Video-link.png"/>
+				<img id="imgclk" onclick="playvideo();" class="f1i2" src="assets/data/Features_or_Highlights/Click-here_Video-link.png"/>
+				<video id="vid" class="v1" style="display:none;">
+                    <source src="Assets/data/Features_or_Highlights/CFD VIDEO_highlights.mp4" type="video/mp4">
+				</video>
+				<img id="imgclose" class="vimg1" style="display:none;" src="assets/data/Features_or_Highlights/close.png"/>
 			</div>
 			<div class="fh1 clr" style="display:block;" id="Features_or_Highlights">
 			<div id="f2">
