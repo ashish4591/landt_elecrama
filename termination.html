@@ -21,6 +21,9 @@
 
 </style>
 <script>
+	$(document).ready(function(){
+		main(1);
+	});
 	function main(id) {
 		switch(id)
 		{
@@ -105,6 +108,13 @@
 			source.setAttribute('src',src);
 			video.appendChild(source);
 			video.play();
+			video.addEventListener('ended',myHandler,false);
+			function myHandler(e) {
+				video.pause(); 
+				delete video; 
+				$(video).remove(); 
+				document.getElementById('term_img1').style.display="block";
+			}
 		}
 
 

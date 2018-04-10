@@ -272,8 +272,9 @@ body{
     margin-left: 875px;*/
     z-index: 780;
     position: absolute;
-    top: 575px;
-    right: 85px;
+    top: 555px;
+    right: 36px;
+    width: 60px;
 }
 	.trip_menu
 	{

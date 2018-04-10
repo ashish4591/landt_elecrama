@@ -462,10 +462,10 @@ body{
 	    }
 		#vid1
 		{
-	        width: 500px;
+	        width: 800px;
 			position: absolute;
-			top: 80px;
-			left: 225px;
+			top: -30px;
+			left: 60px;
 	    }
 
 	    .term_prod_img
@@ -501,8 +501,8 @@ body{
 	.f1i2{
 		position: absolute;
 		top: 145px;
-		left: 25px;
-		width: 75%;
+		left: 27px;
+		width: 65%;
 		z-index: 50;
 	}
 	#f1{
@@ -542,12 +542,12 @@ body{
 		margin-top: -85px;
 	}
 	#fimg4{
-		margin-bottom: 209px;
-		margin-left: -51px;
+		margin-bottom: 208px;
+		margin-left: -44px;
 	}
 	#fimg5{
-	    margin-left: -36px;
-	    margin-top: -81px;
+	    margin-left: -43px;
+		margin-top: -81px;
 	}
 	#r1{
 		margin-top: 115px;
@@ -692,7 +692,7 @@ body{
 		background-image: url(../../Assets/data/Withdrawable_Offerings/Plugin_Selection.png);
 		background-repeat: no-repeat;
 		z-index: 1;
-		margin-left: -13px;
+		margin-left: -5px;
 		margin-top: 7px;
 
     }
@@ -712,7 +712,7 @@ body{
 		background-repeat: no-repeat;
 		z-index: 1;
 		margin-top: 7px;
-		right: 154px;
+		right: 148px;
 
     }
     #salientFeature_popup2
@@ -732,7 +732,7 @@ body{
     {
 		position: absolute;
 		bottom: 45px;
-		right: 54px;
+		right: 18px;
 		z-index: 5;
     }
     #drawout_video
@@ -746,25 +746,23 @@ body{
     }
 
      #silent_video
-    {
+	{
 	    position: absolute;
-	    z-index: 4;
-	    top: 10px;
-	    left: 263px;
-	    width: 350px;
+		z-index: 4;
+		top: 25px;
+		left: 320px;
+		width: 350px;
 
     }
 
         #drawout_video
-    {
+	{
 
 	position: absolute;
-	z-index: 4;
-	top: 0px;
-	/*left: 257px;
-	 left:435px;*/
-	 left:185px;
-	width: 500px;
+    z-index: 4;
+    top: -16px;
+    left: 222px;
+    width: 500px;
 
     }
 
@@ -833,6 +831,7 @@ body{
 		/* display: inline-block; */
 		top: 33%;
 		left: -127px;
+		z-index:345;
 	}
 
 	#salient_acc_popup
@@ -856,11 +855,12 @@ body{
 	.new_video
 	{
 		position: absolute;
-		/* float: right; */
-		width: 80px;
+		/* float: right; 
+		width: 80px;*/
 		height: auto;
 		right: 2px;
 		margin-top: 103px;
+		margin-right:25px;
 	}
 	#dz1
 	{
@@ -960,9 +960,9 @@ body{
 	}
 	.accessories_vid
 	{
-	width: 500px;
-	    margin-top: 4%;
-	    margin-left: 14%;
+		width: 600px;
+		margin-top: 5%;
+		margin-left: 0%;
 	    /* height: 641px; */
 	}
 
@@ -986,7 +986,7 @@ body{
 		margin-left: 753px;
 		z-index: 892;*/
 		position: relative;
-		margin-left: 115px;
+		margin-left: 89px;
 		top: 85px;
 		z-index: 892;
 		width: 100px;
@@ -1000,7 +1000,7 @@ body{
 		margin-top: 160px;
 		z-index:892;*/
 		position: inherit;
-		margin-left: -84px;
+		margin-left: -150px;
 		margin-top: -240px;
 		z-index:892;
 	}
@@ -1021,14 +1021,14 @@ body{
 		position: absolute;
 		position: absolute;
 		bottom: 147px;
-		right: 278px;
+		right: 265px;
 		display: none;
 		z-index: 952;
 	}
 	#p5{
 	position: absolute;
 	    bottom: 147px;
-	    right: 124px;
+	    right: 110px;
 	    z-index: 952;
 		
 	}
@@ -1036,7 +1036,7 @@ body{
 	    position: absolute;
 	    /* margin-top: 106px; */
 	    bottom: 147px;
-	    right: 0px;
+	    right: -15px;
 	    z-index: 952;
 	}
 	#p7{
@@ -1047,7 +1047,7 @@ body{
 		display: none;*/
 	    position: absolute;
 	    margin-left: -418px;
-	    margin-top: -366px;
+	    margin-top: -320px;
 	    z-index: 898;
 		display: none;
 	}
@@ -1062,12 +1062,12 @@ body{
 	.backbtn{
 		position: absolute;
 		margin-top: 210px;
-		margin-left: 208px;
+		margin-left: 240px;
 		z-index: 950;
 	}
 	.nextbtn{
 		position:absolute;
-		margin-left: 845px;
+		margin-left: 820px;
 		margin-top: -230px;
 		z-index:80;
 	}
@@ -1080,8 +1080,8 @@ body{
 	}
 	.pdesc{
 		position: absolute;
-		left: 577px;
-		top: 153px;
+		left: 550px;
+		top: 117px;
 	}
 	#pmodvid{
 		    position: fixed;
@@ -1093,8 +1093,8 @@ body{
 		margin-left: 480px;
 		z-index: 99;*/
 		position: absolute;
-		margin-top: -155px;
-		margin-left: 522px;
+		margin-top: -90px;
+		margin-left: 500px;
 		z-index: 99;
 		width: 39px;
 	}
@@ -1110,11 +1110,10 @@ body{
 		height: 175px;
 		z-index:90;*/
 		position: absolute;
-		top: -287px;
-		right: -570px;
-		width: 320px;
-		height: 175px;
-		z-index:90;
+		top: -365px;
+		right: -580px;
+		height: 360px;
+		z-index: 90;
 	}
 	.pvid{
 		margin-left: 512px;
@@ -1130,10 +1129,10 @@ body{
 		width: 35px;
 		display:none;*/
 	    position: absolute;
-	    top: 9px;
-	    right: 5px;
-	    z-index: 950;
-	    width: 35px;
+		top: 3px;
+		right: 1px;
+		z-index: 950;
+		width: 28px;
 	}
 	.pdclose{
 	    /*margin-left: 840px;
@@ -1147,9 +1146,9 @@ body{
 		display:none;*/
 		z-index: 950;
 		position: absolute;
-		top: 42px;
-		right: 3px;
-		width: 35px;
+		top: 60px;
+		right: 20px;
+		width: 30px;
 	}
 		.prod_def
 		{
@@ -1713,7 +1712,7 @@ position: relative;
 	{
 			width:151px;
 	    	height: 277px;
-	    	background-image: url("../../Assets/data/Accessories/DZ5.png");
+	    	background-image: url("../../Assets/data/Accessories/DZ6.png");
 	    	background-repeat: no-repeat;
 	    	display: inline-block;
 	}
