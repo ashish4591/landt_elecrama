@@ -26,28 +26,7 @@
         }
     }
  $(document).ready(function() {
-                var deg = 0
-				var buttonRef,id;
-                $('.right1').click(function(){
-                    deg=deg+(360/7); 
-                    rotate(deg);                   
-                })
-                $('.left1').click(function(){
-                    deg=deg-(360/7);  
-                    rotate(deg);                  
-                })
-                
-                function rotate(deg)
-                {
-                    $('#img').css('-moz-transform', 'rotate('+deg+'deg) scale(0.7)');
-                    $('#img').css('-webkit-transform', 'rotate('+deg+'deg) scale(0.7)');
-                    $('#img').css('-o-transform:', 'rotate('+deg+'deg) scale(0.7)');
-                    $('#img').css('-ms-transform:', 'rotate('+deg+'deg) scale(0.7)');
-                }
-				
-				$('.carousel').carousel({
-					interval: false
-				});
+				loadOption(1);
         });
 	
 		function loadOption(opt) {
@@ -98,11 +77,12 @@
 					$("#image_6").attr('src', 'final/Frame Asset/Pointer_New.png');
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("L&T_Switchgear.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
-						$("#content-div").load("L&T_Switchgear.html");
-					}, false);
+						
+					}, false);*/
 				}
 				else if(opt==2){
 					
@@ -118,12 +98,13 @@
 					$("#image_6").attr('src', 'final/Frame Asset/dot.png');
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("Features_or_Highlights.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
 						
-						$("#content-div").load("Features_or_Highlights.html");
-					}, false);
+						
+					}, false);*/
 				}
 				else if(opt==3){
 					
@@ -140,12 +121,12 @@
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 
 					id='images_'+opt;
-					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("range.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
 						$("#content-div").load("range.html");
-					}, false);
+					}, false);*/
 				}
 				else if(opt==4){
 					Remove_Elements();
@@ -161,11 +142,12 @@
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("Withdrawal_Offering.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
 						$("#content-div").load("Withdrawal_Offering.html");
-					}, false);
+					}, false);*/
 				}
 				else if(opt==5){
 					Remove_Elements();
@@ -181,11 +163,12 @@
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("Protection_Unit.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
 						$("#content-div").load("Protection_Unit.html");
-					}, false);
+					}, false);*/
 				}
 				else if(opt==6){
 					
@@ -202,11 +185,13 @@
 					$("#image_7").attr('src', 'final/Frame Asset/dot.png');
 
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("termination.html");
+					
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
-						$("#content-div").load("termination.html");
-					}, false);
+						
+					}, false);*/
 				
 				}
 
@@ -225,17 +210,18 @@
 					$("#image_7").attr('src', 'final/Frame Asset/Pointer_New.png');
 
 					id='images_'+opt;
-					buttonRef=document.getElementById(id);
+					$("#content-div").load("accesories.html");
+					/*buttonRef=document.getElementById(id);
 					//console.log(buttonRef);
 					buttonRef.addEventListener("click", function() {
-						$("#content-div").load("accesories.html");
-					}, false);
+					
+					}, false);*/
 				
 				}
 				else{
 				  console.log("error");
 				}
-				//$(".content-div").load("Protection_Unit.html");
+				
 			}
 			function Remove_Elements(){
 

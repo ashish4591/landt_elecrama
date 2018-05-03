@@ -8,8 +8,6 @@
 <link rel="stylesheet" href="resources/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8">
 
 
-
-
 <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js" type="text/javascript"></script-->
 <!--script src="resources/js/jquery-ui.min.js"></script>
 <script src="resources/js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
@@ -22,23 +20,21 @@ jQuery(function() {
 			var slide_id=1;
 			jQuery('#magic_carousel_white').magic_carousel({
 				width: 720,
-				height: 400,
+				//height: 400,
 				responsive:true,
 				width100Proc:0,
 				height100Proc:0,
-				//imageWidth:286,
-				//imageHeight:200,
-				//absUrl: "rmenu\resources",				
+				//imageWidth:307,
+				//imageHeight:200,			
 				border:5,
 				circleColor: "Transparent",
 				circleRadius: 0,
 				elementsHorizontalSpacing: 130,
 				/*borderColorOFF:'#000000',
-				borderColorON:'#FF0000',	*/		
+				borderColorON:'#FF0000',	*/				
 				autoPlay: 0,
 				autoHideNavArrows: false,
 				autoHideBottomNav:false,
-				enableTouchScreen:false,
 				showElementTitle:true,
 				showPreviewThumbs:false,
 				titleColor:'Transparent',
@@ -80,6 +76,51 @@ jQuery(function() {
 					//(Rimage_'+SId).removeClass('Ractive');
 				}
 			});
+			 $(".contentHolderUnit")
+				.on('mousedown touchstart', function (e) {
+					//console.log("x = " + e.pageX);
+					xDown = e.pageX;
+				})
+				.on('mouseup touchend',function (e) {
+					//console.log("x = " + e.pageX);
+					xUp = e.pageX;
+					if (xDown != xUp) {
+						//alert('Swiped');  
+							var val1=xDown;
+							var val2=xUp;
+							if (val1<val2){
+								//console.log("left");
+								if(slide_id<=1){
+									slide_id=5;
+									SId=slide_id;
+									active(SId);
+									//alert(slide_id);
+								}
+								else if(slide_id<=5){
+									slide_id=slide_id-1;
+									SId=slide_id;
+									active(SId);
+									//alert(slide_id);
+								}
+							}
+							else if(val2<val1){
+								//console.log("right");
+								if(slide_id<5){
+									slide_id=slide_id+1;
+									SId=slide_id;
+									//alert(slide_id);
+									active(SId);
+								}
+								else if(slide_id=>5){
+									slide_id=0;
+									slide_id=slide_id+1;
+									SId=slide_id;
+									//alert(slide_id);
+									active(SId);
+								}
+							}
+					}
+				});    
 				//alert(SId);
 				//$('#Rimage_'+SId).removeClass('Ractive');
 			});
@@ -152,6 +193,12 @@ jQuery(function() {
 						<!--img id="Rimage_5" width="25%" src="Assets/data/Range/DZ5.png" class="scaler7"/-->
 						<img id="Rimage_5"  src="Assets/data/Range/DZ6.png" class=""/>
 						<img id="Rimage_6"  src="Assets/data/Range/DZ7.png" class=""/>
+				</div>
+				<div id="r4">
+					<video autoplay loop>
+						<source src="final/Range/UI_05_FlottingText BG2_VP8.webm" type="video/webm">
+						</source>
+					</video>
 				</div>
 				<div id="r2">
 				<div class="magic_carousel white ui-draggable">

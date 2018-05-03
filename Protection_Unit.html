@@ -27,20 +27,19 @@ jQuery(function() {
 			var slide_id=1;
 			jQuery('#magic_carousel_white1').magic_carousel({
 				width: 720,
-				height: 400,
+				//height: 400,
 				responsive:true,
 				imageWidth:252,
 				//imageHeight:200,				
 				border:5,
 				circleColor: "Transparent",
 				circleRadius: 0,
-				elementsHorizontalSpacing: 200,
+				elementsHorizontalSpacing: 130,
 				/*borderColorOFF:'#000000',
 				borderColorON:'#FF0000',	*/		
 				autoPlay: 0,
 				autoHideNavArrows: false,
 				autoHideBottomNav:false,
-				enableTouchScreen:false,
 				showElementTitle:true,
 				showPreviewThumbs:false,
 				titleColor:'Transparent',
@@ -82,6 +81,51 @@ jQuery(function() {
 					//(Pimage_'+SId).removeClass('Ractive');
 				}
 			});
+				 $(".contentHolderUnit")
+				.on('mousedown touchstart', function (e) {
+					//console.log("x = " + e.pageX);
+					xDown = e.pageX;
+				})
+				.on('mouseup touchend',function (e) {
+					//console.log("x = " + e.pageX);
+					xUp = e.pageX;
+					if (xDown != xUp) {
+						//alert('Swiped');  
+							var val1=xDown;
+							var val2=xUp;
+							if (val1<val2){
+								//console.log("left");
+								if(slide_id<=1){
+									slide_id=6;
+									PId=slide_id;
+									slideshow(PId);
+									//alert(slide_id);
+								}
+								else if(slide_id<=6){
+									slide_id=slide_id-1;
+									PId=slide_id;
+									slideshow(PId);
+									//alert(slide_id);
+								}
+							}
+							else if(val2<val1){
+								//console.log("right");
+								if(slide_id<6){
+									slide_id=slide_id+1;
+									PId=slide_id;
+									//alert(slide_id);
+									slideshow(PId);
+								}
+								else if(slide_id=>6){
+									slide_id=0;
+									slide_id=slide_id+1;
+									PId=slide_id;
+									//alert(slide_id);
+									slideshow(PId);
+								}
+							}
+					}
+				});
 				//alert(PId);
 				//$('#Pimage_'+SId).removeClass('Ractive');
 			});
